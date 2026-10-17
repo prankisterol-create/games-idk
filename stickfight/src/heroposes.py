@@ -102,7 +102,7 @@ SP['cover'] = grounded(SPIDER, 0.74, 0.30, -0.38, lean=-12, bend=-6, head=12, pn
                        an=96, en=128, af=-30, ef=60, hn='open', hf='open')
 SP['thwip_up'] = grounded(SPIDER, 0.82, 0.30, -0.30, lean=-6, bend=-4, head=-30, pn=0.2, pf=0.5,
                           an=146, en=0, af=-20, ef=40, hn='thwip', hf='open')
-SP['perch'] = grounded(SPIDER, 0.40, 0.10, -0.10, lean=46, bend=28, head=-26, pn=0.6, pf=0.6,
+SP['perch'] = grounded(SPIDER, 0.40, 0.04, -0.03, lean=46, bend=28, head=-26, pn=0.6, pf=0.6,
                        an=24, en=40, af=14, ef=50, hn='claw', hf='claw')
 
 # ---------------------------------------------------------------- DOOM

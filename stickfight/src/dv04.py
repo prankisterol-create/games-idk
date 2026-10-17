@@ -311,10 +311,11 @@ def build():
     c.key(252, cx=mid + 1.2, cy=2.5, h=6.6, ease='smooth', **moon)
     c.key(271, cx=mid + 1.6, cy=3.0, h=7.4, ease='smooth', **moon)
     c.key(304, cx=(sneu['x'] + FIN[0]) / 2 + 0.6, cy=3.0, h=8.6, ease='smooth', **moon)
-    end_cam = dict(cx=FIN[0] - 0.35, cy=FIN[1] - 0.05, h=3.1)
+    # low angle: tilt the whole frame down so he is framed against open sky, the moon behind him
+    end_cam = dict(cx=FIN[0] - 0.35, cy=FIN[1] - 1.13, h=3.4, tilt=0.35)
     mx, mdy = moon_behind(end_cam, (FIN[0] + 0.05, FIN[1] + 0.45))
     c.key(305, cut=True, ease='smooth', moon_r=0.95, moon_x=mx, moon_dy=mdy, **end_cam)
-    end2 = dict(cx=FIN[0] - 0.35, cy=FIN[1] + 0.05, h=3.5)
+    end2 = dict(cx=FIN[0] - 0.35, cy=FIN[1] - 1.05, h=3.7, tilt=0.35)
     mx2, mdy2 = moon_behind(end2, (FIN[0] + 0.05, FIN[1] + 0.45))
     c.key(N - 1, moon_r=0.95, moon_x=mx2, moon_dy=mdy2, **end2)
 

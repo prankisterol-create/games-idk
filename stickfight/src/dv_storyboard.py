@@ -31,7 +31,7 @@ PANELS = [
     ('D3', 82, '3C  The gauntlet discharges.'),
     ('D3', 107, '3D  Hurled across the roof.'),
     ('D3', 150, '3E  Shake it off.'),
-    ('D3', 160, 'DOOM\'s verdict.'),
+    ('D3', 171, 'DOOM\'s verdict.'),
     ('D4', 28, '4A  INSERT: he is standing in the water.'),
     ('D4', 40, 'Everything he has.'),
     ('D4', 55, 'The lenses narrow. He has seen it.'),
