@@ -11,7 +11,7 @@ import cairo
 from rig import KAI, SEN, solve, draw_figure, pose, hair_anchor
 from poses import LIB, at
 
-W, H = 3000, 1560
+W, H = 3000, 1980
 BG = (0.105, 0.098, 0.125)
 INK = (0.86, 0.84, 0.80)
 DIM = (0.45, 0.43, 0.48)
@@ -94,8 +94,19 @@ def figure(ctx, build, p, cx, ground_px, scale, label=None, skeleton=False):
 
 
 def sheet(build, notes, path):
+    """Write the sheet as PNG and as an editable SVG (same drawing code)."""
+    global H
+    rows = (len(LIB[build.name]) - 1 + 5) // 6
+    H = max(1560, 420 + rows * 330)
     surf = cairo.ImageSurface(cairo.FORMAT_RGB24, W, H)
-    ctx = cairo.Context(surf)
+    draw_sheet(cairo.Context(surf), build, notes)
+    surf.write_to_png(path)
+    vs = cairo.SVGSurface(path.replace('.png', '.svg'), W, H)
+    draw_sheet(cairo.Context(vs), build, notes)
+    vs.finish()
+
+
+def draw_sheet(ctx, build, notes):
     ctx.set_source_rgb(*BG)
     ctx.paint()
     text(ctx, f'{build.name} — MODEL SHEET', 60, 80, 44, build.near, bold=True)
@@ -148,14 +159,13 @@ def sheet(build, notes, path):
         p = lib[n]
         y = p['y'] if p['y'] is not None else 0
         figure(ctx, build, p, cx, gpx, scale2, n)
-    surf.write_to_png(path)
 
 
 if __name__ == '__main__':
     out = sys.argv[1] if len(sys.argv) > 1 else '../output/modelsheets'
     os.makedirs(out, exist_ok=True)
     sheet(KAI, ['"The Furnace" — power striker. Square, heavy, chin tucked, elbows in.',
-                'Silhouette ID: broad chest taper, black headband with two tails, ember-orange body.',
+                'Silhouette ID: broad chest taper, off-white headband with two tails, ember-orange body.',
                 'Moves in straight lines; commits the whole body (torso 30-45° into every strike).'],
           os.path.join(out, 'KAI_model_sheet.png'))
     sheet(SEN, ['"The Tide" — evasive counter-fighter. Tall, long-limbed, loose open hands.',

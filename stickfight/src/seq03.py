@@ -178,8 +178,8 @@ def build():
     c.key(26, cut=True, cx=(imp['x'] + sland['x']) / 2 + 0.2, cy=1.0, h=4.4, ease='dec')
     c.key(44, cx=(imp['x'] + sland['x']) / 2, cy=1.0, h=4.2, fw=0.3, ease='smooth')
     c.key(64, cy=1.0, h=4.0, fw=0.6, ease='smooth')
-    c.key(84, cy=1.1, h=5.2, fw=0.6, ease='smooth')
-    c.key(123, cy=1.1, h=4.7, fw=0.6)
+    c.key(84, cx=2.42, cy=1.1, h=5.2, fw=0.0, ease='smooth')
+    c.key(123, cx=2.42, cy=1.1, h=4.7, fw=0.0)
 
     # ================================================================ fx / sound
     def motes(fx, sc, rf, a):

@@ -256,12 +256,12 @@ class FX:
             elif p.kind == 'ember':
                 fl = 0.6 + 0.4 * math.sin(p.age * 1.7 + p.rot * 5)
                 a = (1 - t) * fl
-                g = cairo.RadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 3)
+                g = cairo.RadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 2.2)
                 g.add_color_stop_rgba(0, *p.col, a)
                 g.add_color_stop_rgba(0.35, *p.col, a * 0.6)
                 g.add_color_stop_rgba(1, *p.col, 0)
                 ctx.set_source(g)
-                ctx.arc(p.x, p.y, p.r * 3, 0, 2 * math.pi)
+                ctx.arc(p.x, p.y, p.r * 2.2, 0, 2 * math.pi)
                 ctx.fill()
                 p.vx += math.sin(p.age * 0.5 + p.rot) * 0.03
             elif p.kind == 'glint':

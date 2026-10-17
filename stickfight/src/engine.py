@@ -73,6 +73,7 @@ class Track:
         jump   apex height (m) of a ballistic arc to the next key (x linear, y parabolic)
         xease  separate spacing for travel (x) when it should differ from the drawing spacing
         """
+        self.keys = [k for k in self.keys if k['f'] != f]      # a new drawing replaces one on the same frame
         self.keys.append(dict(f=f, p=dict(p), ease=ease, lock=tuple(lock), hands=tuple(hands),
                               jump=jump, xease=xease, label=label))
         self._prepared = False
@@ -190,6 +191,24 @@ class Track:
                 return f0 + 2 * ((f - f0) // 2)
         return f
 
+    def floor(self, p):
+        """The ground is solid: lift a sinking body, then put any foot or hand that
+        went through the floor back onto it (same x, solved with IK)."""
+        b = self.b
+        J = solve(b, p)
+        lift = max(0.0, b.head_r * 0.9 - J.head[1], 0.06 - J.hip[1],
+                   b.w_ankle * 0.31 - J.toe_n[1], b.w_ankle * 0.31 - J.toe_f[1])
+        if lift > 0:
+            p['y'] += lift
+            J = solve(b, p)
+        for side, an in (('n', J.ankle_n), ('f', J.ankle_f)):
+            if an[1] < b.w_ankle * 0.5 - 0.004:
+                p = plant_leg(b, p, side, (an[0], b.w_ankle * 0.5))
+        for side, h in (('n', J.hand_n), ('f', J.hand_f)):
+            if h[1] < b.fist_r * 0.5:
+                p = plant_hand(b, p, side, (h[0], b.fist_r * 0.55))
+        return p
+
     def eval(self, f):
         f = self.sample_frame(f)
         p = self._raw(f)
@@ -201,7 +220,7 @@ class Track:
                 q = self._raw(f - lag)
                 for k in params:
                     p[k] = q[k]
-        return p
+        return self.floor(p)
 
     def smear_at(self, f):
         out = []
@@ -209,6 +228,14 @@ class Track:
             if f0 <= f < f1:
                 out.append((limbs, s))
         return out
+
+    def continue_from(self, pose):
+        """Replace the first drawing with the previous sequence's last one (exact handoff)."""
+        self.keys.sort(key=lambda k: k['f'])
+        k0 = self.keys[0]
+        k0['p'] = dict(pose)
+        k0['p'].pop('pins', None)
+        self._prepared = False
 
     @property
     def end(self):
@@ -339,12 +366,14 @@ class Shake:
         return sx, sy
 
 
-def arc(f0, f1, p0, p1, height, hang=2.4):
-    """Stylised ballistic arc between two root positions: linear travel, a
-    vertical profile with a flattened top (hang time) controlled by `hang`."""
+def arc(f0, f1, p0, p1, height, hang=2.4, xease=None):
+    """Stylised ballistic arc between two root positions: travel spaced by
+    `xease` (linear by default), a vertical profile with a flattened top (hang
+    time) controlled by `hang`."""
     def fn(f):
         u = (f - f0) / float(f1 - f0)
         u = max(0.0, min(1.0, u))
+        ux = ease(u, xease) if xease else u
         y = lerp(p0[1], p1[1], u) + height * (1 - abs(2 * u - 1) ** hang)
-        return lerp(p0[0], p1[0], u), y
+        return lerp(p0[0], p1[0], ux), y
     return fn

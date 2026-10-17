@@ -114,7 +114,7 @@ class Sequence:
         if stop:
             self.hitstop(f, stop)
         if style:
-            self.impacts[f] = (style, x, y)
+            self.impacts[f] = (style if isinstance(style, (list, tuple)) else [style], x, y)
         if sound:
             self.sfx(f, sound, power)
 
@@ -330,16 +330,21 @@ class Renderer:
             ctx.fill()
 
     # main loop -------------------------------------------------------------
-    def frames(self, seq):
+    def frames(self, seq, svg_out=None):
         """Generator over rendered frames: yields (rf, anim_frame, is_stop, surface)."""
+        svg_out = svg_out or {}
         fmap = build_frame_map(seq.n, seq.hitstops)
         seq.fmap = fmap
         seq.shake = Shake()
         fx = FX(seed=hash(seq.name) % 1000)
         seq.fx = fx
         actors = list(seq.actors.values())
-        # pre-roll the hair so it starts settled
+        # pre-roll the hair so it starts settled (or inherit it from the previous sequence)
+        carry = getattr(seq, 'carry', None) or {}
         for act in actors:
+            if act.track.name in carry:
+                act.chains = carry[act.track.name]
+                continue
             p = act.track.eval(0)
             J = solve(act.b, p)
             for ch, w0, w1, col in act.chains:
@@ -348,9 +353,11 @@ class Renderer:
                     ch.step(hair_anchor(J), J.face, seq.wind_at(0))
         mid_s = None
         last_a = -1
+        sub = 0
         surf = cairo.ImageSurface(cairo.FORMAT_ARGB32, self.W, self.H)
         for rf, (a, stop) in enumerate(fmap):
             new_anim = a != last_a
+            sub = 0 if new_anim else sub + 1
             ctx = cairo.Context(surf)
             # --- poses
             for act in actors:
@@ -384,67 +391,76 @@ class Renderer:
                 for ch, w0, w1, col in act.chains:
                     out.append((ch.step(hair_anchor(act.J), act.J.face, seq.wind_at(a)), w0, w1, col))
                 chains[act.track.name] = out
-            # --- draw
-            impact = seq.impacts.get(a) if (new_anim and a in seq.impacts) else None
-            if impact:
-                style, ix, iy = impact
-                self.draw_impact_bg(ctx, style, cam, ix, iy)
-            else:
-                self.draw_bg(ctx, cam, rf / FPS)
-            s = self.layer(ctx, cam, 1.0)
-            px = 1.0 / s
-            if not impact:
-                fx.draw_decals(ctx, px)
-                for act in actors:
-                    if act.shown:
-                        self.draw_shadow(ctx, act.J)
-                fx.draw_ghosts(ctx)
-            order = sorted(actors, key=lambda q: q.z)
-            for f0, names in sorted(seq.zorders):
-                if a >= f0:
-                    order = [seq.actors[n] for n in names if n in seq.actors]
-            for act in order:
-                if not act.shown:
-                    continue
+            impact_now = None
+            if a in seq.impacts and sub < len(seq.impacts[a][0]):
+                styles, ix, iy = seq.impacts[a]
+                impact_now = (styles[sub], ix, iy)
+            # --- draw (a closure, so the same frame can also be written as SVG)
+            def paint(ctx, impact=impact_now):
+                W, H = self.W, self.H
                 if impact:
-                    ink = (0.02, 0.0, 0.01) if impact[0] == 'dark' else (0.03, 0.03, 0.04)
-                    draw_figure(ctx, act.J, style='silhouette', near=ink,
-                                chains=[(c, w0, w1, ink) for c, w0, w1, col in chains[act.track.name]])
-                    continue
-                if not stop:
-                    for limbs, strength in act.smears:
-                        draw_smear(ctx, act.b, act.prev_pose, act.pose, limbs, strength)
-                g = seq.glow.get(act.track.name)
-                tint = 0.0
-                for d0, d1, nm, amt in seq.depth:
-                    if nm == act.track.name and d0 <= a < d1:
-                        u = (a - d0) / max(1, d1 - d0)
-                        tint = amt * min(1.0, 4 * u, 4 * (1 - u))
-                haze = (0.24, 0.21, 0.30)
-                near = tuple(lerp(c_, h_, tint) for c_, h_ in zip(act.b.near, haze))
-                far = tuple(lerp(c_, h_, tint) for c_, h_ in zip(act.b.far, haze))
-                draw_figure(ctx, act.J, chains=chains[act.track.name], eye_glow=g(a) if g else 1.0,
-                            near=near, far=far)
-            if not impact:
-                self.draw_pebbles(ctx, cam)
-            self.layer(ctx, cam, 1.0)
-            fx.draw(ctx, px)
-            ctx.identity_matrix()
-            # --- post: flash, vignette, fades, cards
-            if fx.flash > 0.02:
-                ctx.set_source_rgba(*fx.flash_col, min(1.0, fx.flash))
-                ctx.paint()
-            W, H = self.W, self.H
-            ctx.set_source_surface(self.vignette(), 0, 0)
-            ctx.paint()
-            for f0, f1, a0, a1 in seq.fades:
-                if f0 <= a < f1:
-                    t = (a - f0) / max(1, f1 - f0)
-                    ctx.set_source_rgba(0, 0, 0, lerp(a0, a1, t))
+                    self.draw_impact_bg(ctx, impact[0], cam, impact[1], impact[2])
+                else:
+                    self.draw_bg(ctx, cam, rf / FPS)
+                s = self.layer(ctx, cam, 1.0)
+                px = 1.0 / s
+                if not impact:
+                    fx.draw_decals(ctx, px)
+                    for act in actors:
+                        if act.shown:
+                            self.draw_shadow(ctx, act.J)
+                    fx.draw_ghosts(ctx)
+                order = sorted(actors, key=lambda q: q.z)
+                for f0, names in sorted(seq.zorders):
+                    if a >= f0:
+                        order = [seq.actors[n] for n in names if n in seq.actors]
+                for act in order:
+                    if not act.shown:
+                        continue
+                    if impact:
+                        ink = (0.02, 0.0, 0.01) if impact[0] == 'dark' else (0.03, 0.03, 0.04)
+                        draw_figure(ctx, act.J, style='silhouette', near=ink,
+                                    chains=[(c, w0, w1, ink) for c, w0, w1, col in chains[act.track.name]])
+                        continue
+                    if not stop:
+                        for limbs, strength in act.smears:
+                            draw_smear(ctx, act.b, act.prev_pose, act.pose, limbs, strength)
+                    g = seq.glow.get(act.track.name)
+                    tint = 0.0
+                    for d0, d1, nm, amt in seq.depth:
+                        if nm == act.track.name and d0 <= a < d1:
+                            u = (a - d0) / max(1, d1 - d0)
+                            tint = amt * min(1.0, 4 * u, 4 * (1 - u))
+                    haze = (0.24, 0.21, 0.30)
+                    near = tuple(lerp(c_, h_, tint) for c_, h_ in zip(act.b.near, haze))
+                    far = tuple(lerp(c_, h_, tint) for c_, h_ in zip(act.b.far, haze))
+                    draw_figure(ctx, act.J, chains=chains[act.track.name], eye_glow=g(a) if g else 1.0,
+                                near=near, far=far)
+                if not impact:
+                    self.draw_pebbles(ctx, cam)
+                self.layer(ctx, cam, 1.0)
+                fx.draw(ctx, px)
+                ctx.identity_matrix()
+                # --- post: flash, vignette, fades, cards
+                if fx.flash > 0.02:
+                    ctx.set_source_rgba(*fx.flash_col, min(1.0, fx.flash))
                     ctx.paint()
-            for f0, f1, fn in seq.cards:
-                if f0 <= a < f1:
-                    fn(ctx, self, a - f0, f1 - f0)
+                W, H = self.W, self.H
+                ctx.set_source_surface(self.vignette(), 0, 0)
+                ctx.paint()
+                for f0, f1, a0, a1 in seq.fades:
+                    if f0 <= a < f1:
+                        t = (a - f0) / max(1, f1 - f0)
+                        ctx.set_source_rgba(0, 0, 0, lerp(a0, a1, t))
+                        ctx.paint()
+                for f0, f1, fn in seq.cards:
+                    if f0 <= a < f1:
+                        fn(ctx, self, a - f0, f1 - f0)
+            paint(ctx)
+            for path in svg_out.get(a, []) if new_anim else []:
+                vs = cairo.SVGSurface(path, self.W, self.H)
+                paint(cairo.Context(vs))
+                vs.finish()
             if self.debug:
                 ctx.select_font_face('DejaVu Sans Mono')
                 ctx.set_font_size(16)

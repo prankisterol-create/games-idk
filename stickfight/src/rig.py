@@ -158,11 +158,19 @@ def solve(build, p):
         ha = add(el, ldir(a + e, 1), b.farm * s)
         return el, ha
 
+    upright = abs(((p['rot'] + 180.0) % 360.0) - 180.0) < 1.0
+
     def leg(l, k, s, pt):
         kn = add((0, 0), ldir(l, 1), b.thigh * s)
         an = add(kn, ldir(l - k, 1), b.shin * s)
         fa = 90.0 + ((l - k + 14.0) - 90.0) * max(0.0, min(1.0, pt))
         toe = add(an, ldir(fa, 1), b.foot)
+        floor = b.w_ankle * 0.31 - hip[1]
+        if upright and toe[1] < floor:
+            # a toe never goes through the ground: flatten the foot just enough
+            c = max(-1.0, min(1.0, (an[1] - floor) / b.foot))
+            fa2 = math.acos(c) / DEG
+            toe = add(an, ldir(fa2, 1), b.foot)
         return kn, an, toe
 
     elbow_n, hand_n = arm(p['an'], p['en'], p['san'])
@@ -412,9 +420,18 @@ def eye_point(J):
 
 
 def draw_eye(ctx, J, glow=1.0):
+    """glow < 0 draws the eye closed (a thin lid line)."""
     b = J.build
     r = b.head_r
     for (ex, ey), fwd, up, s in eye_points(J):
+        if glow < 0:
+            L = r * 0.36
+            ctx.set_source_rgba(*b.eye, 0.55)
+            ctx.set_line_width(r * 0.05)
+            ctx.move_to(ex - fwd[0] * L * 0.5, ey - fwd[1] * L * 0.5 - r * 0.02)
+            ctx.line_to(ex + fwd[0] * L * 0.5, ey + fwd[1] * L * 0.5 - r * 0.05)
+            ctx.stroke()
+            continue
         scale = 1.0 if s > 0 else 0.85 + 0.15 * math.sin(J.yaw)
         if glow > 0:
             g = cairo.RadialGradient(ex, ey, 0, ex, ey, r * 0.9)
