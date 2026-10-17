@@ -69,6 +69,11 @@
 6. KAI's head-lift beat was invisible in the wide shot.
    *Fix:* new low close-up with the moon above him. SEN's follow-through hold was also shortened by 14 frames.
 
+### Delivery encode
+
+The first 1080p master was 197 MB: per-pixel film grain changing every frame defeats compression.
+*Fix:* grain reduced to ±2 levels and clumped 2×2, encoded with x264 CRF 20 / preset slow. The film keeps its texture at a fraction of the size.
+
 ### Whole-film continuity
 
 1. 5–11 cm pops at sequence boundaries, plus one camera jump cut (S3 → S4).

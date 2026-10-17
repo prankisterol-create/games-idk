@@ -479,15 +479,16 @@ class Renderer:
         buf = np.ndarray((self.H, self.W, 4), np.uint8, surf.get_data()).copy()
         rgb = buf[:, :, [2, 1, 0]].astype(np.int16)
         if self.grain:
-            n = self.rng.integers(-5, 6, (self.H, self.W, 1), dtype=np.int16)
-            rgb += n
+            # subtle, slightly clumped grain (2x2): filmic, and still compresses well
+            n = self.rng.integers(-2, 3, ((self.H + 1) // 2, (self.W + 1) // 2, 1), dtype=np.int16)
+            rgb += np.repeat(np.repeat(n, 2, 0), 2, 1)[:self.H, :self.W]
         return np.clip(rgb, 0, 255).astype(np.uint8)
 
 
-def encode(frames_rgb_iter, W, H, path, fps=FPS, crf=18):
+def encode(frames_rgb_iter, W, H, path, fps=FPS, crf=20):
     os.makedirs(os.path.dirname(path) or '.', exist_ok=True)
     p = subprocess.Popen(['ffmpeg', '-v', 'error', '-y', '-f', 'rawvideo', '-pix_fmt', 'rgb24',
-                          '-s', f'{W}x{H}', '-r', str(fps), '-i', '-', '-c:v', 'libx264', '-preset', 'medium',
+                          '-s', f'{W}x{H}', '-r', str(fps), '-i', '-', '-c:v', 'libx264', '-preset', 'slow',
                           '-crf', str(crf), '-pix_fmt', 'yuv420p', '-movflags', '+faststart', path],
                          stdin=subprocess.PIPE)
     n = 0
