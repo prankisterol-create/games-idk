@@ -53,6 +53,9 @@ class Build:
     glow: tuple
     trait: str            # 'headband' or 'ponytail'
     shoulder_at: float = 0.9
+    painter: object = None     # optional costume renderer fn(ctx, J, style, chains, near, far, eye_glow)
+    anchor: object = None      # optional fn(J) -> world anchor for secondary chains (capes)
+    chains: object = None      # optional factory -> [(Chain, w0, w1, colour)] (engine.chains_for_build)
 
 
 # --------------------------------------------------------------------------
@@ -461,6 +464,8 @@ def draw_eye(ctx, J, glow=1.0):
 def hair_anchor(J):
     """World anchor for secondary chains (headband knot / ponytail root)."""
     b = J.build
+    if b.anchor:
+        return b.anchor(J)
     fwd, up, lat = head_axes(J)
     if b.trait == 'headband':
         return add(add(J.head, fwd, -b.head_r * 0.86), up, b.head_r * 0.48)
@@ -477,6 +482,8 @@ def draw_chain(ctx, pts, w0, w1, color):
 def draw_figure(ctx, J, style='normal', chains=None, near=None, far=None, eye_glow=1.0):
     """Draw a solved figure. style: normal | flat (single colour) | silhouette."""
     b = J.build
+    if b.painter:
+        return b.painter(ctx, J, style=style, chains=chains, near=near, far=far, eye_glow=eye_glow)
     near = near or b.near
     far = far or b.far
     if style in ('flat', 'silhouette'):

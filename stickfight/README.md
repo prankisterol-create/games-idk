@@ -4,6 +4,9 @@ A 37.5-second, 899-frame, 24 fps stick-figure duel with a synthesised soundtrack
 
 ▶ **Watch:** [`output/preview/furnace_and_tide_1080p.mp4`](output/preview/furnace_and_tide_1080p.mp4) (1920×1080, H.264 + AAC).
 
+> **Second film: DOOM vs SPIDER-MAN.** A 42-second night-rooftop fight built on the same engine, with costumed characters, powers, a water-tower set piece and a synthesised score.
+> ▶ [`output/doom_vs_spiderman/preview/doom_vs_spiderman_1080p.mp4`](output/doom_vs_spiderman/preview/doom_vs_spiderman_1080p.mp4) · notes: [`docs/06_doom_vs_spiderman.md`](docs/06_doom_vs_spiderman.md) · see [below](#second-film-doom-vs-spider-man).
+
 ## Deliverables
 
 | # | Deliverable | Where |
@@ -76,3 +79,29 @@ Useful variants:
 - **Change timing or spacing:** each `track.key(frame, pose, ease=..., lock=...)` in a `seqNN.py` is one key drawing. Move frames, change `ease`, add a breakdown key, add `track.smear(...)`, `track.lag(...)` or `track.on_twos(...)`, or change `seq.hitstop(...)`.
 - **Choreography geometry** (distances, contact points) is solved in each script. Run `python3 seq01.py` (or 02/03/04) to print the measured gaps and contact positions.
 - **Vector drawings:** the SVGs in `output/storyboard/svg/` and `output/modelsheets/` open in Inkscape, Illustrator, Affinity, or a browser.
+
+## Second film: DOOM vs SPIDER-MAN
+
+A non-commercial fan animation on the same engine: [`docs/06_doom_vs_spiderman.md`](docs/06_doom_vs_spiderman.md) has the story beats, techniques, timing, sound and QC.
+
+| What | Where |
+|---|---|
+| Video with sound (1920×1080) | [`output/doom_vs_spiderman/preview/`](output/doom_vs_spiderman/preview) |
+| Model sheets (PNG + SVG) | [`output/doom_vs_spiderman/modelsheets/`](output/doom_vs_spiderman/modelsheets) |
+| Storyboard rendered from the animation (pages, panels, SVG frames) | [`output/doom_vs_spiderman/storyboard/`](output/doom_vs_spiderman/storyboard) |
+| Every rendered frame on contact sheets, plus the per-frame timeline | [`output/doom_vs_spiderman/sheets/`](output/doom_vs_spiderman/sheets), [`output/doom_vs_spiderman/timeline.csv`](output/doom_vs_spiderman/timeline.csv) |
+| Sources | `src/heroes.py` (costumed builds), `src/heroposes.py`, `src/rooftop.py` (stage), `src/powers.py` (effects), `src/dv01.py`–`dv04.py` (sequences), `src/dv_audio.py`, `src/dv_modelsheet.py`, `src/dv_storyboard.py` |
+
+```bash
+cd stickfight/src
+python3 dv_modelsheet.py ../output/doom_vs_spiderman/modelsheets
+python3 tools/qc_scan.py --film doom                     # expects "0 issues"
+python3 film.py --film doom --all --res 1920x1080 --out /tmp/dv_video.mp4 \
+    --sheets ../output/doom_vs_spiderman/sheets --storyboard ../output/doom_vs_spiderman/storyboard \
+    --log ../output/doom_vs_spiderman/timeline.csv
+python3 dv_audio.py /tmp/dv_sound.wav
+ffmpeg -i /tmp/dv_video.mp4 -i /tmp/dv_sound.wav -c:v copy -c:a aac -b:a 192k -shortest \
+    ../output/doom_vs_spiderman/preview/doom_vs_spiderman_1080p.mp4
+```
+
+The engine changes the second film needed (costume painters, stages, overlays, FX items, dict paths) are opt-in hooks; FURNACE & TIDE renders as before.

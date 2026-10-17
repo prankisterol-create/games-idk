@@ -84,6 +84,8 @@ class Sequence:
         self.notes = {}             # anim frame -> annotation (timeline doc)
         self.glow = {}              # actor name -> fn(anim frame) eye-glow intensity
         self.depth = []             # (f0, f1, actor, amount) atmospheric tint when passing behind
+        self.stage = None           # optional set: .draw_bg(R, ctx, cam, t, a) / .draw_front(R, ctx, cam, a)
+        self.overlays = []          # (f0, f1, fn(ctx, seq, a, rf, px, ink), layer) world-space drawings
 
     def wind_at(self, a):
         return self.wind(a) if callable(self.wind) else self.wind
@@ -129,6 +131,12 @@ class Sequence:
                 scene.shake.add(rf, 0.04 + 0.07 * power, frames=6 + int(5 * power), dx=dirx, dy=diry * 0.5 + 0.3,
                                 seed=f)
         self.at(f, ev)
+
+    def overlay(self, f0, f1, fn, layer='front'):
+        """Draw fn(ctx, seq, a, rf, px, ink) in world space for f0 <= a < f1. layer: 'back' (behind the
+        fighters), 'front' (over them) or 'top' (over the effects). ink is the silhouette colour on
+        impact frames, else None."""
+        self.overlays.append((f0, f1, fn, layer))
 
     def fade(self, f0, f1, a0, a1):
         self.fades.append((f0, f1, a0, a1))
@@ -400,16 +408,31 @@ class Renderer:
                 W, H = self.W, self.H
                 if impact:
                     self.draw_impact_bg(ctx, impact[0], cam, impact[1], impact[2])
+                elif seq.stage:
+                    seq.stage.draw_bg(self, ctx, cam, rf / FPS, a)
                 else:
                     self.draw_bg(ctx, cam, rf / FPS)
                 s = self.layer(ctx, cam, 1.0)
                 px = 1.0 / s
+                ink = None
+                if impact:
+                    ink = (0.02, 0.0, 0.01) if impact[0] == 'dark' else (0.03, 0.03, 0.04)
+
+                def overlays(layer):
+                    for o0, o1, ofn, olayer in seq.overlays:
+                        if olayer == layer and o0 <= a < o1:
+                            self.layer(ctx, cam, 1.0)
+                            ofn(ctx, seq, a, rf, px, ink)
                 if not impact:
                     fx.draw_decals(ctx, px)
                     for act in actors:
                         if act.shown:
-                            self.draw_shadow(ctx, act.J)
+                            if seq.stage and hasattr(seq.stage, 'draw_shadow'):
+                                seq.stage.draw_shadow(self, ctx, act.J)
+                            else:
+                                self.draw_shadow(ctx, act.J)
                     fx.draw_ghosts(ctx)
+                overlays('back')
                 order = sorted(actors, key=lambda q: q.z)
                 for f0, names in sorted(seq.zorders):
                     if a >= f0:
@@ -436,10 +459,15 @@ class Renderer:
                     far = tuple(lerp(c_, h_, tint) for c_, h_ in zip(act.b.far, haze))
                     draw_figure(ctx, act.J, chains=chains[act.track.name], eye_glow=g(a) if g else 1.0,
                                 near=near, far=far)
+                overlays('front')
                 if not impact:
-                    self.draw_pebbles(ctx, cam)
+                    if seq.stage:
+                        seq.stage.draw_front(self, ctx, cam, a)
+                    else:
+                        self.draw_pebbles(ctx, cam)
                 self.layer(ctx, cam, 1.0)
                 fx.draw(ctx, px)
+                overlays('top')
                 ctx.identity_matrix()
                 # --- post: flash, vignette, fades, cards
                 if fx.flash > 0.02:

@@ -3,6 +3,7 @@
 usage:
   python3 film.py --seq s1 --out ../output/preview/s1.mp4 --sheets ../output/sheets/s1
   python3 film.py --all --out ../output/preview/stickfight.mp4 --res 1920x1080
+  python3 film.py --film doom --all --out /tmp/doom.mp4          (DOOM vs SPIDER-MAN)
 """
 import argparse
 import importlib
@@ -14,8 +15,17 @@ from PIL import Image, ImageDraw, ImageFont
 
 from scene import Renderer, encode
 
-SEQUENCES = ['s1', 's2', 's3', 's4']
-MODULES = {'s1': 'seq01', 's2': 'seq02', 's3': 'seq03', 's4': 'seq04'}
+FILMS = {
+    'furnace': dict(seqs=['s1', 's2', 's3', 's4'],
+                    modules={'s1': 'seq01', 's2': 'seq02', 's3': 'seq03', 's4': 'seq04'},
+                    panels='storyboard_frames', title='FURNACE & TIDE'),
+    'doom': dict(seqs=['d1', 'd2', 'd3', 'd4'],
+                 modules={'d1': 'dv01', 'd2': 'dv02', 'd3': 'dv03', 'd4': 'dv04'},
+                 panels='dv_storyboard', title='DOOM vs SPIDER-MAN'),
+}
+FILM = FILMS['furnace']
+SEQUENCES = FILM['seqs']
+MODULES = FILM['modules']
 
 
 def load(name):
@@ -56,7 +66,7 @@ class SheetWriter:
 
 
 def storyboard_pages(d, cols=4, tw=480):
-    from storyboard_frames import PANELS
+    PANELS = importlib.import_module(FILM['panels']).PANELS
     th = tw * 9 // 16
     font = ImageFont.truetype('/usr/share/fonts/opentype/inter/Inter-Regular.otf', 17)
     bold = ImageFont.truetype('/usr/share/fonts/opentype/inter/Inter-Bold.otf', 30)
@@ -66,7 +76,7 @@ def storyboard_pages(d, cols=4, tw=480):
         rows = (len(chunk) + cols - 1) // cols
         im = Image.new('RGB', (cols * (tw + 20) + 20, rows * (th + 64) + 80), (24, 23, 30))
         dr = ImageDraw.Draw(im)
-        dr.text((20, 22), f'FURNACE & TIDE  storyboard  {page // per + 1}', fill=(236, 230, 216), font=bold)
+        dr.text((20, 22), f'{FILM["title"]}  storyboard  {page // per + 1}', fill=(236, 230, 216), font=bold)
         for i, (s, fa, cap) in enumerate(chunk):
             r, c = divmod(i, cols)
             x, y = 20 + c * (tw + 20), 80 + r * (th + 64)
@@ -79,7 +89,9 @@ def storyboard_pages(d, cols=4, tw=480):
 
 
 def main():
+    global FILM, SEQUENCES, MODULES
     ap = argparse.ArgumentParser()
+    ap.add_argument('--film', default='furnace', choices=sorted(FILMS))
     ap.add_argument('--seq', nargs='*', default=[])
     ap.add_argument('--all', action='store_true')
     ap.add_argument('--res', default='1280x720')
@@ -91,6 +103,8 @@ def main():
     ap.add_argument('--log', default=None, help='write the per-render-frame timeline CSV here')
     ap.add_argument('--storyboard', default=None, help='write storyboard panels (PNG + SVG) here')
     args = ap.parse_args()
+    FILM = FILMS[args.film]
+    SEQUENCES, MODULES = FILM['seqs'], FILM['modules']
     W, H = map(int, args.res.split('x'))
     names = SEQUENCES if args.all else args.seq
     R = Renderer(W, H, debug=args.debug)
@@ -119,7 +133,7 @@ def main():
                 lo, hi = map(int, args.range.split(':'))
             svg_out = {}
             if args.storyboard:
-                from storyboard_frames import PANELS
+                PANELS = importlib.import_module(FILM['panels']).PANELS
                 os.makedirs(os.path.join(args.storyboard, 'svg'), exist_ok=True)
                 os.makedirs(os.path.join(args.storyboard, 'panels'), exist_ok=True)
                 for sname, fa, cap in PANELS:

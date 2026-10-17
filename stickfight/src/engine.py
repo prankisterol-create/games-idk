@@ -88,7 +88,8 @@ class Track:
         return self
 
     def path(self, f0, f1, fn):
-        """Override the root (hip) position with fn(f) -> (x, y) for f0 <= f <= f1."""
+        """Override the root (hip) position with fn(f) -> (x, y) for f0 <= f <= f1
+        (or fn(f) -> dict of parameters to override)."""
         self.paths.append((f0, f1, fn))
         return self
 
@@ -214,7 +215,11 @@ class Track:
         p = self._raw(f)
         for f0, f1, fn in self.paths:
             if f0 <= f <= f1:
-                p['x'], p['y'] = fn(f)
+                r = fn(f)
+                if isinstance(r, dict):
+                    p.update(r)          # a path may also drive other parameters (e.g. rot on a swing)
+                else:
+                    p['x'], p['y'] = r
         for f0, f1, params, lag in self.lags:
             if f0 <= f < f1:
                 q = self._raw(f - lag)
@@ -328,6 +333,8 @@ class Chain:
 
 
 def chains_for_build(build):
+    if build.chains:
+        return build.chains()
     if build.trait == 'headband':
         return [(Chain(7, 0.05, gravity=0.55, drag=0.84, trail=2.2), 0.05, 0.024, build.accent),
                 (Chain(6, 0.048, gravity=0.7, drag=0.82, trail=1.6), 0.045, 0.02, build.accent)]

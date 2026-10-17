@@ -35,6 +35,11 @@ class FX:
         self.flash = 0.0          # screen flash level
         self.flash_col = (1, 1, 1)
         self.rnd = random.Random(seed)
+        self.items = []           # self-contained effects: .step() -> alive, .draw(ctx, px)
+
+    def add(self, item):
+        self.items.append(item)
+        return item
 
     # ------------------------------------------------------------ spawners
     def sparks(self, x, y, dirx, diry, n=18, speed=9.0, spread=0.9, life=(5, 11)):
@@ -47,7 +52,7 @@ class FX:
                                     life=R.randint(*life), col=R.choice(HOT), g=4.0, drag=0.86,
                                     w=R.uniform(0.012, 0.026)))
 
-    def dust(self, x, y=0.04, n=8, dirx=0.0, speed=1.5, size=0.16, life=(10, 20), up=0.6, alpha=0.5):
+    def dust(self, x, y=0.04, n=8, dirx=0.0, speed=1.5, size=0.16, life=(10, 20), up=0.6, alpha=0.5, col=DUST):
         """Low, flat puffs that spread and dissipate quickly."""
         R = self.rnd
         n = max(1, int(round(n * 0.7)))
@@ -55,7 +60,7 @@ class FX:
             self.ps.append(Particle('dust', x + R.uniform(-0.12, 0.12), y + R.uniform(0, 0.05),
                                     dirx * speed * R.uniform(0.4, 1.1) + R.uniform(-0.5, 0.5),
                                     up * R.uniform(0.15, 0.8), life=R.randint(*life),
-                                    r=size * R.uniform(0.45, 0.9), grow=size * 0.16, col=DUST,
+                                    r=size * R.uniform(0.45, 0.9), grow=size * 0.16, col=col,
                                     alpha=alpha * 0.42 * R.uniform(0.6, 1.0), drag=0.86, squash=0.62))
 
     def debris(self, x, n=10, speed=4.0, up=5.0):
@@ -139,6 +144,7 @@ class FX:
         for g in self.ghosts:
             g[2] += 1
         self.ghosts = [g for g in self.ghosts if g[2] < g[3]]
+        self.items = [it for it in self.items if it.step()]
         self.flash *= 0.35
 
     # ------------------------------------------------------------ drawing
@@ -287,6 +293,8 @@ class FX:
                 ctx.move_to(p.x, p.y)
                 ctx.line_to(p.x + (p.r if p.vx > 0 else -p.r), p.y)
                 ctx.stroke()
+        for it in self.items:
+            it.draw(ctx, px)
 
 
 # ---------------------------------------------------------------- smears
