@@ -48,8 +48,8 @@ MESA_MID_PTS = _ridge(11, -40, 40, HZ - 0.15, 0.35, 0.7)
 _R = random.Random(5)
 GROUND_MARKS = [(_R.uniform(-40, 40), _R.uniform(0.15, 1.9), _R.uniform(0.3, 2.2)) for _ in range(520)]
 PEBBLES = [(_R.uniform(-40, 40), _R.uniform(0.7, 2.4), _R.uniform(0.012, 0.035)) for _ in range(160)]
-CLOUDS = [(_R.uniform(-30, 30), _R.uniform(HZ + 0.9, HZ + 2.6), _R.uniform(1.5, 5.0), _R.uniform(0.04, 0.12))
-          for _ in range(26)]
+CLOUDS = [(_R.uniform(-30, 30), _R.uniform(HZ + 0.9, HZ + 2.6), _R.uniform(1.5, 5.0), _R.uniform(0.03, 0.08))
+          for _ in range(20)]
 
 
 class Actor:
@@ -82,6 +82,8 @@ class Sequence:
         self.cam_follow = None
         self.sound = []             # (anim frame, kind, gain) cues for the audio pass
         self.notes = {}             # anim frame -> annotation (timeline doc)
+        self.glow = {}              # actor name -> fn(anim frame) eye-glow intensity
+        self.depth = []             # (f0, f1, actor, amount) atmospheric tint when passing behind
 
     def wind_at(self, a):
         return self.wind(a) if callable(self.wind) else self.wind
@@ -163,7 +165,7 @@ class Renderer:
         z = H0 / cam['h']
         s = (H / H0) * z ** d
         ctx.identity_matrix()
-        ctx.translate(W / 2 + cam['sx'] * H / cam['h'], H / 2 + cam['sy'] * H / cam['h'])
+        ctx.translate(W / 2 + cam['sx'] * H / cam['h'], H / 2 + cam['sy'] * H / cam['h'] + cam['tilt'] * H)
         ctx.rotate(cam['rot'] * math.pi / 180 * d)
         ctx.scale(s, -s)
         ctx.translate(-cam['cx'] * d, -(cam['cy'] * d + YC * (1 - d)))
@@ -171,7 +173,7 @@ class Renderer:
 
     def horizon_y(self, cam):
         W, H = self.W, self.H
-        return H / 2 - (H / H0) * (HZ - YC) + cam['sy'] * H / cam['h']
+        return H / 2 - (H / H0) * (HZ - YC) + cam['sy'] * H / cam['h'] + cam['tilt'] * H
 
     # background ------------------------------------------------------------
     def draw_bg(self, ctx, cam, t):
@@ -188,7 +190,7 @@ class Renderer:
         ctx.fill()
         # moon
         self.layer(ctx, cam, 0.015)
-        mx, my, mr = 2.7, YC + 1.42, 0.42
+        mx, my, mr = cam['moon_x'], YC + cam['moon_dy'], cam['moon_r']
         g = cairo.RadialGradient(mx, my, mr * 0.9, mx, my, mr * 4)
         g.add_color_stop_rgba(0, *MOON, 0.22)
         g.add_color_stop_rgba(1, *MOON, 0)
@@ -208,7 +210,7 @@ class Renderer:
             x = ((cx + t * 0.06 + 30) % 60) - 30
             g = cairo.LinearGradient(x - w, 0, x + w, 0)
             g.add_color_stop_rgba(0, 0.36, 0.33, 0.45, 0)
-            g.add_color_stop_rgba(0.5, 0.36, 0.33, 0.45, 0.35)
+            g.add_color_stop_rgba(0.5, 0.36, 0.33, 0.45, 0.16)
             g.add_color_stop_rgba(1, 0.36, 0.33, 0.45, 0)
             ctx.set_source(g)
             ctx.save()
@@ -412,7 +414,17 @@ class Renderer:
                 if not stop:
                     for limbs, strength in act.smears:
                         draw_smear(ctx, act.b, act.prev_pose, act.pose, limbs, strength)
-                draw_figure(ctx, act.J, chains=chains[act.track.name])
+                g = seq.glow.get(act.track.name)
+                tint = 0.0
+                for d0, d1, nm, amt in seq.depth:
+                    if nm == act.track.name and d0 <= a < d1:
+                        u = (a - d0) / max(1, d1 - d0)
+                        tint = amt * min(1.0, 4 * u, 4 * (1 - u))
+                haze = (0.24, 0.21, 0.30)
+                near = tuple(lerp(c_, h_, tint) for c_, h_ in zip(act.b.near, haze))
+                far = tuple(lerp(c_, h_, tint) for c_, h_ in zip(act.b.far, haze))
+                draw_figure(ctx, act.J, chains=chains[act.track.name], eye_glow=g(a) if g else 1.0,
+                            near=near, far=far)
             if not impact:
                 self.draw_pebbles(ctx, cam)
             self.layer(ctx, cam, 1.0)

@@ -47,14 +47,16 @@ class FX:
                                     life=R.randint(*life), col=R.choice(HOT), g=4.0, drag=0.86,
                                     w=R.uniform(0.012, 0.026)))
 
-    def dust(self, x, y=0.04, n=8, dirx=0.0, speed=1.5, size=0.16, life=(14, 26), up=0.6, alpha=0.5):
+    def dust(self, x, y=0.04, n=8, dirx=0.0, speed=1.5, size=0.16, life=(10, 20), up=0.6, alpha=0.5):
+        """Low, flat puffs that spread and dissipate quickly."""
         R = self.rnd
+        n = max(1, int(round(n * 0.7)))
         for _ in range(n):
-            self.ps.append(Particle('dust', x + R.uniform(-0.1, 0.1), y + R.uniform(0, 0.06),
-                                    dirx * speed * R.uniform(0.3, 1.0) + R.uniform(-0.4, 0.4),
-                                    up * R.uniform(0.2, 1.0), life=R.randint(*life),
-                                    r=size * R.uniform(0.5, 1.0), grow=size * 0.09, col=DUST,
-                                    alpha=alpha * 0.6 * R.uniform(0.6, 1.0), drag=0.88))
+            self.ps.append(Particle('dust', x + R.uniform(-0.12, 0.12), y + R.uniform(0, 0.05),
+                                    dirx * speed * R.uniform(0.4, 1.1) + R.uniform(-0.5, 0.5),
+                                    up * R.uniform(0.15, 0.8), life=R.randint(*life),
+                                    r=size * R.uniform(0.45, 0.9), grow=size * 0.16, col=DUST,
+                                    alpha=alpha * 0.42 * R.uniform(0.6, 1.0), drag=0.86, squash=0.62))
 
     def debris(self, x, n=10, speed=4.0, up=5.0):
         R = self.rnd
@@ -95,6 +97,18 @@ class FX:
             self.ps.append(Particle('line', x - dirx * R.uniform(0.2, 1.0), y + R.uniform(-spread, spread),
                                     -dirx * 4, 0, life=life, r=length * R.uniform(0.5, 1.0),
                                     col=(1, 1, 1), alpha=R.uniform(0.25, 0.55), w=R.uniform(0.008, 0.018)))
+
+    def embers(self, J, n=2, heat=1.0):
+        """KAI's signature: sparks of heat lifting off the body."""
+        R = self.rnd
+        pts = [J.hip, J.chest, J.head, J.hand_n, J.hand_f, J.elbow_n, J.knee_n]
+        for _ in range(n):
+            x, y = R.choice(pts)
+            self.ps.append(Particle('ember', x + R.uniform(-0.08, 0.08), y + R.uniform(-0.08, 0.08),
+                                    R.uniform(-0.25, 0.25), R.uniform(0.5, 1.4) * heat, life=R.randint(12, 26),
+                                    r=R.uniform(0.008, 0.02) * (0.8 + 0.4 * heat),
+                                    col=R.choice([(1.0, 0.75, 0.3), (1.0, 0.55, 0.2), (1.0, 0.9, 0.6)]),
+                                    g=-0.02, drag=0.97))
 
     def ghost(self, J, col, life=6, alpha=0.45):
         self.ghosts.append([J, col, 0, life, alpha])
@@ -175,15 +189,19 @@ class FX:
                 ctx.line_to(p.x - p.vx * 0.022, p.y - p.vy * 0.022)
                 ctx.stroke()
             elif p.kind == 'dust':
-                r = p.r + p.grow * p.age
-                a = p.alpha * (1 - t) ** 1.3
-                g = cairo.RadialGradient(p.x, p.y, 0, p.x, p.y, r)
+                r = p.r + p.grow * p.age * (1 - 0.5 * t)
+                a = p.alpha * (1 - t) ** 1.6
+                ctx.save()
+                ctx.translate(p.x, p.y)
+                ctx.scale(1.0, p.squash)
+                g = cairo.RadialGradient(0, 0, 0, 0, 0, r)
                 g.add_color_stop_rgba(0, *p.col, a)
-                g.add_color_stop_rgba(0.55, *p.col, a * 0.85)
+                g.add_color_stop_rgba(0.45, *p.col, a * 0.7)
                 g.add_color_stop_rgba(1, *p.col, 0)
                 ctx.set_source(g)
-                ctx.arc(p.x, p.y, r, 0, 2 * math.pi)
+                ctx.arc(0, 0, r, 0, 2 * math.pi)
                 ctx.fill()
+                ctx.restore()
             elif p.kind == 'debris':
                 ctx.save()
                 ctx.translate(p.x, p.y)
@@ -235,6 +253,17 @@ class FX:
                 ctx.set_source(g)
                 ctx.rectangle(p.x - p.r, p.y - p.w * a / 2, 2 * p.r, p.w * a)
                 ctx.fill()
+            elif p.kind == 'ember':
+                fl = 0.6 + 0.4 * math.sin(p.age * 1.7 + p.rot * 5)
+                a = (1 - t) * fl
+                g = cairo.RadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 3)
+                g.add_color_stop_rgba(0, *p.col, a)
+                g.add_color_stop_rgba(0.35, *p.col, a * 0.6)
+                g.add_color_stop_rgba(1, *p.col, 0)
+                ctx.set_source(g)
+                ctx.arc(p.x, p.y, p.r * 3, 0, 2 * math.pi)
+                ctx.fill()
+                p.vx += math.sin(p.age * 0.5 + p.rot) * 0.03
             elif p.kind == 'glint':
                 k = math.sin(math.pi * min(1.0, t * 1.4))
                 r = p.r * (0.4 + 0.8 * k)
@@ -272,14 +301,20 @@ def lerp_pose(a, b, t):
     return out
 
 
-def draw_smear(ctx, build, prev_pose, cur_pose, limbs, strength=1.0, steps=16):
+def draw_smear(ctx, build, prev_pose, cur_pose, limbs, strength=1.0, steps=None):
     """Fill the arc a limb swept between the previous drawing and this one.
 
     The swept copies are interpolated in joint-angle space, so the smear
     follows the real arc of the strike, then composited semi-transparent
-    *behind* the opaque current drawing."""
+    *behind* the opaque current drawing. The number of copies scales with
+    how far the limb's end travelled, so long sweeps stay solid."""
     if prev_pose is None or prev_pose.get('face') != cur_pose.get('face'):
         return
+    J0, J1 = solve(build, prev_pose), solve(build, cur_pose)
+    ends = {'an': 'hand_n', 'af': 'hand_f', 'ln': 'toe_n', 'lf': 'toe_f'}
+    travel = max([math.dist(getattr(J0, ends[l]), getattr(J1, ends[l])) for l in limbs if l in ends] + [0.2])
+    if steps is None:
+        steps = int(min(64, max(12, travel / (build.w_wrist * 0.35))))
     ctx.push_group()
     for i in range(steps):
         t = i / steps
@@ -287,7 +322,6 @@ def draw_smear(ctx, build, prev_pose, cur_pose, limbs, strength=1.0, steps=16):
         J = solve(build, p)
         a = (0.15 + 0.85 * t) ** 1.6
         ctx.push_group()
-        col = build.near
         for limb in limbs:
             if limb == 'an':
                 ctx.set_source_rgb(*build.near)
@@ -304,6 +338,6 @@ def draw_smear(ctx, build, prev_pose, cur_pose, limbs, strength=1.0, steps=16):
             elif limb == 'body':
                 draw_figure(ctx, J, style='flat', near=build.near)
         ctx.pop_group_to_source()
-        ctx.paint_with_alpha(a * 0.32)
+        ctx.paint_with_alpha(min(1.0, a * 0.32 * 16.0 / steps * 1.6))
     ctx.pop_group_to_source()
     ctx.paint_with_alpha(min(1.0, 0.95 * strength))

@@ -61,6 +61,7 @@ class Track:
         self.lags = []
         self.twos = []
         self.smears = []
+        self.paths = []
         self._prepared = False
 
     def key(self, f, p, ease='smooth', lock=(), hands=(), jump=None, xease=None, label=None):
@@ -85,6 +86,11 @@ class Track:
         self.twos.append((f0, f1))
         return self
 
+    def path(self, f0, f1, fn):
+        """Override the root (hip) position with fn(f) -> (x, y) for f0 <= f <= f1."""
+        self.paths.append((f0, f1, fn))
+        return self
+
     def smear(self, f0, f1, limbs, strength=1.0):
         self.smears.append((f0, f1, tuple(limbs), strength))
         return self
@@ -93,6 +99,17 @@ class Track:
     def prepare(self):
         self.keys.sort(key=lambda k: k['f'])
         b = self.b
+        # unwrap whole-body rotation so a flip keyed in <180 steps never spins back
+        prev = None
+        for k in self.keys:
+            r = k['p'].get('rot', 0.0)
+            if prev is not None:
+                while r - prev > 180:
+                    r -= 360
+                while r - prev < -180:
+                    r += 360
+            k['p']['rot'] = r
+            prev = r
         # pins: a run of consecutive keys that lock a foot shares the first key's ankle position
         for side in ('n', 'f'):
             pin = None
@@ -176,6 +193,9 @@ class Track:
     def eval(self, f):
         f = self.sample_frame(f)
         p = self._raw(f)
+        for f0, f1, fn in self.paths:
+            if f0 <= f <= f1:
+                p['x'], p['y'] = fn(f)
         for f0, f1, params, lag in self.lags:
             if f0 <= f < f1:
                 q = self._raw(f - lag)
@@ -199,7 +219,7 @@ class CamTrack:
     """Camera keys: cx, cy (world centre), h (view height in m), rot (deg),
     fw (follow weight toward the fighters' smoothed midpoint), ox (offset)."""
 
-    DEF = dict(cx=0.0, cy=1.0, h=4.6, rot=0.0, fw=0.0, ox=0.0, oy=0.0)
+    DEF = dict(cx=0.0, cy=1.0, h=4.6, rot=0.0, fw=0.0, ox=0.0, oy=0.0, moon_r=0.42, moon_x=2.7, moon_dy=1.42, tilt=0.0)
 
     def __init__(self):
         self.keys = []
@@ -317,3 +337,14 @@ class Shake:
                 sx += amp * decay * (sign * dx * 0.8 + rnd.uniform(-0.4, 0.4))
                 sy += amp * decay * (sign * dy * 0.8 + rnd.uniform(-0.4, 0.4))
         return sx, sy
+
+
+def arc(f0, f1, p0, p1, height, hang=2.4):
+    """Stylised ballistic arc between two root positions: linear travel, a
+    vertical profile with a flattened top (hang time) controlled by `hang`."""
+    def fn(f):
+        u = (f - f0) / float(f1 - f0)
+        u = max(0.0, min(1.0, u))
+        y = lerp(p0[1], p1[1], u) + height * (1 - abs(2 * u - 1) ** hang)
+        return lerp(p0[0], p1[0], u), y
+    return fn

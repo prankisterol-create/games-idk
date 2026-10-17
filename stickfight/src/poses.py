@@ -109,6 +109,40 @@ K['bf_ext'] = grounded(KAI, 0.80, -0.42, 0.32, lean=8, bend=0, head=0,
                        an=40, en=130, af=96, ef=6)
 K['bf_follow'] = grounded(KAI, 0.76, -0.46, 0.36, lean=22, bend=8, head=4,
                           an=20, en=120, af=118, ef=14)
+# stalking / low kick / jab / stumble (sequence 2) --------------------------
+K['stalk'] = grounded(KAI, 0.74, 0.26, -0.38, lean=18, bend=14, head=12,
+                      an=56, en=100, af=34, ef=144)
+K['lk_chamber'] = grounded(KAI, 0.82, 0.08, None, lean=-4, bend=4, head=8,
+                           an=70, en=74, af=-26, ef=96, lf=24, kf=66, pf=0.6)
+K['lk_ext'] = grounded(KAI, 0.84, 0.06, None, lean=-18, bend=0, head=12,
+                       an=84, en=58, af=-62, ef=60, lf=62, kf=4, pf=0.3)
+K['jab_antic'] = grounded(KAI, 0.74, 0.30, -0.40, lean=16, bend=12, head=12,
+                          an=44, en=112, af=34, ef=144)
+K['jab_ext'] = grounded(KAI, 0.76, 0.36, -0.42, lean=24, bend=4, head=8,
+                        an=99, en=3, af=36, ef=146, san=1.04)
+K['stumble_a'] = airborne(KAI, 0.84, lean=56, bend=10, head=-22, an=100, en=40, af=-56, ef=30,
+                          ln=52, kn=70, lf=-36, kf=60, pn=0.4, pf=0.8)
+K['stumble_b'] = grounded(KAI, 0.70, 0.42, -0.34, lean=50, bend=16, head=-12,
+                          an=84, en=34, af=124, ef=34)
+K['catch'] = grounded(KAI, 0.58, 0.52, -0.34, lean=56, bend=24, head=-8,
+                      an=80, en=10, af=40, ef=110)
+# leaping axe kick / hop / hammer fist / knee (sequence 3) -----------------
+K['takeoff'] = grounded(KAI, 0.92, None, -0.30, lean=24, bend=-4, head=-10,
+                        an=150, en=40, af=120, ef=50, ln=95, kn=110, pn=0.6, pf=0.9)
+K['air_rise'] = airborne(KAI, 1.6, lean=6, bend=6, head=-4, an=150, en=50, af=110, ef=70,
+                         ln=110, kn=130, lf=-30, kf=90, pn=0.6, pf=0.9)
+K['axe_air'] = airborne(KAI, 2.0, lean=-26, bend=-6, head=-8, an=100, en=20, af=-80, ef=30,
+                        ln=178, kn=2, lf=10, kf=110, pn=0.2, pf=0.8)
+K['axe_drop'] = airborne(KAI, 1.5, lean=20, bend=14, head=10, an=60, en=50, af=-40, ef=60,
+                         ln=80, kn=4, lf=-20, kf=60, pn=0.0, pf=0.7)
+K['hop_tuck'] = airborne(KAI, 1.15, lean=14, bend=10, head=4, an=60, en=100, af=40, ef=120,
+                         ln=95, kn=125, lf=70, kf=130, pn=0.6, pf=0.6)
+K['hammer_up'] = airborne(KAI, 1.2, lean=-8, bend=-6, head=-6, an=60, en=90, af=200, ef=30,
+                          ln=80, kn=110, lf=30, kf=100, pn=0.5, pf=0.5)
+K['hammer_down'] = airborne(KAI, 1.05, lean=34, bend=18, head=20, an=30, en=100, af=95, ef=12,
+                            ln=50, kn=70, lf=-10, kf=80, pn=0.4, pf=0.5)
+K['knee_up'] = grounded(KAI, 0.98, None, -0.20, lean=-14, bend=-8, head=6, pf=0.9,
+                        an=40, en=40, af=20, ef=50, ln=118, kn=140, pn=0.8)
 # reactions ---------------------------------------------------------------
 K['hit_body'] = grounded(KAI, 0.72, 0.28, -0.24, lean=-6, bend=32, head=30,
                          an=20, en=110, af=-20, ef=90)
@@ -167,6 +201,32 @@ S['check'] = grounded(SEN, 0.92, None, -0.10, lean=-6, bend=12, head=8,
 # backward glide (the tide going out) -------------------------------------------
 S['glide'] = grounded(SEN, 0.72, 0.34, -0.44, lean=12, bend=10, head=2, pn=0.2,
                       an=70, en=64, af=6, ef=112, hn='open', hf='open')
+# sequence 2 defence --------------------------------------------------------------
+S['hop'] = airborne(SEN, 1.02, lean=-14, bend=-6, head=-10, an=150, en=30, af=-100, ef=30,
+                    ln=64, kn=96, lf=-8, kf=34, pn=0.3, pf=0.7, hn='open', hf='open')
+S['parry_n'] = grounded(SEN, 0.86, 0.22, -0.36, lean=-8, bend=4, head=-4,
+                        an=114, en=36, af=30, ef=110, hn='open', hf='open')
+S['parry_f'] = grounded(SEN, 0.86, 0.22, -0.36, lean=-8, bend=4, head=-4,
+                        an=58, en=84, af=110, ef=36, hn='open', hf='open')
+S['redirect'] = grounded(SEN, 0.62, 0.40, -0.32, lean=40, bend=20, head=-18,
+                         an=132, en=18, af=18, ef=100, hn='open', hf='open')
+S['palm_push'] = grounded(SEN, 0.80, 0.40, -0.52, lean=22, bend=-4, head=0,
+                          an=86, en=10, af=80, ef=20, hn='open', hf='open')
+# sequence 3 evasions -------------------------------------------------------------
+S['roll_sit'] = grounded(SEN, 0.32, 0.50, 0.20, lean=-20, bend=30, head=30,
+                         an=60, en=90, af=40, ef=100, hn='open', hf='open')
+S['roll_tuck'] = airborne(SEN, 0.40, lean=30, bend=40, head=34, an=70, en=120, af=50, ef=120,
+                          ln=130, kn=150, lf=120, kf=150, pn=0.8, pf=0.8, hn='open', hf='open')
+S['sweep_fwd'] = grounded(SEN, 0.36, None, -0.10, lean=-10, bend=14, head=0,
+                          an=-60, en=20, af=-80, ef=10, ln=86, kn=0, pn=0.8, hn='open', hf='open')
+S['sweep_wind'] = grounded(SEN, 0.40, 0.30, -0.30, lean=30, bend=24, head=-12,
+                           an=40, en=20, af=-20, ef=30, hn='open', hf='open')
+S['xblock'] = grounded(SEN, 0.48, 0.46, None, lean=10, bend=14, head=14,
+                       an=158, en=58, af=166, ef=48, lf=-70, kf=140, hn='fist', hf='fist')
+S['flip_antic'] = grounded(SEN, 0.58, 0.20, -0.20, lean=34, bend=20, head=-6,
+                           an=-60, en=20, af=-70, ef=20, hn='open', hf='open')
+S['flip_launch'] = airborne(SEN, 1.25, lean=-40, bend=-24, head=-30, an=190, en=10, af=180, ef=20,
+                            ln=0, kn=10, lf=-6, kf=8, pn=1, pf=1, hn='open', hf='open')
 # landing / recovery ---------------------------------------------------------
 S['land'] = grounded(SEN, 0.50, 0.36, -0.40, lean=34, bend=24, head=-10,
                      an=80, en=30, af=-60, ef=40, hn='open', hf='open')

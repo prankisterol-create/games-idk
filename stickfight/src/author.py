@@ -83,3 +83,23 @@ def bounce(track, f0, f1, low, high, period=12, lock='nf'):
         f += period // 2
         i += 1
     track.on_twos(f0, f1)
+
+
+def stance_at(build, base, front_x, rear_x, face=1, frac=0.55, dy=0.0, front='n', **over):
+    """Grounded drawing whose feet sit exactly on world x positions."""
+    from rig import plant_leg
+    q = dict(base)
+    q.update(over)
+    q['face'] = face
+    q['x'] = rear_x + (front_x - rear_x) * frac
+    q['y'] = (base['y'] if base['y'] is not None else 0.9) + dy
+    rear = 'f' if front == 'n' else 'n'
+    q = plant_leg(build, q, front, (front_x, build.w_ankle * 0.5))
+    q = plant_leg(build, q, rear, (rear_x, build.w_ankle * 0.5))
+    return q
+
+
+def lifted(build, p, side, x, h=0.12):
+    """Put one foot in the air at world (x, h) (a stepping foot)."""
+    from rig import plant_leg
+    return plant_leg(build, p, side, (x, h))
