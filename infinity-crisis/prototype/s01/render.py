@@ -1734,7 +1734,7 @@ def S01_180(t, d):
 
 # ------------------------------------------------------------------ assembly
 
-def post(img, sid, t, frame_no):
+def post(img, sid, t, frame_no, captions=None, label=None):
     img = np.clip(img, 0, None)
     img = 1 - np.exp(-img * 1.35)                                   # filmic shoulder
     X, Y = grid()
@@ -1744,14 +1744,14 @@ def post(img, sid, t, frame_no):
     gr = r.normal(0, 0.012, (H // 2 + 1, W // 2 + 1)).astype(np.float32)
     img += np.repeat(np.repeat(gr, 2, 0), 2, 1)[:H, :W, None]
     s, ctx = surface()
-    for (a, b, text) in CAPTIONS.get(sid, []):
+    for (a, b, text) in (CAPTIONS if captions is None else captions).get(sid, []):
         if a <= t < b:
             al = min(1, (t - a) / 0.15, (b - t) / 0.15)
             caption(ctx, text, al)
     ctx.select_font_face('Inter', cairo.FONT_SLANT_NORMAL, cairo.FONT_WEIGHT_NORMAL)
     ctx.set_font_size(15 * S)
     ctx.set_source_rgba(1, 1, 1, 0.38)
-    label = 'INFINITY CRISIS  S01 PREVIS PROTOTYPE  %s' % sid
+    label = label or 'INFINITY CRISIS  S01 PREVIS PROTOTYPE  %s' % sid
     ext = ctx.text_extents(label)
     ctx.move_to(W - ext.width - 24 * S, H / 2 + SCOPE * S / 2 - 18 * S)
     ctx.show_text(label)

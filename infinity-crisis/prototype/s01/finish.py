@@ -1,6 +1,6 @@
 """Mux picture + sound into the 16:9 and 2.39:1 deliverables and pull storyboard frames.
 
-    python3 finish.py picture_16x9.mp4 sound.wav
+    python3 finish.py picture_16x9.mp4 sound.wav [sequence_number]
 """
 import os
 import subprocess
@@ -12,14 +12,15 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, '..', '..', 'tools'))
 import common as C  # noqa: E402
 
-OUT = os.path.join(C.OUTPUT, 's01_prototype')
 
 
 def run(args):
     subprocess.run(args, check=True)
 
 
-def main(picture, sound):
+def main(picture, sound, n=1):
+    OUT = os.path.join(C.OUTPUT, 's%02d_prototype' % n)
+    tag = 's%02d' % n
     os.makedirs(os.path.join(OUT, 'storyboard'), exist_ok=True)
     # cinematic finishing: denoise, bloom, anamorphic streaks, slight chromatic fringe, grade
     grade = ("hqdn3d=1.5:1.5:3:3,format=gbrp,split=3[b][g][s];"
@@ -33,18 +34,18 @@ def main(picture, sound):
     enc = ['-c:v', 'libx264', '-preset', 'medium', '-crf', '22', '-maxrate', '4M', '-bufsize', '8M',
            '-c:a', 'aac', '-b:a', '256k', '-movflags', '+faststart', '-shortest']
     run(['ffmpeg', '-y', '-loglevel', 'error', '-i', picture, '-i', sound, '-vf', grade] + enc +
-        [os.path.join(OUT, 'infinity_crisis_s01_16x9_1920x1080.mp4')])
+        [os.path.join(OUT, 'infinity_crisis_%s_16x9_1920x1080.mp4' % tag)])
     run(['ffmpeg', '-y', '-loglevel', 'error', '-i', picture, '-i', sound, '-vf', 'crop=1920:804:0:138,' + grade] + enc +
-        [os.path.join(OUT, 'infinity_crisis_s01_scope_1920x804.mp4')])
-    seq = C.load_yaml(os.path.join(C.DATA, 'shots', 's01.yaml'))
+        [os.path.join(OUT, 'infinity_crisis_%s_scope_1920x804.mp4' % tag)])
+    seq = C.load_yaml(os.path.join(C.DATA, 'shots', '%s.yaml' % tag))
     t0, tiles = 0.0, []
     font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', 18)
     for shot in seq['shots']:
-        for tag, frac in (('a', 0.3), ('b', 0.8)):
+        for ab, frac in (('a', 0.3), ('b', 0.8)):
             t = t0 + shot['dur'] * frac
-            path = os.path.join(OUT, 'storyboard', '%s_%s.jpg' % (shot['id'], tag))
+            path = os.path.join(OUT, 'storyboard', '%s_%s.jpg' % (shot['id'], ab))
             run(['ffmpeg', '-y', '-loglevel', 'error', '-ss', '%.3f' % t, '-i',
-                 os.path.join(OUT, 'infinity_crisis_s01_16x9_1920x1080.mp4'), '-frames:v', '1',
+                 os.path.join(OUT, 'infinity_crisis_%s_16x9_1920x1080.mp4' % tag), '-frames:v', '1',
                  '-vf', 'crop=1920:804:0:138,scale=960:402', '-q:v', '3', path])
             tiles.append((shot, path))
         t0 += shot['dur']
@@ -61,4 +62,4 @@ def main(picture, sound):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1], sys.argv[2])
+    main(sys.argv[1], sys.argv[2], int(sys.argv[3]) if len(sys.argv) > 3 else 1)
