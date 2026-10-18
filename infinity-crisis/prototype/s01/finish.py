@@ -21,11 +21,12 @@ def run(args):
 
 def main(picture, sound):
     os.makedirs(os.path.join(OUT, 'storyboard'), exist_ok=True)
-    enc = ['-c:v', 'libx264', '-preset', 'slow', '-crf', '20', '-pix_fmt', 'yuv420p',
+    enc = ['-c:v', 'libx264', '-preset', 'medium', '-crf', '22', '-maxrate', '4M', '-bufsize', '8M',
+           '-vf', 'hqdn3d=1.5:1.5:3:3', '-pix_fmt', 'yuv420p',
            '-c:a', 'aac', '-b:a', '256k', '-movflags', '+faststart', '-shortest']
     run(['ffmpeg', '-y', '-loglevel', 'error', '-i', picture, '-i', sound] + enc +
         [os.path.join(OUT, 'infinity_crisis_s01_16x9_1920x1080.mp4')])
-    run(['ffmpeg', '-y', '-loglevel', 'error', '-i', picture, '-i', sound, '-vf', 'crop=1920:804:0:138'] + enc +
+    run(['ffmpeg', '-y', '-loglevel', 'error', '-i', picture, '-i', sound, ] + [a if a != 'hqdn3d=1.5:1.5:3:3' else 'crop=1920:804:0:138,hqdn3d=1.5:1.5:3:3' for a in enc] +
         [os.path.join(OUT, 'infinity_crisis_s01_scope_1920x804.mp4')])
     seq = C.load_yaml(os.path.join(C.DATA, 'shots', 's01.yaml'))
     t0, tiles = 0.0, []
