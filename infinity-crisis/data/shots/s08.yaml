@@ -1,0 +1,731 @@
+sequence: 8
+title: THE WAR FOR REALITY
+target: 103.5
+music: "8M1 'The War for Reality' (full orchestra, choir, tick motif as a metronome under everything; each movement keeps its team's colour; total silence at the strike)"
+purpose: >
+  The largest set piece, kept legible by geography: the Crown is up, the Root is down, the
+  Heart is in the middle, and Thanos's position is established in the first shot. Four
+  movements, each with a clear objective. Wide shots alternate with close character
+  decisions. Everything pays off on one beat of the count.
+locations: [ENGINE_EXT, RINGS, GAP, CROWN, ROOT_GATE, PASSAGE, CORRIDOR_T, HEART]
+shots:
+
+- id: S08_010
+  scene: "8.1"
+  title: The Eternity Engine
+  dur: 5.0
+  location: ENGINE_EXT
+  characters: [CAP, IRONMAN, THOR, HULK, STRANGE, SPIDEY, PANTHER, SUPERMAN, BATMAN, WW, FLASH, GL, AQUAMAN, CYBORG]
+  camera: Extreme wide, 40,000 km from the Engine, slightly below the ring plane.
+  lens: 35 mm.
+  movement: Very slow push.
+  framing: >
+    The shattered world lower third; the Engine above it filling two-thirds of frame; a
+    drifting rock lower left where the portal opens, the heroes a few pixels tall.
+  action: Strange's portal opens on a drifting rock; the heroes step through, dwarfed by everything.
+  lighting: Violet-white core light, cold starlight, rim on the rings.
+  environment: Rings turning slowly; floating rock; lightning tracing invisible geometric pathways.
+  vfx: Gravitational lensing of the star field around the core, ring rotation, path lightning.
+  sound: Vast low resonance; choir; total sense of space.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_020
+  scene: "8.1"
+  title: Thanos turns
+  dur: 3.0
+  location: HEART
+  characters: [THANOS, FLEET]
+  camera: Long lens into the violet sphere, 5 km from the dais.
+  lens: 300 mm.
+  movement: Locked, heat-haze shimmer.
+  framing: A vast figure on a dais at the mouth of the Heart, turning toward camera; fleet wheeling behind.
+  action: Thanos turns toward the intruders; the fleet wheels toward them.
+  lighting: Core backlight silhouetting him.
+  environment: Energy haze.
+  vfx: Haze, fleet motion.
+  sound: Thanos motif, one low statement.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_030
+  scene: "8.1"
+  title: On the count
+  dur: 3.5
+  location: ENGINE_EXT
+  characters: [CAP, STRANGE, BATMAN, WW, FLASH, SPIDEY]
+  camera: Medium-wide on the rock, 5 m, low.
+  lens: 35 mm.
+  movement: Slow arc.
+  framing: Heroes in a cluster, breath steaming; orange rings lighting around their wrists.
+  action: Steve calls it; Strange binds them to one count; Batman starts the clock.
+  lighting: Cold rim light, orange wrist rings.
+  environment: Breath steam, drifting grit.
+  vfx: Metronome Ward rings pulsing once.
+  sound: The soft tick enters and will not stop until S08_350.
+  dialogue:
+  - {who: STEVE, line: "On the count."}
+  - {who: BATMAN, line: "Clock starts now."}
+  transition: Cut on the first tick.
+
+- id: S08_040
+  scene: "8.2"
+  title: "First movement: through the rings"
+  dur: 3.0
+  location: RINGS
+  characters: [IRONMAN]
+  camera: Chase cam 6 m behind Iron Man.
+  lens: 24 mm.
+  movement: Fast follow through gaps between rotating rings.
+  framing: Iron Man centre; ring edges whipping past frame edges.
+  action: Iron Man threads the gaps between the rings at full burn; beams scythe past.
+  lighting: Warm repulsor against violet structure.
+  environment: Ring surfaces racing past.
+  vfx: Ring geometry, enemy beams.
+  sound: Repulsor scream, beam zips, tick under everything.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_050
+  scene: "8.2"
+  title: Heat vision assist
+  dur: 2.5
+  location: RINGS
+  characters: [SUPERMAN, IRONMAN]
+  camera: Wide, 200 m.
+  lens: 50 mm.
+  movement: Pan.
+  framing: Gunship locking onto Iron Man; Superman banking past frame right.
+  action: A gunship locks on; a line of heat vision cuts its cannon off at the root.
+  lighting: Red-white heat vision beam (thin, controlled).
+  environment: Cannon falling away.
+  vfx: Heat vision, cut glow.
+  sound: Heat vision sizzle, cut clank.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_060
+  scene: "8.2"
+  title: Thor's storm
+  dur: 3.0
+  location: RINGS
+  characters: [THOR, FLEET]
+  camera: Extreme wide, 3,000 km.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Thor small above the structure; lightning lacing every ring.
+  action: Thor raises Stormbreaker; a storm ignites across the void, lighting the entire Engine and silhouetting hundreds of ships.
+  lighting: Lightning flashes illuminating the structure.
+  environment: Storm clouds forming in the void.
+  vfx: Lightning network, fleet silhouettes.
+  sound: Thunder that fills the whole field; choir.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_070
+  scene: "8.3"
+  title: Lantern's bridge
+  dur: 2.5
+  location: GAP
+  characters: [GL, CAP, WW, HULK, AQUAMAN, PANTHER]
+  camera: Wide, side-on to the gap, 80 m.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Crack in space centre; Lantern above; Team Two charging onto the bridge from frame left.
+  action: A crack in space widens; Lantern throws a bridge across; Team Two charges onto it.
+  lighting: Green bridge light, void violet.
+  environment: Space crack widening.
+  vfx: Dimensional crack, construct bridge.
+  sound: Construct hum, footsteps on light.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_080
+  scene: "8.3"
+  title: Superman catches the ring segment
+  dur: 3.0
+  location: GAP
+  characters: [SUPERMAN, CAP, WW, HULK, AQUAMAN, PANTHER]
+  camera: Low on the bridge, looking up, 10 m.
+  lens: 24 mm.
+  movement: Tilt up.
+  framing: Team Two on the bridge in the foreground; falling segment above; Superman catching it.
+  action: A ring segment sheared off by the storm tumbles toward the bridge; Superman catches it, strains, and heaves it aside into the void.
+  lighting: Lightning, green bridge.
+  environment: Debris raining.
+  vfx: Ring segment, debris.
+  sound: Metal groan, strain, debris.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_090
+  scene: "8.4"
+  title: Mirror hulls
+  dur: 2.5
+  location: CROWN
+  characters: [IRONMAN, THOR]
+  camera: Medium, 15 m.
+  lens: 35 mm.
+  movement: Pan.
+  framing: Iron Man firing; mirrored gunship reflecting the blast back at him; Thor arriving.
+  action: The gunship's mirrored skin throws a repulsor blast straight back at Tony.
+  lighting: Reflected repulsor flash.
+  environment: Sparks.
+  vfx: Mirror-hull reflection.
+  sound: Blast and its ricochet.
+  dialogue:
+  - {who: TONY, line: "They're learning."}
+  - {who: THOR, line: "Then we teach faster."}
+  transition: Cut.
+
+- id: S08_100
+  scene: "8.4"
+  title: Crown exposed
+  dur: 3.0
+  location: CROWN
+  characters: [IRONMAN, THOR]
+  camera: Wide, 400 m.
+  lens: 35 mm.
+  movement: Slow push.
+  framing: Gunship screen crumbling; the Crown spire revealed at the summit of the highest ring.
+  action: Tony switches to kinetic rounds; Thor follows them in; the screen crumbles; the Crown stands exposed.
+  lighting: Crown pulsing violet.
+  environment: Wreckage falling away.
+  vfx: Kinetic rounds, gunship destruction, Crown reveal.
+  sound: Kinetic rounds (dry thuds), explosions.
+  dialogue:
+  - {who: TONY, line: "Crown's exposed!"}
+  transition: Cut.
+
+- id: S08_110
+  scene: "8.5"
+  title: "Second movement: the Root gate"
+  dur: 3.0
+  location: ROOT_GATE
+  characters: [CAP, WW, HULK, AQUAMAN, PANTHER, ASCENDANT_GUARD]
+  camera: Extreme wide, low, 600 m from the gate.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Gate 200 m high centre; Ascendant Guard ranks before it; Team Two arriving small at frame bottom.
+  action: Team Two arrives at the gate; the Guard turns.
+  lighting: Violet seams in the gate, cold rim.
+  environment: Dust from the dead world.
+  vfx: Gate scale, Guard ranks.
+  sound: Glaives igniting.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_120
+  scene: "8.5"
+  title: Steve and Diana vs the Guard
+  dur: 3.5
+  location: ROOT_GATE
+  characters: [CAP, WW, ASCENDANT_GUARD]
+  camera: Lateral tracking, 6 m.
+  lens: 35 mm.
+  movement: Lateral track with them.
+  framing: Steve and Diana moving left to right through the Guard.
+  action: Diana's lasso snaps around a glaive and yanks; Steve's shield breaks the guard's stance; Diana's sword finishes it; they move on without a word.
+  lighting: Glaive glow, lasso gold.
+  environment: Dust.
+  vfx: Lasso glow, glaive arcs.
+  sound: Lasso crack, shield clang, sword ring.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_130
+  scene: "8.5"
+  title: Hulk opens the gate
+  dur: 3.0
+  location: ROOT_GATE
+  characters: [HULK]
+  camera: Low, 8 m.
+  lens: 24 mm.
+  movement: Tilt up the seam.
+  framing: Hulk at the seam centre, gate towering.
+  action: Hulk sinks his fingers into the seam and pulls; metal shrieks; the gate splits.
+  lighting: Violet light spilling through the split.
+  environment: Metal fragments.
+  vfx: Gate tearing.
+  sound: Shriek of metal, roar.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_140
+  scene: "8.5"
+  title: Panther clears the breach
+  dur: 2.5
+  location: ROOT_GATE
+  characters: [PANTHER, ASCENDANT_GUARD]
+  camera: Behind Panther, 4 m.
+  lens: 28 mm.
+  movement: Locked; shake on release.
+  framing: Panther centre in the breach; cannon fire incoming.
+  action: The Guard's cannons open up; Panther drinks in the fire and throws it back as a purple shockwave.
+  lighting: Purple.
+  environment: Guards blown back.
+  vfx: Absorption, release ring.
+  sound: Hum, release.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_150
+  scene: "8.5"
+  title: Aquaman leads through
+  dur: 2.5
+  location: ROOT_GATE
+  characters: [AQUAMAN, CAP, WW, HULK, PANTHER]
+  camera: Wide inside the gate, 30 m.
+  lens: 24 mm.
+  movement: Push with the charge.
+  framing: Aquaman leading; the Root pillar rising beyond.
+  action: Aquaman charges through, trident spinning; the Root is revealed, a crystal pillar sunk into the dead world.
+  lighting: Root's violet-white glow.
+  environment: Crystal hum, dust.
+  vfx: Root crystal.
+  sound: Trident whirl, crystal hum.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_160
+  scene: "8.5"
+  title: Root's ours
+  dur: 2.5
+  location: ROOT_GATE
+  characters: [CAP, WW]
+  camera: Medium, 4 m.
+  lens: 40 mm.
+  movement: Locked.
+  framing: Steve calling it; Diana launching upward behind him.
+  action: Steve calls it; Diana leaps from the gate and flies up toward the Heart to join Superman.
+  lighting: Root glow.
+  environment: Dust.
+  vfx: Diana's launch.
+  sound: Team Two motif.
+  dialogue:
+  - {who: STEVE, line: "Root's ours!"}
+  transition: Cut.
+
+- id: S08_170
+  scene: "8.5"
+  title: Geography check
+  dur: 2.5
+  location: ENGINE_EXT
+  characters: []
+  camera: Wide cross-section view, 10,000 km.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Crown at the top (Team One flares), Root at the bottom (Team Two flare), Heart in the middle.
+  action: All three fronts visible at once; the audience knows where everyone is.
+  lighting: Team colors as distant flares.
+  environment: Rings turning.
+  vfx: Clean read of the three anchors.
+  sound: Tick prominent.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_180
+  scene: "8.6"
+  title: "Third movement: the passage"
+  dur: 3.0
+  location: PASSAGE
+  characters: [BATMAN, SPIDEY]
+  camera: Low inside the passage, 6 m.
+  lens: 24 mm.
+  movement: Slow push.
+  framing: Gear-rings the size of houses closing the way; Batman and Spider-Man small.
+  action: Batman and Spider-Man move through; the rotating machinery closes the path.
+  lighting: Violet seam light, Batman's lenses.
+  environment: Grinding gears, sparks.
+  vfx: Gear-ring machinery.
+  sound: Grinding, deep mechanical rhythm locked to the tick.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_190
+  scene: "8.6"
+  title: Webs in the gears
+  dur: 3.0
+  location: PASSAGE
+  characters: [SPIDEY, BATMAN]
+  camera: Medium, 4 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Spider-Man anchoring webs to a strut; the ring slowing; Batman slipping through.
+  action: Spider-Man fires lines onto a spinning ring and anchors them; the webs stretch, smoke and hold; Batman slips through.
+  lighting: Same.
+  environment: Smoking webs.
+  vfx: Web tension sim.
+  sound: Web strain creak.
+  dialogue:
+  - {who: SPIDEY, line: "Okay. Not trusting the tingle. Trusting the count."}
+  transition: Cut.
+
+- id: S08_200
+  scene: "8.6"
+  title: The way in
+  dur: 2.0
+  location: PASSAGE
+  characters: [BATMAN]
+  camera: Close, 1.5 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Batman scanning a control mechanism.
+  action: Batman identifies the control mechanism.
+  lighting: Scanner light.
+  environment: None.
+  vfx: Scan overlay.
+  sound: Scan tone.
+  dialogue:
+  - {who: BATMAN, line: "There. That's the way into the Heart."}
+  transition: Cut.
+
+- id: S08_210
+  scene: "8.7"
+  title: The collapsing corridor
+  dur: 3.0
+  location: CORRIDOR_T
+  characters: [FLASH]
+  camera: Tracking with the Flash, 3 m, time-sliced.
+  lens: 28 mm.
+  movement: Follows his zigzag.
+  framing: Flash centre; corridor sections repeating, hanging, jumping.
+  action: The Flash runs a corridor coming apart in time, zigzagging between fragments along a clean route.
+  lighting: Lightning trail, violet.
+  environment: Floor sections repeating and jumping.
+  vfx: Time-fragmented environment, readable lightning route.
+  sound: Speed crackle; stuttering environment sounds.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_220
+  scene: "8.7"
+  title: Fraying portals
+  dur: 2.5
+  location: CORRIDOR_T
+  characters: [STRANGE, FLASH]
+  camera: Medium, 4 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Strange opening a portal ahead of the Flash; its edges fraying.
+  action: Strange opens portals to keep the team connected; each one flickers more than the last.
+  lighting: Orange, flickering.
+  environment: Sparks shedding from portal edges.
+  vfx: Unstable portal rims.
+  sound: Portal crackle stuttering.
+  dialogue:
+  - {who: STRANGE, line: "The portals won't hold much longer."}
+  transition: Cut.
+
+- id: S08_230
+  scene: "8.7"
+  title: Cyborg finds the pulse
+  dur: 3.0
+  location: CORRIDOR_T
+  characters: [CYBORG]
+  camera: Close, 1.5 m.
+  lens: 50 mm.
+  movement: Slow push to his eye.
+  framing: Cyborg's arm in the control node; code flooding his eye.
+  action: Cyborg plugs into a control node and locks the carrier pulse.
+  lighting: Red eye, blue code.
+  environment: None.
+  vfx: Code in eye, node interface.
+  sound: Data surge locking to the tick.
+  dialogue:
+  - {who: CYBORG, line: "I've got the carrier pulse. Crown and Root on the zero. Heart in the same beat."}
+  transition: Cut.
+
+- id: S08_240
+  scene: "8.8"
+  title: "Fourth movement: the Heart"
+  dur: 3.0
+  location: HEART
+  characters: [THANOS]
+  camera: Extreme wide inside the spherical chamber, 2 km.
+  lens: 24 mm.
+  movement: Slow push.
+  framing: Core of white light in a churning purple shell centre; the dais and control platform tiny; clouds forming in the chamber.
+  action: The central anchor in its shell; Thanos on the dais at the chamber's mouth.
+  lighting: White core, purple shell.
+  environment: Clouds forming inside the chamber.
+  vfx: Energy shell, internal clouds.
+  sound: Core hum, choir.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_250
+  scene: "8.8"
+  title: Superman and Diana block him
+  dur: 2.5
+  location: HEART
+  characters: [THANOS, SUPERMAN, WW]
+  camera: Low wide, 15 m.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Thanos turning toward the platform frame right; Superman and Diana landing in front of him.
+  action: Thanos turns toward the control platform; Superman and Wonder Woman drop in front of him.
+  lighting: Core backlight.
+  environment: Dust from their landing.
+  vfx: Landings.
+  sound: Two landings, then quiet.
+  dialogue:
+  - {who: THANOS, line: "You cannot stop what has already begun."}
+  - {who: SUPERMAN, line: "Watch us."}
+  transition: Cut.
+
+- id: S08_260
+  scene: "8.8"
+  title: Holding him
+  dur: 3.0
+  location: HEART
+  characters: [THANOS, SUPERMAN, WW]
+  camera: Lateral, 10 m.
+  lens: 35 mm.
+  movement: Lateral track.
+  framing: Thanos centre; every time he turns toward the platform, one of them is in his way.
+  action: They engage; they don't try to beat him, only to block him.
+  lighting: Sparks, core light.
+  environment: Debris.
+  vfx: Impacts.
+  sound: Blows; tick.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_270
+  scene: "8.8"
+  title: Lantern braces the chamber
+  dur: 2.0
+  location: HEART
+  characters: [GL]
+  camera: Wide, 60 m.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Green girders bracing shaking supports.
+  action: Green Lantern braces the shaking chamber with girders of light.
+  lighting: Green.
+  environment: Supports shuddering.
+  vfx: Construct girders.
+  sound: Construct hum, structural groans.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_280
+  scene: "8.8"
+  title: Strange holds the pathway
+  dur: 2.0
+  location: HEART
+  characters: [STRANGE]
+  camera: Medium, 4 m, through the portal ring.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Strange holding a ring that shows the Crown on the other side.
+  action: Strange holds open a portal connecting the Heart to the Crown.
+  lighting: Orange ring, Crown violet beyond.
+  environment: Sparks.
+  vfx: Portal with view to the Crown.
+  sound: Portal hum.
+  dialogue: []
+  transition: Cut through the portal.
+
+- id: S08_290
+  scene: "8.8"
+  title: Conduits ready
+  dur: 2.5
+  location: CROWN
+  characters: [IRONMAN, THOR]
+  camera: Medium, 6 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Iron Man and Thor hovering over the conduits.
+  action: They hover over the conduits, charged.
+  lighting: Repulsors and lightning ready.
+  environment: Crown pulsing.
+  vfx: Charge glows.
+  sound: Charge whine rising.
+  dialogue:
+  - {who: TONY, line: "Conduits at a hundred and ten percent."}
+  transition: Cut.
+
+- id: S08_300
+  scene: "8.8"
+  title: The Flash waits for zero
+  dur: 2.5
+  location: HEART
+  characters: [FLASH]
+  camera: Close, 1.2 m, low.
+  lens: 50 mm.
+  movement: Slow push.
+  framing: Flash crouched at the shell; wrist ring pulsing.
+  action: The Flash crouches; lightning gathers; the orange ring pulses with the count.
+  lighting: Purple shell light, yellow lightning, orange ring.
+  environment: Shell churning.
+  vfx: Lightning gathering.
+  sound: Tick, louder.
+  dialogue:
+  - {who: FLASH, line: "Three. Two.", note: under his breath}
+  transition: Cut.
+
+- id: S08_310
+  scene: "8.8"
+  title: Now
+  dur: 2.0
+  location: HEART
+  characters: [BATMAN]
+  camera: Extreme close-up, 0.8 m.
+  lens: 85 mm.
+  movement: Locked.
+  framing: Batman's mouth and jaw.
+  action: Batman gives the signal, quietly.
+  lighting: Core light.
+  environment: None.
+  vfx: None.
+  sound: The tick lands on zero.
+  dialogue:
+  - {who: BATMAN, line: "Now."}
+  transition: Cut.
+
+- id: S08_320
+  scene: "8.8"
+  title: Overload
+  dur: 1.5
+  location: CROWN
+  characters: [IRONMAN, THOR]
+  camera: Wide, 30 m.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Lightning and repulsor fire pouring into the Crown.
+  action: Thor and Iron Man overload the external conduits.
+  lighting: White overload.
+  environment: Crown flaring.
+  vfx: Combined overload.
+  sound: Overload roar (cut short by the next shot).
+  dialogue: []
+  transition: Cut.
+
+- id: S08_330
+  scene: "8.8"
+  title: The strike
+  dur: 2.0
+  location: HEART
+  characters: [FLASH]
+  camera: Extreme slow motion (1000 fps equivalent), 1 m.
+  lens: 85 mm.
+  movement: Locked.
+  framing: The shell flickering open; the Flash's hand entering the gap.
+  action: In the same instant, the shell flickers open for a fraction of a heartbeat; his hand goes through the gap and strikes the core.
+  lighting: Core white through the gap.
+  environment: Shell particles frozen.
+  vfx: Extreme slow motion, shell gap.
+  sound: Silence.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_340
+  scene: "8.8"
+  title: The universe holds its breath
+  dur: 3.0
+  location: HEART
+  characters: [BATMAN, CYBORG, STRANGE, SUPERMAN, WW]
+  camera: Slow lateral across faces, 2 m.
+  lens: 50 mm.
+  movement: Slow lateral.
+  framing: Faces waiting; particles hanging in the air.
+  action: Nothing happens. Everyone waits.
+  lighting: Core light steady.
+  environment: Drifting particles hang.
+  vfx: Particles.
+  sound: Total silence (no tick).
+  dialogue: []
+  transition: Cut.
+
+- id: S08_350
+  scene: "8.8"
+  title: The Crown goes dark
+  dur: 2.0
+  location: CROWN
+  characters: []
+  camera: Wide, 2 km.
+  lens: 50 mm.
+  movement: Locked.
+  framing: The Crown spire.
+  action: The Crown's light dies.
+  lighting: Violet to black.
+  environment: Rings slowing.
+  vfx: Light falloff.
+  sound: Deep power-down.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_360
+  scene: "8.8"
+  title: The Root follows
+  dur: 1.5
+  location: ROOT_GATE
+  characters: [CAP, HULK, AQUAMAN, PANTHER]
+  camera: Low, 20 m.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Team Two watching the Root drain.
+  action: The Root's light drains down into the dead world.
+  lighting: Glow draining downward.
+  environment: Crystal dimming.
+  vfx: Light drain.
+  sound: Second power-down, lower.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_370
+  scene: "8.8"
+  title: The Heart collapses
+  dur: 2.0
+  location: HEART
+  characters: []
+  camera: Wide, 500 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Shell collapsing inward layer by layer.
+  action: The Heart shudders and its shell begins to collapse inward.
+  lighting: Purple flickering.
+  environment: Shell layers folding.
+  vfx: Layered implosion.
+  sound: Implosion layers.
+  dialogue: []
+  transition: Cut.
+
+- id: S08_380
+  scene: "8.8"
+  title: His composure breaks
+  dur: 2.5
+  location: HEART
+  characters: [THANOS]
+  camera: Close-up, 2 m.
+  lens: 85 mm.
+  movement: Slow push.
+  framing: Thanos's face.
+  action: For the first time, his composure breaks.
+  lighting: Flickering purple.
+  environment: None.
+  vfx: None.
+  sound: Thanos motif distorted.
+  dialogue:
+  - {who: THANOS, line: "No."}
+  transition: Cut.
+
+- id: S08_390
+  scene: "8.8"
+  title: He launches
+  dur: 2.5
+  location: HEART
+  characters: [THANOS, SUPERMAN, WW]
+  camera: Wide, 200 m.
+  lens: 28 mm.
+  movement: Pan with his flight.
+  framing: Thanos tearing free of Superman and Diana and launching screen right toward the control platform.
+  action: He tears free and launches across the chamber toward the control platform, a violet meteor.
+  lighting: Violet trail.
+  environment: Shock ring at launch.
+  vfx: Launch, trail.
+  sound: Launch boom.
+  dialogue: []
+  transition: Cut into S09_010.

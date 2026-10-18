@@ -1,0 +1,471 @@
+sequence: 3
+title: THE TITAN ENTERS THE WAR
+target: 60.5
+music: "3M1 'The Titan' (near-silence > Thanos motif > combat percussion > collapse to drone > new hope sting)"
+purpose: >
+  Show that the Avengers' best coordinated effort works for four seconds and then fails,
+  each hero beaten by a different mechanism. Reveal the Engine and the stakes. End on hope.
+locations: [CROSSING, MIDTOWN_SKY]
+shots:
+
+- id: S03_010
+  scene: "3.1"
+  title: Thanos descends
+  dur: 3.5
+  location: CROSSING
+  characters: [THANOS]
+  camera: Low and wide from the far end of the street, 0.8 m high, 60 m from the landing point.
+  lens: 35 mm.
+  movement: Locked; very slow push.
+  framing: Column of smoke centre; Thanos descending through it, framed by ruined buildings.
+  action: Thanos descends slowly; debris turns lazily around him.
+  lighting: Smoke lit violet from within by the gauntlet; fires low in frame.
+  environment: Debris orbiting slowly, ash falling.
+  vfx: Volumetric smoke lit from inside, floating debris.
+  sound: Near-silence; a deep resonant hum; debris ticking.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_020
+  scene: "3.1"
+  title: Feet strike the ground
+  dur: 2.0
+  location: CROSSING
+  characters: [THANOS]
+  camera: Ground level, 1.5 m from his boots.
+  lens: 24 mm.
+  movement: Locked; impact shake 6 frames.
+  framing: Boots enter top of frame and land centre.
+  action: His feet strike the ground; the pavement cracks outward in a star.
+  lighting: Violet underglow, fire.
+  environment: Asphalt chips jump.
+  vfx: Radial crack propagation.
+  sound: Heavy double impact; low boom; stone crack.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_030
+  scene: "3.1"
+  title: Shockwave
+  dur: 2.0
+  location: CROSSING
+  characters: [THANOS]
+  camera: High angle, 25 m above the intersection.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Thanos small at centre; the ring expanding toward the frame edges.
+  action: A circular shockwave races out through dust; glass skitters; puddles leap; car windows burst in a ring.
+  lighting: Same.
+  environment: Dust ring, water spray, glass.
+  vfx: Expanding dust shock ring, glass shatter, puddle splash.
+  sound: Whoosh and rolling glass burst around the ring.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_040
+  scene: "3.1"
+  title: The tilt up
+  dur: 4.5
+  location: CROSSING
+  characters: [THANOS]
+  camera: Starts 0.2 m above the pavement at his boots, 3 m away; ends at chest height looking up at his face.
+  lens: 28 mm.
+  movement: Continuous slow tilt and crane up from boots to face.
+  framing: Ends with Thanos filling the frame, face in the upper third.
+  action: Thanos stands still; the camera reveals greaves, gauntlet with six burning Stones, chest plate, scarred jaw.
+  lighting: Low violet key from the gauntlet, warm fire fill from below, hard rim light.
+  environment: Smoke and embers drift up past camera.
+  vfx: Stone glow, embers.
+  sound: Thanos motif on low brass, slow.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_050
+  scene: "3.1"
+  title: The Avengers spread out
+  dur: 3.0
+  location: CROSSING
+  characters: [THANOS, CAP, THOR, IRONMAN, HULK, SPIDEY, STRANGE]
+  camera: Over Thanos's right shoulder, 2 m behind, 2.5 m high.
+  lens: 32 mm.
+  movement: Locked.
+  framing: Thanos's shoulder frame left; Avengers spread across the intersection (Hulk left, Cap and Thor centre, Iron Man hovering, Spider-Man on a signal, Strange right).
+  action: The Avengers hold position, ready. This frame is the spatial map for the fight.
+  lighting: Fire glow on heroes, violet edge from the gauntlet.
+  environment: Smoke, rain.
+  vfx: Repulsor hover glow.
+  sound: Room tone of the burning city; rain.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_060
+  scene: "3.1"
+  title: The anchor
+  dur: 4.5
+  location: CROSSING
+  characters: [THANOS]
+  camera: Medium close-up, low, 3 m.
+  lens: 50 mm.
+  movement: Slow push-in.
+  framing: Thanos centre, eyes moving across the heroes.
+  action: He studies them like weather and speaks without raising his voice.
+  lighting: Low violet key, warm fill.
+  environment: Embers.
+  vfx: None.
+  sound: Score holds a single low note under the dialogue.
+  dialogue:
+  - {who: THANOS, line: "This world is not my target."}
+  - {who: THANOS, line: "It is my anchor. The last one I need."}
+  transition: Cut.
+
+- id: S03_070
+  scene: "3.1"
+  title: Thor gathers lightning
+  dur: 2.0
+  location: CROSSING
+  characters: [THOR]
+  camera: Close-up, slightly low, 1.5 m.
+  lens: 50 mm.
+  movement: Locked, then whip with his launch.
+  framing: Thor centre, eyes flooding white.
+  action: Thor's eyes flood with light; lightning bursts from the clouds into Stormbreaker; he launches.
+  lighting: Hard white-blue lightning key.
+  environment: Rain blown back by the discharge.
+  vfx: Eye glow, lightning column into the axe, arcs over armor.
+  sound: Rising electrical crackle, thunder.
+  dialogue:
+  - {who: THOR, line: "Then you will not have it."}
+  transition: Cut on the launch.
+
+- id: S03_080
+  scene: "3.1"
+  title: The strike
+  dur: 2.0
+  location: CROSSING
+  characters: [THOR, THANOS]
+  camera: Lateral, profile, 8 m from the line of action, 1.5 m high.
+  lens: 35 mm.
+  movement: Lateral track with Thor's leap, stopping at the contact frame.
+  framing: Thor enters left, Thanos right; contact at centre.
+  action: Thor brings the axe down with everything he has; Thanos raises the gauntlet and blocks.
+  lighting: Lightning on the axe; violet on the gauntlet.
+  environment: Rain.
+  vfx: Axe smear (two frames), contact flash.
+  sound: Whoosh, then contact.
+  dialogue: []
+  transition: Cut on contact.
+
+- id: S03_090
+  scene: "3.1"
+  title: Impact burst
+  dur: 2.0
+  location: CROSSING
+  characters: [THOR, THANOS]
+  camera: Wide, 20 m, low.
+  lens: 24 mm.
+  movement: Locked; shake 10 frames.
+  framing: The burst centre; cars at frame edges.
+  action: >
+    A violent burst of white light; a ring of dust blasts out, shoving cars aside. Speed ramp
+    to 30% for 20 frames at the flash, then back to real time.
+  lighting: White flash, then violet and fire.
+  environment: Cars sliding, glass bursting, dust ring.
+  vfx: Flash, shock ring, dust, car physics.
+  sound: Thunder-crack contact, low boom, glass; delayed car alarms.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_100
+  scene: "3.1"
+  title: Thanos advances through the smoke
+  dur: 2.0
+  location: CROSSING
+  characters: [THOR, THANOS]
+  camera: Low, 4 m, behind Thor's shoulder.
+  lens: 40 mm.
+  movement: Slow push back as Thanos advances (dolly out).
+  framing: Thor's back frame left pressing down; Thanos stepping forward out of the smoke.
+  action: "The smoke thins: Thanos is still standing, takes a step forward and pushes Thor back."
+  lighting: Smoke backlit violet.
+  environment: Smoke parting around him.
+  vfx: Smoke parting.
+  sound: Grinding of the axe on the gauntlet; Thor's strain.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_110
+  scene: "3.1"
+  title: Three vectors
+  dur: 3.0
+  location: CROSSING
+  characters: [CAP, IRONMAN, HULK, THANOS, THOR]
+  camera: Wide lateral, 25 m, 4 m high.
+  lens: 28 mm.
+  movement: Slow lateral track.
+  framing: Thanos centre; Cap charging from left, Iron Man diving from top, Hulk launching from right.
+  action: Captain America charges shield first; Iron Man dives, repulsors blazing; Hulk launches across the street.
+  lighting: Repulsor warm, fire, violet.
+  environment: Debris kicked up by the charges.
+  vfx: Repulsor beams, Hulk launch dust.
+  sound: "Three distinct signatures: shield whoosh, repulsor whine, Hulk roar."
+  dialogue: []
+  transition: Cut.
+
+- id: S03_120
+  scene: "3.1"
+  title: For four seconds, it works
+  dur: 3.0
+  location: CROSSING
+  characters: [CAP, IRONMAN, HULK, THANOS]
+  camera: Medium-wide lateral, 10 m, tracking.
+  lens: 35 mm.
+  movement: Lateral track following Thanos as he is driven back.
+  framing: Thanos centre; attackers rotating through frame.
+  action: >
+    Steve's shield cracks into the back of Thanos's knee and his weight shifts; a repulsor
+    blast staggers him; Hulk's fist connects with his jaw and drives him a full stride back,
+    boots gouging asphalt.
+  lighting: Repulsor flashes, fire.
+  environment: Asphalt gouged.
+  vfx: Impact flashes scaled to each hit, small debris.
+  sound: Metallic shield ring, repulsor blast, heavy punch.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_130
+  scene: "3.2"
+  title: He adapts
+  dur: 1.5
+  location: CROSSING
+  characters: [THANOS]
+  camera: Extreme close-up on his eyes, 1 m.
+  lens: 85 mm.
+  movement: Locked.
+  framing: Eyes across the frame.
+  action: His eyes move once to each attacker. Reading them.
+  lighting: Violet key, hard.
+  environment: None.
+  vfx: None.
+  sound: Combat sound drops away; a single held cello note.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_140
+  scene: "3.2"
+  title: Thor redirected
+  dur: 2.0
+  location: CROSSING
+  characters: [THOR, THANOS]
+  camera: Lateral, 6 m.
+  lens: 35 mm.
+  movement: Locked, follows the throw.
+  framing: Thanos centre; bus at frame left.
+  action: Thor swings again; Thanos steps inside the arc, guides the haft past and turns, hurling Thor by his own momentum into a bus.
+  lighting: Lightning glint, violet.
+  environment: Bus caves in, glass.
+  vfx: Bus deformation.
+  sound: Whoosh, crunch of metal.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_150
+  scene: "3.2"
+  title: Iron Man's own blast
+  dur: 1.5
+  location: CROSSING
+  characters: [IRONMAN, THANOS]
+  camera: Low, looking up past Thanos at Iron Man.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Thanos's open hand frame right; Iron Man upper left.
+  action: Iron Man fires; the blast vanishes into a pinhole of blue light and erupts from a second pinhole behind him, slamming him out of the air.
+  lighting: Repulsor warm light, blue Space-Stone pinholes.
+  environment: Smoke.
+  vfx: Two micro-portals, beam continuity.
+  sound: Repulsor blast swallowed (suck-in), re-emerging behind him; armor clang.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_160
+  scene: "3.2"
+  title: Hulk countered
+  dur: 1.5
+  location: CROSSING
+  characters: [HULK, THANOS]
+  camera: Lateral, 5 m, low.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Hulk left, Thanos right.
+  action: Hulk throws a haymaker; Thanos sways back a hand's width; the fist craters the pavement; Thanos drives an elbow down onto Hulk's neck and buries him.
+  lighting: Fire.
+  environment: Crater debris.
+  vfx: Pavement crater.
+  sound: Miss whoosh, crater thud, elbow crack.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_170
+  scene: "3.2"
+  title: The shield caught
+  dur: 1.0
+  location: CROSSING
+  characters: [CAP, THANOS]
+  camera: Medium, 4 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Steve left, Thanos right, shield between.
+  action: Steve vaults in; Thanos catches the shield's edge and holds it, and Steve with it, at arm's length.
+  lighting: Fire reflected in the shield.
+  environment: None.
+  vfx: None.
+  sound: Shield clang stopped dead.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_180
+  scene: "3.2"
+  title: Energy pulse
+  dur: 2.0
+  location: CROSSING
+  characters: [THANOS, CAP, HULK]
+  camera: Wide, 30 m, 3 m high.
+  lens: 24 mm.
+  movement: Locked; speed ramp to 40% then real time.
+  framing: Thanos centre; ring expanding.
+  action: The Stones flare purple; a ring of force hurls Steve, Hulk and debris across the intersection.
+  lighting: Purple pulse illuminating every surface.
+  environment: Debris, cars, rain blown outward.
+  vfx: Power-Stone pulse ring, debris throw.
+  sound: Deep purple whoomp with a choir stab.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_190
+  scene: "3.2"
+  title: Strange's shield
+  dur: 2.0
+  location: CROSSING
+  characters: [STRANGE, SPIDEY, PARAMEDIC]
+  camera: Low, behind Strange, 3 m.
+  lens: 28 mm.
+  movement: Locked; shake when the wave hits.
+  framing: Strange centre, mandala filling the frame; Spider-Man and the paramedic behind him.
+  action: Strange throws up his hands; an orange mandala blooms and the wave breaks against it like surf.
+  lighting: Orange spell light against purple wave.
+  environment: Debris breaking off the shield.
+  vfx: Layered mandala geometry, wave impact.
+  sound: Spell activation chime and roar of the wave breaking.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_200
+  scene: "3.2"
+  title: Magic. Technology. Strength.
+  dur: 3.0
+  location: CROSSING
+  characters: [THANOS, STRANGE]
+  camera: Over Strange's shoulder through the mandala at Thanos, 10 m.
+  lens: 85 mm.
+  movement: Slow push.
+  framing: Thanos centred inside the rings of the mandala.
+  action: Thanos looks directly at Strange.
+  lighting: Orange from the shield across Thanos's face.
+  environment: Embers.
+  vfx: Mandala foreground.
+  sound: Score near silence.
+  dialogue:
+  - {who: THANOS, line: "Magic. Technology. Strength."}
+  transition: Cut.
+
+- id: S03_210
+  scene: "3.2"
+  title: The same illusion
+  dur: 3.0
+  location: CROSSING
+  characters: [THANOS, STRANGE]
+  camera: Close-up on the gauntlet, then rack to Strange's face.
+  lens: 100 mm.
+  movement: Locked; rack focus.
+  framing: Gauntlet foreground; Strange soft behind, then sharp.
+  action: Thanos slowly closes his hand; cracks race across the mandala.
+  lighting: Stones glinting; orange spell light flickering.
+  environment: Mandala fragments.
+  vfx: Crack propagation on the spell geometry.
+  sound: Glass-like spell cracking.
+  dialogue:
+  - {who: THANOS, line: "Different names for the same illusion."}
+  transition: Cut.
+
+- id: S03_220
+  scene: "3.2"
+  title: The Engine revealed
+  dur: 3.0
+  location: CROSSING
+  characters: [THANOS, CAP, IRONMAN, THOR, HULK, SPIDEY, STRANGE]
+  camera: Wide behind the Avengers, 4 m high.
+  lens: 24 mm.
+  movement: Slow push into the rupture.
+  framing: Heroes small at frame bottom; rupture behind them; the Engine tiny and colossal inside.
+  action: Thanos gestures; space tears open behind the heroes, revealing a colossal machine turning in a starless void.
+  lighting: Engine's violet-white glow spilling onto the street.
+  environment: Air rushing into the rupture.
+  vfx: Rupture, Engine distant plate with gravitational lensing.
+  sound: Vast low resonance; choir cluster.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_230
+  scene: "3.2"
+  title: What is that?
+  dur: 2.0
+  location: CROSSING
+  characters: [SPIDEY, STRANGE]
+  camera: Medium two-shot, 3 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Spider-Man and Strange looking into the rupture, lit by it.
+  action: They stare.
+  lighting: Violet-white Engine light.
+  environment: Wind.
+  vfx: None.
+  sound: Resonance under dialogue.
+  dialogue:
+  - {who: SPIDEY, line: "What is that?"}
+  - {who: STRANGE, line: "Something that isn't in our universe.", note: quietly}
+  transition: Cut.
+
+- id: S03_240
+  scene: "3.3"
+  title: The second tear
+  dur: 2.0
+  location: MIDTOWN_SKY
+  characters: []
+  camera: Wide on the clouds above the city.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Clouds; a blue-white seam opening upper centre.
+  action: A second tear splits the clouds, blue-white, not violet.
+  lighting: Blue-white light against violet sky.
+  environment: Clouds pushed apart.
+  vfx: Second rupture (different color, cleaner edge).
+  sound: A clear high tone cuts through the drone.
+  dialogue: []
+  transition: Cut.
+
+- id: S03_250
+  scene: "3.3"
+  title: Superman descends
+  dur: 2.5
+  location: MIDTOWN_SKY
+  characters: [SUPERMAN]
+  camera: Below the clouds, looking up, 400 m.
+  lens: 85 mm.
+  movement: Locked, then tilt down as he accelerates past.
+  framing: Small red-and-blue figure emerging from the tear, growing.
+  action: Superman descends through the cloud, accelerating; a sonic boom ring.
+  lighting: Natural-daylight quality around him (blue-white tear), cape catching light.
+  environment: Vapor cone.
+  vfx: Vapor cone, boom ring.
+  sound: Sonic boom; first statement of the heroic Justice League motif (French horns).
+  dialogue: []
+  transition: Cut into S04_010.

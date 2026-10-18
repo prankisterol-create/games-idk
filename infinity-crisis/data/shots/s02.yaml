@@ -1,0 +1,376 @@
+sequence: 2
+title: THE AVENGERS RESPOND
+target: 58.0
+music: "2M1 'First Response' (tinnitus > fast orchestral pulse > Avengers ostinato > held dread)"
+purpose: >
+  Introduce each Avenger through one readable, ability-specific action that protects
+  people. Establish the reality anomalies. Win one round, then take the win away.
+locations: [AVENUE, SKYLINE, MIDTOWN_SKY, FIFTH_AVE, EAST_RIVER, ROOFTOPS, SIXTH_AVE, BRYANT_PARK, CORRIDOR, STREET_42, CROSSING]
+shots:
+
+- id: S02_010
+  scene: "2.1"
+  title: Aftermath of the first strike
+  dur: 2.5
+  location: AVENUE
+  characters: [PEDESTRIANS]
+  camera: Street level, 1.6 m, same avenue axis as S01_180, now inside the smoke.
+  lens: 28 mm.
+  movement: Slow drift forward, as if stunned.
+  framing: Smoke-filled avenue; a traffic light swinging on one cable in the upper left.
+  action: Debris patters down; silhouettes of people stagger through smoke.
+  lighting: Orange fire glow through smoke, violet sky glow above, car hazard lights.
+  environment: Rolling smoke, falling ash and grit, swinging traffic light.
+  vfx: Volumetric smoke, debris particles, embers.
+  sound: >
+    Tinnitus whine (6 kHz) for 1 s, then sound floods back: alarms, sirens, screams,
+    debris hail.
+  dialogue: []
+  transition: Cut on the first siren peak.
+
+- id: S02_020
+  scene: "2.2"
+  title: Iron Man through the skyline
+  dur: 3.0
+  location: MIDTOWN_SKY
+  characters: [IRONMAN]
+  camera: Air-to-air tracking alongside Iron Man at 150 m altitude, 6 m off his left side.
+  lens: 50 mm.
+  movement: Fast lateral track matching his speed; he banks toward a glass tower and the camera banks with him.
+  framing: Iron Man left third, flying screen right; his reflection racing across a glass façade behind him.
+  action: Iron Man rockets between towers, banks hard, skims a glass face.
+  lighting: Warm repulsor glow on his armor, red/gold specular highlights, violet sky rim.
+  environment: Rain streaks, smoke plumes passing.
+  vfx: Repulsor thrust plumes, heat shimmer, reflection on glass.
+  sound: Repulsor roar with Doppler; signature Iron Man tone (bright rising whine).
+  dialogue: []
+  transition: Cut inside the helmet on the bank.
+
+- id: S02_030
+  scene: "2.3"
+  title: The HUD
+  dur: 2.5
+  location: MIDTOWN_SKY
+  characters: [IRONMAN]
+  camera: Inside the helmet, facing Tony, 0.25 m.
+  lens: 24 mm (helmet interior convention).
+  movement: Micro-shake from flight buffeting.
+  framing: Tony's face centre, HUD graphics wrapping the frame edges.
+  action: Targets bloom across the display; counter climbs to 212. Tony reacts.
+  lighting: Cool blue HUD glow on his face, red target highlights.
+  environment: None (interior).
+  vfx: HUD target reticles, counter, threat vectors.
+  sound: HUD target chirps accelerating, muffled wind outside.
+  dialogue:
+  - {who: TONY, line: "Two hundred and twelve. Great. Love that."}
+  transition: Cut.
+
+- id: S02_040
+  scene: "2.4"
+  title: Captain America directs the evacuation
+  dur: 3.0
+  location: FIFTH_AVE
+  characters: [CAP, PEDESTRIANS, RESPONDERS]
+  camera: Low angle from the street, 4 m from the bus.
+  lens: 35 mm.
+  movement: Slow push-in.
+  framing: Steve on the bus roof in the upper half; civilians flowing past at frame bottom toward a subway entrance on the left.
+  action: Steve waves responders and civilians toward the subway entrance; explosions bloom across his shield.
+  lighting: Fire glow reflected in the shield, flashing emergency lights, violet sky.
+  environment: Crowd flow, smoke, rain.
+  vfx: Explosion reflections in the shield, distant fireballs.
+  sound: Crowd, sirens; Steve's voice cuts through clear and calm.
+  dialogue:
+  - {who: STEVE, line: "Underground! Keep moving! Help each other!"}
+  transition: Cut.
+
+- id: S02_050
+  scene: "2.5"
+  title: Thor descends
+  dur: 3.5
+  location: MIDTOWN_SKY
+  characters: [THOR]
+  camera: Inside the storm cloud, level with Thor, then below him as he passes.
+  lens: 35 mm.
+  movement: Tilt down following his descent; camera lit only by lightning.
+  framing: Thor centre, descending; the carrier small below him, frame bottom.
+  action: Thor descends through the thunderhead, raises Stormbreaker; a bolt the width of a building strikes the carrier, which splits.
+  lighting: White-blue lightning flashes, total darkness between them; electrical arcs over his armor.
+  environment: Cloud churn, rain.
+  vfx: Branching lightning, arcs crawling on armor, carrier split with molten edges.
+  sound: Thunder crack, high electrical sizzle (Thor's signature), metal shriek.
+  dialogue: []
+  transition: Cut to water level.
+
+- id: S02_060
+  scene: "2.6"
+  title: The carrier falls into the river
+  dur: 2.5
+  location: EAST_RIVER
+  characters: []
+  camera: Low on the water, 1 m above the river, 400 m from impact.
+  lens: 85 mm.
+  movement: Locked; shake on splash arrival.
+  framing: Bridge in the background clear of the impact; two carrier halves hitting water mid-frame.
+  action: Both halves slam into the river, well clear of the bridges; twin columns of spray climb.
+  lighting: Fire on the wreck, violet sky reflected in the river.
+  environment: Spray columns, waves rolling toward camera.
+  vfx: Water impact simulation (crown splash), steam.
+  sound: Twin heavy splashes (delayed slightly), hiss of steam.
+  dialogue: []
+  transition: Cut.
+
+- id: S02_070
+  scene: "2.7"
+  title: Hulk vaults across rooftops
+  dur: 3.0
+  location: ROOFTOPS
+  characters: [HULK]
+  camera: Wide from a rooftop opposite, 60 m.
+  lens: 35 mm.
+  movement: Pan following Hulk's leaps.
+  framing: Hulk travelling screen right; the Crawler visible on the street below, heading for a crowd.
+  action: Hulk vaults from a broken water tower to a rooftop to the street, each landing cratering stone.
+  lighting: Fire glow, violet sky.
+  environment: Stone chunks flying from each landing, dust puffs.
+  vfx: Rooftop impact debris, dust.
+  sound: Heavy landing thuds with sub weight; growl.
+  dialogue: []
+  transition: Cut on landing.
+
+- id: S02_080
+  scene: "2.8"
+  title: Hulk removes the Crawler
+  dur: 2.5
+  location: AVENUE
+  characters: [HULK, CRAWLER, PEDESTRIANS]
+  camera: Street level, 10 m from the Crawler.
+  lens: 28 mm.
+  movement: Tilt up as Hulk lifts.
+  framing: Crowd foreground running past; Hulk and Crawler mid-ground.
+  action: Hulk lands on the Crawler's back, digs his fingers under its armor and heaves it sideways off the avenue into an empty parking structure.
+  lighting: Headlights, fire.
+  environment: Concrete dust, sparks from the Crawler's legs scraping.
+  vfx: Crawler impact on parking structure, dust.
+  sound: Metal groan, Hulk roar, crash.
+  dialogue: []
+  transition: Cut.
+
+- id: S02_090
+  scene: "2.9"
+  title: Spider-Man swings
+  dur: 3.0
+  location: SIXTH_AVE
+  characters: [SPIDEY]
+  camera: Following Spider-Man through the swing arc on a cable-cam path, 8 m behind.
+  lens: 24 mm.
+  movement: Follows the pendulum arc; attachment point visible at frame top.
+  framing: Web line taut to a cornice at the top of frame; Spider-Man rotating through the bottom of the arc.
+  action: Spider-Man swings through a canyon of glass, rotating his body through the bottom of the arc and releasing.
+  lighting: Reflected city light on his suit, violet rim.
+  environment: Rain, smoke drift.
+  vfx: Web line, motion blur keeping silhouette.
+  sound: Web thwip, wind rush, fabric flutter.
+  dialogue: []
+  transition: Cut.
+
+- id: S02_100
+  scene: "2.10"
+  title: Spider-Man catches the façade
+  dur: 2.5
+  location: SIXTH_AVE
+  characters: [SPIDEY, PEDESTRIANS]
+  camera: Street level looking up, 15 m from the crowd.
+  lens: 28 mm.
+  movement: Locked; small tilt up.
+  framing: Crowd foreground; falling façade above; Spider-Man upper right.
+  action: A façade section tears loose; Spider-Man fires four lines and catches it in a web net a story above the crowd.
+  lighting: Streetlights, fire.
+  environment: Glass shards raining, dust.
+  vfx: Web net stretch, debris.
+  sound: Crack, four thwips, creak of the web taking load.
+  dialogue:
+  - {who: SPIDEY, line: "Got it, got it... okay, mostly got it."}
+  transition: Cut.
+
+- id: S02_110
+  scene: "2.11"
+  title: Doctor Strange redirects with portals
+  dur: 3.0
+  location: BRYANT_PARK
+  characters: [STRANGE, PEDESTRIANS]
+  camera: Wide over the park, 20 m high.
+  lens: 35 mm.
+  movement: Slow crane down.
+  framing: Strange floating centre; falling water tower upper left; portal mid-frame; second portal and crowd at frame right.
+  action: A burning water tower falls into Strange's portal and emerges harmlessly above the river; a second portal lets a crowd escape a blocked street into a safe plaza.
+  lighting: Orange spell light, fire glow, violet sky.
+  environment: Cloak rippling, sparks drifting.
+  vfx: Sling-ring portals (orange spark rims), view through portal to the river.
+  sound: Portal open (crackling shimmer), fire roar cut off as the tower enters.
+  dialogue: []
+  transition: Cut.
+
+- id: S02_120
+  scene: "2.12"
+  title: Black Panther holds the corridor
+  dur: 3.0
+  location: CORRIDOR
+  characters: [PANTHER, HOLLOWS, PEDESTRIANS]
+  camera: Low, behind the bus barricade, 6 m from Panther.
+  lens: 35 mm.
+  movement: Lateral track as he steps forward.
+  framing: Civilians streaming onto the bridge in the background; Panther centre facing the Hollows.
+  action: Hollows fire; the blasts sink into Panther's suit, lighting it purple; he drops to one knee and releases a kinetic wave that sweeps them off their feet.
+  lighting: Purple kinetic glow building on his suit, muzzle flashes.
+  environment: Asphalt fragments lifted by the wave.
+  vfx: Energy absorption pattern on vibranium weave, kinetic shock ring.
+  sound: Energy hits absorbed as rising hum; release as a deep purple whoomp.
+  dialogue: []
+  transition: Cut.
+
+- id: S02_130
+  scene: "2.13"
+  title: Gravity fails on 42nd Street
+  dur: 2.5
+  location: STREET_42
+  characters: []
+  camera: Street level, wide, 1.7 m.
+  lens: 28 mm.
+  movement: Locked off (the street moves, not the camera).
+  framing: Street receding; taxi centre; streetlights casting shadows.
+  action: Rain falls upward; a taxi drifts off the ground, wheels turning, then drops; every shadow points toward the light.
+  lighting: Streetlights with inverted shadow direction (cheat in comp).
+  environment: Upward rain, floating litter.
+  vfx: Reversed rain sim, inverted shadows, taxi float.
+  sound: Rain sound reversed; taxi's suspension creak; sudden thump as it drops.
+  dialogue: []
+  transition: Cut.
+
+- id: S02_140
+  scene: "2.14"
+  title: Iron Man and Thor combine
+  dur: 3.0
+  location: MIDTOWN_SKY
+  characters: [IRONMAN, THOR]
+  camera: Tracking with Iron Man, 10 m behind and above.
+  lens: 35 mm.
+  movement: Fast follow, then whip-free pan to reveal Thor.
+  framing: Dropship ahead of Iron Man; Thor waiting at frame right.
+  action: Iron Man blasts a dropship's engines and drives it spinning at Thor, who meets it with Stormbreaker; it comes apart in sparks.
+  lighting: Repulsor warm light, lightning flash.
+  environment: Debris shower.
+  vfx: Engine explosion, axe impact sparks.
+  sound: Repulsor blasts, thunder-clang impact.
+  dialogue: []
+  transition: Cut.
+
+- id: S02_150
+  scene: "2.15"
+  title: The Avengers converge
+  dur: 3.0
+  location: CROSSING
+  characters: [CAP, IRONMAN, THOR, HULK, SPIDEY, STRANGE]
+  camera: Wide, 3 m high, at the edge of the intersection.
+  lens: 28 mm.
+  movement: Slow arc 15 deg around the group.
+  framing: Avengers converge into a loose ring; Steve walks into the centre.
+  action: Thor lands, Iron Man touches down, Hulk drops, Spider-Man perches on a bent signal, Strange floats down.
+  lighting: Fire glow, smoke backlit violet.
+  environment: Smoke drift, falling ash.
+  vfx: Landing dust, repulsor down-wash.
+  sound: Landings, then the battle noise thins away.
+  dialogue: []
+  transition: Cut.
+
+- id: S02_160
+  scene: "2.15"
+  title: Quiet
+  dur: 2.5
+  location: CROSSING
+  characters: [SPIDEY, IRONMAN]
+  camera: Medium two-shot, Spider-Man on the signal, Tony below.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Spider-Man upper left, Tony lower right.
+  action: A breath. Rain. Spider-Man hopes; Tony knows better.
+  lighting: Soft rain-diffused fire glow.
+  environment: Rain, smoke.
+  vfx: Minimal.
+  sound: Only rain. Score drops out.
+  dialogue:
+  - {who: SPIDEY, line: "Was that it? That felt like it."}
+  - {who: TONY, line: "It's never it."}
+  transition: Cut.
+
+- id: S02_170
+  scene: "2.16"
+  title: The Hollows stop
+  dur: 3.0
+  location: CROSSING
+  characters: [HOLLOWS]
+  camera: Wide down the avenue, 2 m height.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Dozens of Hollows scattered along the avenue, mid-action.
+  action: Every Hollow stops mid-step, mid-reload.
+  lighting: Fire glow, violet sky.
+  environment: Smoke; rain.
+  vfx: None beyond crowd.
+  sound: Their footsteps stop at once; silence except rain.
+  dialogue: []
+  transition: Cut.
+
+- id: S02_180
+  scene: "2.16"
+  title: They kneel
+  dur: 2.5
+  location: CROSSING
+  characters: [HOLLOWS]
+  camera: High angle over the avenue, 15 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Ranks of Hollows filling the frame.
+  action: As one, the Hollows kneel.
+  lighting: Same.
+  environment: Dust puffs from knees.
+  vfx: Crowd sync.
+  sound: A single metallic clank rolls down the avenue.
+  dialogue: []
+  transition: Cut.
+
+- id: S02_190
+  scene: "2.17"
+  title: The shadow
+  dur: 3.0
+  location: SKYLINE
+  characters: []
+  camera: Wide on the skyline from the Crossing, 2 m, tilted up 20 deg.
+  lens: 40 mm.
+  movement: Locked.
+  framing: Towers across the frame.
+  action: A shadow sweeps across the towers, swallowing window after window.
+  lighting: The violet glow is eclipsed band by band.
+  environment: Smoke.
+  vfx: Moving shadow wipe across the city lights.
+  sound: Deep sub-bass drone sliding downward; brass swell begins.
+  dialogue: []
+  transition: Cut.
+
+- id: S02_200
+  scene: "2.18"
+  title: Thanos has arrived
+  dur: 4.5
+  location: CROSSING
+  characters: [CAP, IRONMAN, THOR, THANOS]
+  camera: Low angle behind the Avengers, looking up past them into the smoke.
+  lens: 35 mm.
+  movement: Slow push between Steve and Thor.
+  framing: Steve, Tony and Thor in the foreground looking up; a vast silhouette descending in the smoke, upper centre.
+  action: The Avengers look up. Thor tightens his grip. Thanos descends in violet light.
+  lighting: Violet glow from the gauntlet backlighting the smoke; heroes rim-lit.
+  environment: Smoke column swirling.
+  vfx: Volumetric smoke, gauntlet glow.
+  sound: Thanos motif (low brass), choir; Thor's grip creaks on the haft.
+  dialogue: []
+  transition: Cut into S03_010.

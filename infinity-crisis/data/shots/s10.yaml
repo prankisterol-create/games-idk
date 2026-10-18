@@ -1,0 +1,526 @@
+sequence: 10
+title: THE FINAL GAMBIT
+target: 65.0
+music: "10M1 'The Gambit' (merged theme at full force, Thanos motif fighting it; music falls away completely at the collapse so the mechanism dominates; absolute silence on the wave)"
+purpose: >
+  Win through intelligence and teamwork, not a power-up: force Thanos to choose between
+  holding the Engine and fighting. Every hero performs one specific, earned task. The
+  near-sacrifice is established clearly and left unresolved until Sequence 11.
+locations: [PLATFORM, HEART, CAUSEWAY]
+shots:
+
+- id: S10_010
+  scene: "10.1"
+  title: The collapse stalls
+  dur: 3.0
+  location: PLATFORM
+  characters: [IRONMAN, BATMAN, CYBORG]
+  camera: Medium-wide on the platform, 6 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Iron Man dropping onto the platform beside Batman; console readout; Heart beyond.
+  action: Iron Man lands; the collapse stalls on the console; the Heart's shell begins to re-form.
+  lighting: Console light, re-forming purple shell.
+  environment: Shell re-forming in the background.
+  vfx: Readout reversing; shell reconstitution.
+  sound: Collapse sound reversing into a rising hum.
+  dialogue:
+  - {who: CYBORG, line: "He's feeding it from the Stones. It's holding!"}
+  transition: Cut.
+
+- id: S10_020
+  scene: "10.1"
+  title: Make him choose
+  dur: 4.0
+  location: PLATFORM
+  characters: [STRANGE, BATMAN, IRONMAN]
+  camera: Three-shot around the console, 3 m.
+  lens: 40 mm.
+  movement: Slow arc.
+  framing: Strange, Batman, Tony around the console.
+  action: Strange explains why the Stones can't be taken; Batman finds the move.
+  lighting: Console blue, purple shell.
+  environment: Platform trembling.
+  vfx: Loop diagram on the console.
+  sound: Tense pulse.
+  dialogue:
+  - {who: STRANGE, line: "The Stones are fused into the loop. Tear them out and the loop takes Earth with them."}
+  - {who: BATMAN, line: "Then we make him choose. Every control point at once. He can hold the Engine or he can fight us. Not both."}
+  transition: Cut.
+
+- id: S10_030
+  scene: "10.1"
+  title: I'll take the core
+  dur: 4.0
+  location: PLATFORM
+  characters: [IRONMAN, BATMAN]
+  camera: Two-shot, then close on Batman, 2.5 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Tony left (faceplate open), Batman right.
+  action: Tony volunteers. Batman understands what it means.
+  lighting: Purple shell light on both.
+  environment: None.
+  vfx: None.
+  sound: Score drops out under the exchange.
+  dialogue:
+  - {who: TONY, line: "And somebody has to be at the core to finish it."}
+  - {who: TONY, line: "I'll take the core."}
+  - {who: BATMAN, line: "Stark."}
+  - {who: TONY, line: "I know."}
+  transition: Cut.
+
+- id: S10_040
+  scene: "10.2"
+  title: The Flash runs the control points
+  dur: 3.0
+  location: HEART
+  characters: [FLASH]
+  camera: Wide aerial orbit around the Heart, 1 km.
+  lens: 35 mm.
+  movement: Orbit opposite to his direction.
+  framing: A ring of red lightning circling the Heart; nodes lighting one by one.
+  action: The Flash runs a circle around the Heart; control points light in his wake.
+  lighting: Red-yellow ring of lightning, node lights.
+  environment: Shell flickering.
+  vfx: Lightning ring, node activation sequence.
+  sound: Speed crackle cycling around the surround field.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_050
+  scene: "10.2"
+  title: Spider-Man holds it together
+  dur: 2.5
+  location: HEART
+  characters: [SPIDEY]
+  camera: Medium, 4 m.
+  lens: 35 mm.
+  movement: Locked; vibration.
+  framing: Spider-Man braced between anchor points, webs to a cracking strut.
+  action: A support strut cracks; Spider-Man fires line after line onto anchor points, braces his feet, and holds it together.
+  lighting: Purple, sparks.
+  environment: Strut cracking, sparks.
+  vfx: Web tension, metal stress.
+  sound: Webs creaking under load.
+  dialogue:
+  - {who: SPIDEY, line: "Hold... hold... hold!"}
+  transition: Cut.
+
+- id: S10_060
+  scene: "10.2"
+  title: Strange keeps the seal
+  dur: 2.0
+  location: HEART
+  characters: [STRANGE]
+  camera: Close, 1.5 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Strange's trembling hands, mandalas locked around the Heart behind.
+  action: Strange keeps the dimensional seal, hands trembling.
+  lighting: Orange.
+  environment: Cloak torn and fluttering.
+  vfx: Locked mandalas.
+  sound: Spell strain.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_070
+  scene: "10.2"
+  title: Lantern's last shield
+  dur: 2.0
+  location: HEART
+  characters: [GL]
+  camera: Low, 6 m.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Hal throwing a dome over the others; discharge lashing.
+  action: The discharge lashes outward; Lantern throws a dome over the others.
+  lighting: Green, flickering low.
+  environment: Discharge arcs.
+  vfx: Weak construct dome.
+  sound: Ring voice.
+  dialogue:
+  - {who: RING, line: "Power level three percent."}
+  transition: Cut.
+
+- id: S10_080
+  scene: "10.2"
+  title: Iron Man flies at the column
+  dur: 3.0
+  location: HEART
+  characters: [IRONMAN]
+  camera: Chase cam, 5 m behind.
+  lens: 24 mm.
+  movement: Fast follow toward the column.
+  framing: Iron Man centre; nanotech shield segments unfolding around him; column ahead.
+  action: Iron Man flies straight at the central column, deploying every defensive system; energy streams off the layers.
+  lighting: Column white-violet, warm repulsors.
+  environment: Energy streaming.
+  vfx: Nanotech layering, energy shedding.
+  sound: Armor deployment clicks, roaring column.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_090
+  scene: "10.2"
+  title: He's losing it
+  dur: 2.0
+  location: CAUSEWAY
+  characters: [THANOS]
+  camera: Close-up, 2 m.
+  lens: 85 mm.
+  movement: Locked.
+  framing: Thanos's face and gauntlet; light pouring out of the gauntlet into the Engine.
+  action: Thanos sees the column flicker; he is losing the Engine.
+  lighting: Gauntlet light draining.
+  environment: None.
+  vfx: Energy flow from gauntlet.
+  sound: Strained Thanos motif.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_100
+  scene: "10.2"
+  title: He goes for Tony
+  dur: 2.0
+  location: HEART
+  characters: [THANOS, IRONMAN]
+  camera: Wide, 100 m.
+  lens: 35 mm.
+  movement: Pan.
+  framing: Thanos launching from frame left toward Iron Man near the column frame right.
+  action: He abandons the Engine and launches himself at Tony.
+  lighting: Violet trail.
+  environment: Launch shock.
+  vfx: Trail.
+  sound: Launch boom.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_110
+  scene: "10.2"
+  title: Superman intercepts
+  dur: 1.5
+  location: HEART
+  characters: [SUPERMAN, THANOS]
+  camera: Wide, 80 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Collision in midair, centre.
+  action: Superman intercepts him in midair; the collision rings out across the void.
+  lighting: Collision flash.
+  environment: Shock ring.
+  vfx: Midair impact ring.
+  sound: Huge collision.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_120
+  scene: "10.2"
+  title: Diana drives him back
+  dur: 2.0
+  location: HEART
+  characters: [WW, THANOS]
+  camera: Medium, 6 m.
+  lens: 35 mm.
+  movement: Pan.
+  framing: Diana's shield strike sending Thanos screen left, away from the platform.
+  action: Wonder Woman follows through with a shield strike that drives him away from the platform.
+  lighting: Gold flash.
+  environment: None.
+  vfx: Strike flash.
+  sound: Shield boom.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_130
+  scene: "10.2"
+  title: The storm's last strike
+  dur: 2.5
+  location: CAUSEWAY
+  characters: [THOR, THANOS]
+  camera: Wide, low, 40 m.
+  lens: 24 mm.
+  movement: Tilt down with the lightning.
+  framing: Thor high frame right; lightning column driving Thanos down onto the causeway frame left.
+  action: Thor unleashes everything the storm has left; a column of lightning drives Thanos down onto the causeway.
+  lighting: Massive white-blue.
+  environment: Causeway shattering.
+  vfx: Lightning column, ground burst.
+  sound: Thunder at maximum.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_140
+  scene: "10.2"
+  title: Steve arrives
+  dur: 2.0
+  location: CAUSEWAY
+  characters: [CAP]
+  camera: Lateral tracking, 5 m.
+  lens: 35 mm.
+  movement: Track with his sprint.
+  framing: Steve sprinting up the causeway left to right; the exposed control point ahead.
+  action: Captain America sprints up the causeway from the Root and sees the last control point exposed.
+  lighting: Lightning afterglow.
+  environment: Debris.
+  vfx: None.
+  sound: Footsteps, breath.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_150
+  scene: "10.2"
+  title: The throw
+  dur: 2.0
+  location: CAUSEWAY
+  characters: [CAP, THANOS]
+  camera: Lateral, 10 m.
+  lens: 35 mm.
+  movement: Pan with the shield.
+  framing: Shield arcing past Thanos toward the control point.
+  action: Steve throws; the shield arcs past Thanos.
+  lighting: Shield reflecting the core.
+  environment: None.
+  vfx: Shield trail.
+  sound: Shield whoosh (his signature).
+  dialogue: []
+  transition: Cut.
+
+- id: S10_160
+  scene: "10.2"
+  title: The last control point
+  dur: 1.5
+  location: PLATFORM
+  characters: []
+  camera: Close, 1 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Control node centre; shield striking.
+  action: The shield strikes the final control point; the node shatters. (The shield stays embedded in the wreckage of the node.)
+  lighting: Node flash.
+  environment: Fragments.
+  vfx: Node shatter.
+  sound: Shield impact, node shatter.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_170
+  scene: "10.2"
+  title: The Engine collapses inward
+  dur: 2.5
+  location: HEART
+  characters: []
+  camera: Extreme wide, 5,000 km.
+  lens: 35 mm.
+  movement: Locked.
+  framing: The rings folding toward the sphere.
+  action: The Eternity Engine begins to collapse inward.
+  lighting: Core flaring.
+  environment: Rings folding.
+  vfx: Structural implosion.
+  sound: Vast groan.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_180
+  scene: "10.2"
+  title: Thanos roars
+  dur: 2.0
+  location: CAUSEWAY
+  characters: [THANOS]
+  camera: Close-up, low, 2 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Thanos roaring, energy arcing from the gauntlet.
+  action: Thanos roars as the purple energy around him turns unstable.
+  lighting: Wild purple arcs.
+  environment: Arcs striking the causeway.
+  vfx: Unstable energy arcs.
+  sound: The roar, the only time he raises his voice.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_190
+  scene: "10.2"
+  title: The world changes
+  dur: 3.5
+  location: HEART
+  characters: []
+  camera: Wide, 2 km.
+  lens: 24 mm.
+  movement: Locked.
+  framing: Rings stretching into impossible shapes; stars folding inward beyond.
+  action: Color drains away; sound disappears; the rings stretch into impossible geometry; the stars fold inward.
+  lighting: Desaturating to near monochrome.
+  environment: Geometry stretching.
+  vfx: Non-Euclidean stretch, star fold, desaturation.
+  sound: Sound disappears (high-pass sweep to nothing); only the mechanism's low throb remains.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_200
+  scene: "10.2"
+  title: Everyone, move!
+  dur: 2.0
+  location: HEART
+  characters: [STRANGE]
+  camera: Medium, 3 m.
+  lens: 40 mm.
+  movement: Locked.
+  framing: Strange opening portals.
+  action: Strange shouts; portals burn open.
+  lighting: Orange against monochrome.
+  environment: None.
+  vfx: Portals (the only saturated color).
+  sound: His voice dry and close.
+  dialogue:
+  - {who: STRANGE, line: "Everyone, move!"}
+  transition: Cut.
+
+- id: S10_210
+  scene: "10.2"
+  title: Evacuation
+  dur: 2.5
+  location: HEART
+  characters: [CAP, WW, HULK, SPIDEY, THOR]
+  camera: Wide, 30 m.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Heroes diving through portal rings.
+  action: The heroes dive through the portals.
+  lighting: Portal orange.
+  environment: Debris stretching.
+  vfx: Portals.
+  sound: Portal rushes, muffled.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_220
+  scene: "10.3"
+  title: Manual only
+  dur: 2.5
+  location: HEART
+  characters: [IRONMAN]
+  camera: Inside the helmet, 0.25 m.
+  lens: 24 mm.
+  movement: Locked.
+  framing: Tony's face; HUD reads RELEASE - MANUAL ONLY.
+  action: Tony at the heart of the column.
+  lighting: White-violet core light through the faceplate.
+  environment: None.
+  vfx: HUD warning.
+  sound: HUD alert, heartbeat.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_230
+  scene: "10.3"
+  title: Superman reaches back
+  dur: 2.0
+  location: HEART
+  characters: [SUPERMAN]
+  camera: Medium, 4 m, at the last portal.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Superman at the portal edge reaching back.
+  action: Superman reaches back for him.
+  lighting: Portal orange.
+  environment: None.
+  vfx: Portal edge.
+  sound: Muffled.
+  dialogue:
+  - {who: SUPERMAN, line: "Tony!"}
+  transition: Cut.
+
+- id: S10_240
+  scene: "10.3"
+  title: The failing Engine
+  dur: 2.0
+  location: HEART
+  characters: [IRONMAN]
+  camera: Close profile, 1.5 m.
+  lens: 85 mm.
+  movement: Locked.
+  framing: Tony looking at the column.
+  action: Tony looks at the failing Engine.
+  lighting: Core light.
+  environment: None.
+  vfx: None.
+  sound: Throb.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_250
+  scene: "10.3"
+  title: The heroes beyond the portal
+  dur: 2.0
+  location: HEART
+  characters: [CAP, SUPERMAN, STRANGE]
+  camera: Tony's POV, 20 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Steve, Superman and Strange framed in the portal ring, Strange's hands shaking.
+  action: The heroes waiting beyond the portal.
+  lighting: Portal orange.
+  environment: Portal edges fraying.
+  vfx: Portal.
+  sound: Throb.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_260
+  scene: "10.3"
+  title: Go
+  dur: 1.5
+  location: HEART
+  characters: [IRONMAN]
+  camera: Inside the helmet, 0.25 m.
+  lens: 24 mm.
+  movement: Locked.
+  framing: Tony's face.
+  action: Tony says one word.
+  lighting: Core light.
+  environment: None.
+  vfx: None.
+  sound: Dry.
+  dialogue:
+  - {who: TONY, line: "Go."}
+  transition: Cut.
+
+- id: S10_270
+  scene: "10.3"
+  title: The release
+  dur: 1.5
+  location: HEART
+  characters: [IRONMAN]
+  camera: Close on his gauntlet, 0.8 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Gauntlet closing on the release.
+  action: He triggers the final release.
+  lighting: Core flare.
+  environment: None.
+  vfx: Release trigger glow.
+  sound: A single click.
+  dialogue: []
+  transition: Cut.
+
+- id: S10_280
+  scene: "10.3"
+  title: The wave
+  dur: 2.0
+  location: HEART
+  characters: []
+  camera: Extreme wide, 10,000 km.
+  lens: 35 mm.
+  movement: Locked.
+  framing: A colossal wave of white and violet energy engulfing the structure.
+  action: The wave engulfs the Engine.
+  lighting: White-violet whiteout.
+  environment: Everything.
+  vfx: Energy wave.
+  sound: Absolute silence.
+  dialogue: []
+  transition: Cut to black (holds 1 s into S11).

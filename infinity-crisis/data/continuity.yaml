@@ -1,0 +1,856 @@
+# Character continuity sheet, tracked per sequence, plus shot-level events.
+#
+# For each sequence: every principal who appears (or is present off screen) has a state at
+# sequence START. `events` change state at a specific shot; the storyboard prints the
+# resulting state for every shot, and tools/qc_shots.py enforces:
+#   - a character appears only in shots whose location is on their `path`, visited in order
+#     (no teleporting between cuts; cross-cut zones keep each character in one place)
+#   - damage never decreases (there are no repair events in this film)
+#   - a character marked `status: gone` (or not listed) never appears in a shot
+#   - equipment changes are explicit events (no prop vanishes without a cause)
+#
+# damage: 0 pristine, 1 scuffed / dust, 2 visibly damaged (tears, dents, scorch), 3 heavily damaged
+# power: rough percentage of usable power or stamina at sequence start
+
+sequences:
+
+  1:
+    THANOS:
+      look: Full armor, no helmet, gauntlet with all six Stones lit softly.
+      damage: 0
+      equipment: Gauntlet (six Stones)
+      injury: None
+      path: [THRONE]
+      objective: Bring the fleet to Earth, the last anchor.
+      power: 100
+      emotion: Calm certainty.
+      knowledge: Earth is the hinge world shared by two realities; the Engine needs it.
+
+  2:
+    IRONMAN:
+      look: Clean armor, faceplate down.
+      damage: 0
+      equipment: Mark armor (repulsors, shoulder micro-missiles, nanotech reserve)
+      injury: None
+      path: [MIDTOWN_SKY, CROSSING]
+      objective: Map and intercept incoming targets.
+      power: 100
+      emotion: Alert, joking.
+      knowledge: Invasion of unknown origin, 212 targets.
+    CAP:
+      look: Clean suit, shield on arm.
+      damage: 0
+      equipment: Shield
+      injury: None
+      path: [FIFTH_AVE, CROSSING]
+      objective: Get civilians underground.
+      power: 100
+      emotion: Focused.
+      knowledge: Same as Tony.
+    THOR:
+      look: Armor clean, cape whole.
+      damage: 0
+      equipment: Stormbreaker
+      injury: None
+      path: [MIDTOWN_SKY, CROSSING]
+      objective: Bring down carriers away from people.
+      power: 100
+      emotion: Battle-ready, confident.
+      knowledge: None beyond the attack.
+    HULK:
+      look: Clean skin.
+      damage: 0
+      equipment: None
+      injury: None
+      path: [ROOFTOPS, AVENUE, CROSSING]
+      objective: Stop the Crawlers reaching crowds.
+      power: 100
+      emotion: Angry.
+      knowledge: None.
+    SPIDEY:
+      look: Clean suit, mask on.
+      damage: 0
+      equipment: Web-shooters (full cartridges)
+      injury: None
+      path: [SIXTH_AVE, CROSSING]
+      objective: Catch falling debris and people.
+      power: 100
+      emotion: Nervous energy.
+      knowledge: None.
+    STRANGE:
+      look: Robes and cloak pristine.
+      damage: 0
+      equipment: Sling ring, cloak
+      injury: None
+      path: [BRYANT_PARK, CROSSING]
+      objective: Redirect debris and crowds with portals.
+      power: 100
+      emotion: Controlled.
+      knowledge: Senses the rupture is dimensional.
+    PANTHER:
+      look: Suit clean, energy store empty.
+      damage: 0
+      equipment: Vibranium suit (kinetic storage)
+      injury: None
+      path: [CORRIDOR]
+      objective: Hold the Brooklyn Bridge evacuation corridor.
+      power: 100
+      emotion: Composed.
+      knowledge: None.
+    THANOS:
+      look: As S1.
+      damage: 0
+      equipment: Gauntlet
+      injury: None
+      path: [CROSSING]
+      objective: Take the field personally.
+      power: 100
+      emotion: Patient.
+      knowledge: As S1.
+
+  3:
+    THANOS:
+      look: As S1.
+      damage: 0
+      equipment: Gauntlet
+      injury: None
+      path: [CROSSING]
+      objective: Announce the anchor; demonstrate futility; open the view to the Engine.
+      power: 100
+      emotion: Unhurried contempt.
+      knowledge: As S1.
+    IRONMAN:
+      look: Clean armor.
+      damage: 0
+      equipment: Armor
+      injury: None
+      path: [CROSSING]
+      objective: Attack from above.
+      power: 90
+      emotion: Determined.
+      knowledge: Thanos's target is Earth as an anchor.
+    CAP:
+      look: Suit lightly dusted.
+      damage: 1
+      equipment: Shield
+      injury: None
+      path: [CROSSING]
+      objective: Flank and destabilise.
+      power: 90
+      emotion: Determined.
+      knowledge: As Tony.
+    THOR:
+      look: Armor clean, cape whole.
+      damage: 0
+      equipment: Stormbreaker
+      injury: None
+      path: [CROSSING]
+      objective: Strike first and hardest.
+      power: 95
+      emotion: Righteous fury.
+      knowledge: As Tony.
+    HULK:
+      look: Dusty.
+      damage: 1
+      equipment: None
+      injury: None
+      path: [CROSSING]
+      objective: Overpower Thanos.
+      power: 95
+      emotion: Rage.
+      knowledge: None.
+    SPIDEY:
+      look: Suit dusty.
+      damage: 1
+      equipment: Web-shooters
+      injury: None
+      path: [CROSSING]
+      objective: Protect the injured paramedic.
+      power: 90
+      emotion: Scared but staying.
+      knowledge: None.
+    STRANGE:
+      look: Pristine.
+      damage: 0
+      equipment: Sling ring, cloak
+      injury: None
+      path: [CROSSING]
+      objective: Shield the last defenders.
+      power: 95
+      emotion: Alarmed.
+      knowledge: Thanos can crack his wards by will.
+    SUPERMAN:
+      look: Pristine suit and cape.
+      damage: 0
+      equipment: None
+      injury: None
+      path: [MIDTOWN_SKY]
+      objective: Find the source of the rupture on the far side of the tear.
+      power: 100
+      emotion: Concerned.
+      knowledge: The rupture spans his world and this one.
+
+  4:
+    SUPERMAN:
+      look: Pristine.
+      damage: 0
+      equipment: None
+      injury: None
+      path: [HOSPITAL, MIDTOWN_SKY, CROSSING]
+      objective: Save the hospital, then confront Thanos.
+      power: 100
+      emotion: Strained, then resolved.
+      knowledge: His strength has limits against this fleet.
+    THANOS:
+      look: As S1.
+      damage: 0
+      equipment: Gauntlet
+      injury: None
+      path: [CROSSING]
+      objective: Welcome more champions to fight (and feed the Engine).
+      power: 100
+      emotion: Amused.
+      knowledge: More power is coming to him.
+    IRONMAN:
+      look: Back plate scorched by his own blast, faceplate dented.
+      damage: 1
+      equipment: Armor
+      injury: Bruised ribs
+      path: [CROSSING]
+      objective: Understand the enemy's technology.
+      power: 75
+      emotion: Rattled, covering with humour.
+      knowledge: Thanos can redirect energy through space.
+    CAP:
+      look: Suit dusted and torn at one shoulder.
+      damage: 1
+      equipment: Shield
+      injury: Bruised
+      path: [CROSSING]
+      objective: Forge the alliance.
+      power: 80
+      emotion: Steady.
+      knowledge: The enemy is beyond the Avengers alone.
+    THOR:
+      look: Armor dented from the bus impact.
+      damage: 1
+      equipment: Stormbreaker
+      injury: Bruised
+      path: [CROSSING]
+      objective: Recover.
+      power: 85
+      emotion: Humbled.
+      knowledge: His strongest strike did not move Thanos.
+    HULK:
+      look: Dusty, a graze on the neck.
+      damage: 1
+      equipment: None
+      injury: Neck bruise
+      path: [CROSSING]
+      objective: Recover.
+      power: 85
+      emotion: Sullen.
+      knowledge: None.
+    SPIDEY:
+      look: Dusty suit.
+      damage: 1
+      equipment: Web-shooters
+      injury: None
+      path: [CROSSING]
+      objective: Stay useful.
+      power: 85
+      emotion: Awed, nervous.
+      knowledge: The machine is not in this universe.
+    STRANGE:
+      look: Cloak singed at the hem.
+      damage: 1
+      equipment: Sling ring, cloak
+      injury: None
+      path: [CROSSING]
+      objective: Measure the fracture.
+      power: 80
+      emotion: Grave.
+      knowledge: The fracture runs through every layer of reality.
+    WW:
+      look: Pristine armor.
+      damage: 0
+      equipment: Sword, shield, lasso
+      injury: None
+      path: [CROSSING]
+      objective: Stand with Superman.
+      power: 100
+      emotion: Resolute.
+      knowledge: Same rupture as on her world.
+    BATMAN:
+      look: Pristine.
+      damage: 0
+      equipment: Scanner gauntlet, grapnel, holo projector
+      injury: None
+      path: [CROSSING]
+      objective: Analyse the enemy.
+      power: 100
+      emotion: Guarded.
+      knowledge: The energy signature matches Stark's readings.
+    CYBORG:
+      look: Pristine.
+      damage: 0
+      equipment: Integrated tools
+      injury: None
+      path: [CROSSING]
+      objective: Scan.
+      power: 100
+      emotion: Focused.
+      knowledge: The pattern is a rewrite, not an invasion.
+    FLASH:
+      look: Pristine.
+      damage: 0
+      equipment: None
+      injury: None
+      path: [CROSSING]
+      objective: Arrive.
+      power: 100
+      emotion: Nervous humour.
+      knowledge: None.
+    GL:
+      look: Pristine.
+      damage: 0
+      equipment: Ring
+      injury: None
+      path: [CROSSING]
+      objective: Shield the street.
+      power: 100
+      emotion: Confident.
+      knowledge: None.
+    AQUAMAN:
+      look: Wet.
+      damage: 0
+      equipment: Trident
+      injury: None
+      path: [CROSSING]
+      objective: Arrive.
+      power: 100
+      emotion: Ready for a fight.
+      knowledge: None.
+
+  5:
+    CAP:
+      look: Torn shoulder, dusty.
+      damage: 1
+      equipment: Shield
+      injury: Bruised
+      path: [CROSSING, MADISON]
+      objective: Assign zones; hold the street line.
+      power: 85
+      emotion: Commanding.
+      knowledge: The alliance's powers.
+    WW:
+      look: Pristine armor.
+      damage: 0
+      equipment: Sword, shield, lasso
+      injury: None
+      path: [CROSSING, MADISON, CROSSING]
+      objective: Hold the line with Steve; push the last Hollows back.
+      power: 100
+      emotion: Fierce joy in a good fight.
+      knowledge: Steve fights like an Amazon trains.
+    IRONMAN:
+      look: Scorched back plate.
+      damage: 1
+      equipment: Armor
+      injury: Bruised ribs
+      path: [CROSSING, SKY_A, CROSSING]
+      objective: Bring down the carrier.
+      power: 80
+      emotion: Enjoying the teamwork.
+      knowledge: Lantern constructs can carry him.
+    GL:
+      look: Pristine.
+      damage: 0
+      equipment: Ring
+      injury: None
+      path: [CROSSING, SKY_A]
+      objective: Build the ramp; support the sky team.
+      power: 100
+      emotion: Showing off.
+      knowledge: Stark can keep up.
+    SUPERMAN:
+      look: Suit dusted from the hospital save.
+      damage: 1
+      equipment: None
+      injury: None
+      path: [CROSSING, SKY_A, CROSSING]
+      objective: Keep falling ships off the city.
+      power: 90
+      emotion: Focused on civilians.
+      knowledge: None new.
+    THOR:
+      look: Dented armor.
+      damage: 1
+      equipment: Stormbreaker
+      injury: Bruised
+      path: [CROSSING, SKY_A, CROSSING]
+      objective: Clear gunships.
+      power: 85
+      emotion: Vengeful.
+      knowledge: None new.
+    HULK:
+      look: Dusty, neck graze.
+      damage: 1
+      equipment: None
+      injury: Neck bruise
+      path: [CROSSING, WATERFRONT]
+      objective: Stop the Leviathan.
+      power: 90
+      emotion: Rage, then frustration.
+      knowledge: The machines adapt to raw force.
+    AQUAMAN:
+      look: Wet.
+      damage: 0
+      equipment: Trident
+      injury: None
+      path: [CROSSING, WATERFRONT]
+      objective: Protect the coast.
+      power: 100
+      emotion: Protective.
+      knowledge: Adaptive armor has to leave the intake open.
+    STRANGE:
+      look: Singed hem.
+      damage: 1
+      equipment: Sling ring, cloak
+      injury: None
+      path: [CROSSING, DIM_FRONT]
+      objective: Find what powers the Engine.
+      power: 85
+      emotion: Intent.
+      knowledge: Three anchors; destroying them in the wrong order accelerates the collapse.
+    BATMAN:
+      look: Pristine.
+      damage: 0
+      equipment: Holo projector, scanner
+      injury: None
+      path: [CROSSING, DIM_FRONT]
+      objective: Model the enemy tech.
+      power: 100
+      emotion: Concentrated.
+      knowledge: Three anchors; the problem is timing.
+    CYBORG:
+      look: Pristine.
+      damage: 0
+      equipment: Integrated tools
+      injury: None
+      path: [CROSSING, DIM_FRONT]
+      objective: Trace the signal.
+      power: 100
+      emotion: Focused.
+      knowledge: The tech talks to three nodes.
+    FLASH:
+      look: Pristine.
+      damage: 0
+      equipment: None
+      injury: None
+      path: [CROSSING, RESCUE]
+      objective: Evacuate civilians.
+      power: 100
+      emotion: Joking, then uneasy.
+      knowledge: Some regions of the city repeat the same seconds.
+    SPIDEY:
+      look: Dusty.
+      damage: 1
+      equipment: Web-shooters
+      injury: None
+      path: [CROSSING, RESCUE, CROSSING]
+      objective: Catch falling people.
+      power: 85
+      emotion: Nervous jokes.
+      knowledge: None new.
+    PANTHER:
+      look: Suit scuffed from S2.
+      damage: 1
+      equipment: Vibranium suit
+      injury: None
+      path: [CORRIDOR]
+      objective: Keep the corridor open.
+      power: 90
+      emotion: Calm.
+      knowledge: None new.
+    THANOS:
+      look: As S1.
+      damage: 0
+      equipment: Gauntlet
+      injury: None
+      path: [CROSSING]
+      objective: Let them spend their strength, then stop time.
+      power: 100
+      emotion: Satisfied.
+      knowledge: Every hero attack charged the Engine.
+
+  6:
+    IRONMAN:
+      look: Scorched back plate.
+      damage: 1
+      equipment: Armor
+      injury: Bruised ribs
+      path: [CROSSING]
+      objective: Break the reversal.
+      power: 70
+      emotion: Alarmed, then cold clarity.
+      knowledge: Every hero attack feeds the Engine.
+    THANOS:
+      look: As S1.
+      damage: 0
+      equipment: Gauntlet
+      injury: None
+      path: [CROSSING]
+      objective: Break their will; fracture the sky.
+      power: 100
+      emotion: Serene.
+      knowledge: As S5.
+    FLASH:
+      look: Suit scuffed.
+      damage: 1
+      equipment: None
+      injury: None
+      path: [SEVENTH_AVE, CROSSING]
+      objective: Outrun the effect; reach the dome when the loop breaks.
+      power: 85
+      emotion: Panic.
+      knowledge: The block is a closed time loop.
+    SPIDEY:
+      look: Dusty.
+      damage: 1
+      equipment: Web-shooters
+      injury: None
+      path: [SIXTH_AVE, CROSSING]
+      objective: Get the paramedic out.
+      power: 75
+      emotion: Terror.
+      knowledge: His spider-sense cannot predict the distortions.
+    SUPERMAN:
+      look: Dusted suit.
+      damage: 1
+      equipment: None
+      injury: None
+      path: [CROSSING]
+      objective: Stop Thanos directly.
+      power: 85
+      emotion: Frustrated.
+      knowledge: Thanos anticipates him.
+    WW:
+      look: Armor scratched.
+      damage: 1
+      equipment: Sword, shield, lasso
+      injury: None
+      path: [CROSSING]
+      objective: Engage Thanos; then cover the retreat.
+      power: 90
+      emotion: Defiant.
+      knowledge: She cannot beat him head-on.
+    THOR:
+      look: Dented armor.
+      damage: 1
+      equipment: Stormbreaker
+      injury: Bruised
+      path: [CROSSING]
+      objective: Combined strike with Stark.
+      power: 75
+      emotion: Furious.
+      knowledge: Thanos can absorb lightning.
+    HULK:
+      look: Dusty, neck graze.
+      damage: 1
+      equipment: None
+      injury: Neck bruise
+      path: [CROSSING]
+      objective: Get up.
+      power: 60
+      emotion: Exhausted.
+      knowledge: None new.
+    BATMAN:
+      look: Cape dusty.
+      damage: 1
+      equipment: Scanner gauntlet, grapnel
+      injury: None
+      path: [CROSSING]
+      objective: Find the rule Thanos is breaking.
+      power: 95
+      emotion: Cold focus.
+      knowledge: Thanos edits their perception of cause and effect.
+    GL:
+      look: Pristine.
+      damage: 0
+      equipment: Ring
+      injury: None
+      path: [HARBOR]
+      objective: Shield the ferries and the retreat.
+      power: 60
+      emotion: Strain.
+      knowledge: His ring nearly ran dry.
+    STRANGE:
+      look: Singed hem.
+      damage: 1
+      equipment: Sling ring, cloak
+      injury: Nosebleed (strain)
+      path: [CROSSING]
+      objective: Hold back the fracturing sky.
+      power: 70
+      emotion: Strain.
+      knowledge: The fracture can be held, not closed, from here.
+    CAP:
+      look: Torn shoulder, dusty.
+      damage: 1
+      equipment: Shield
+      injury: Bruised
+      path: [CROSSING]
+      objective: Get everyone under the dome.
+      power: 70
+      emotion: Grim.
+      knowledge: As Batman's broadcast.
+    AQUAMAN:
+      look: Wet.
+      damage: 1
+      equipment: Trident
+      injury: None
+      path: [CROSSING]
+      objective: Retreat with the team (off screen).
+      power: 80
+      emotion: Grim.
+      knowledge: As broadcast.
+    CYBORG:
+      look: Dust in the seams.
+      damage: 1
+      equipment: Integrated tools
+      injury: None
+      path: [CROSSING]
+      objective: Record everything (off screen).
+      power: 85
+      emotion: Focused.
+      knowledge: As broadcast.
+    PANTHER:
+      look: Scuffed.
+      damage: 1
+      equipment: Vibranium suit
+      injury: None
+      path: [CORRIDOR]
+      objective: Hold the corridor under the dome (off screen).
+      power: 70
+      emotion: Calm.
+      knowledge: As broadcast.
+
+  7:
+    IRONMAN:
+      look: Helmet off, armor scorched black down one side.
+      damage: 2
+      equipment: Armor (nanotech reserve at 40%)
+      injury: Bruised ribs, cut on the cheek
+      path: [BUNKER]
+      objective: Define the window.
+      power: 55
+      emotion: Serious, no jokes.
+      knowledge: The plan.
+    SUPERMAN:
+      look: Cape torn, suit grey with concrete dust.
+      damage: 2
+      equipment: None
+      injury: Bruised
+      path: [BUNKER]
+      objective: Volunteer for the air team.
+      power: 75
+      emotion: Quiet resolve.
+      knowledge: The plan.
+    WW:
+      look: Shield dented, armor scratched.
+      damage: 2
+      equipment: Sword, shield (dented), lasso
+      injury: Cut forearm
+      path: [BUNKER]
+      objective: Name the risk.
+      power: 80
+      emotion: Resolute.
+      knowledge: The plan.
+    FLASH:
+      look: Suit scuffed, sitting against the wall.
+      damage: 1
+      equipment: None
+      injury: Legs trembling (overexertion)
+      path: [BUNKER]
+      objective: Accept the Heart strike.
+      power: 60
+      emotion: Afraid, then decided.
+      knowledge: The plan; the half-second window.
+    HULK:
+      look: Dusty, grazed, sitting on the floor.
+      damage: 2
+      equipment: None
+      injury: Neck bruise, cracked rib
+      path: [BUNKER]
+      objective: Stand back up.
+      power: 60
+      emotion: Brooding.
+      knowledge: The plan.
+    SPIDEY:
+      look: Mask pushed up to the nose, suit torn at the knee.
+      damage: 2
+      equipment: Web-shooters (one cartridge left each)
+      injury: Scraped knee
+      path: [BUNKER]
+      objective: Not panic.
+      power: 65
+      emotion: Scared humour.
+      knowledge: The plan; trust the count, not the tingle.
+    CAP:
+      look: Torn shoulder, dusty, cut lip.
+      damage: 2
+      equipment: Shield
+      injury: Cut lip
+      path: [BUNKER]
+      objective: Lead.
+      power: 70
+      emotion: Steady.
+      knowledge: The plan.
+    THOR:
+      look: Scalp cut, dented armor.
+      damage: 2
+      equipment: Stormbreaker
+      injury: Scalp cut
+      path: [BUNKER]
+      objective: Join the air team.
+      power: 70
+      emotion: Determined.
+      knowledge: The plan.
+    STRANGE:
+      look: Singed hem, dried blood under the nose.
+      damage: 1
+      equipment: Sling ring, cloak
+      injury: Strain
+      path: [BUNKER]
+      objective: Bind them to one count; open the way.
+      power: 70
+      emotion: Controlled urgency.
+      knowledge: The order; the count spell.
+    BATMAN:
+      look: Cape dusty.
+      damage: 1
+      equipment: Holo projector
+      injury: None
+      path: [BUNKER]
+      objective: Build the plan.
+      power: 90
+      emotion: Cold focus.
+      knowledge: The counter-strategy (a clock Thanos cannot read).
+    CYBORG:
+      look: Dust in the seams.
+      damage: 1
+      equipment: Integrated tools
+      injury: None
+      path: [BUNKER]
+      objective: Ride the carrier pulse.
+      power: 85
+      emotion: Focused.
+      knowledge: The carrier pulse.
+    GL:
+      look: Suit scuffed.
+      damage: 1
+      equipment: Ring (charge tied to his will; partly recovered with rest)
+      injury: Exhaustion
+      path: [BUNKER]
+      objective: Recover concentration.
+      power: 41
+      emotion: Tired, determined.
+      knowledge: The plan.
+    AQUAMAN:
+      look: Wet, armor scuffed.
+      damage: 1
+      equipment: Trident
+      injury: None
+      path: [BUNKER]
+      objective: Join the ground team.
+      power: 80
+      emotion: Ready.
+      knowledge: The plan.
+    PANTHER:
+      look: Scuffed suit.
+      damage: 1
+      equipment: Vibranium suit
+      injury: None
+      path: [BUNKER]
+      objective: Join the ground team.
+      power: 75
+      emotion: Calm.
+      knowledge: The plan.
+
+  8:
+    CAP: {look: As S7, damage: 2, equipment: Shield, injury: Cut lip, path: [ENGINE_EXT, GAP, ROOT_GATE], objective: Take and hold the Root gate., power: 70, emotion: Commanding., knowledge: The count.}
+    IRONMAN: {look: "Armor resealed by nanotech; scorch still visible as dull patches.", damage: 2, equipment: Armor, injury: Bruised ribs, path: [ENGINE_EXT, RINGS, CROWN], objective: Expose and overload the Crown., power: 55, emotion: Focused., knowledge: The count.}
+    THOR: {look: As S7, damage: 2, equipment: Stormbreaker, injury: Scalp cut, path: [ENGINE_EXT, RINGS, CROWN], objective: Storm the structure; overload the Crown., power: 70, emotion: Exultant., knowledge: The count.}
+    HULK: {look: As S7, damage: 2, equipment: None, injury: Cracked rib, path: [ENGINE_EXT, GAP, ROOT_GATE], objective: Open the Root gate., power: 60, emotion: Rage with purpose., knowledge: The count.}
+    STRANGE: {look: As S7, damage: 1, equipment: "Sling ring, cloak", injury: Strain, path: [ENGINE_EXT, CORRIDOR_T, HEART], objective: Keep the team connected; hold the pathway., power: 70, emotion: Strain., knowledge: The count.}
+    SPIDEY: {look: "Mask down, suit torn at the knee, dusty.", damage: 2, equipment: Web-shooters, injury: Scraped knee, path: [ENGINE_EXT, PASSAGE], objective: Jam the gear-rings., power: 65, emotion: Steadier., knowledge: Trust the count.}
+    PANTHER: {look: As S7, damage: 1, equipment: Vibranium suit, injury: None, path: [ENGINE_EXT, GAP, ROOT_GATE], objective: Clear the breach., power: 75, emotion: Calm., knowledge: The count.}
+    SUPERMAN: {look: As S7, damage: 2, equipment: None, injury: Bruised, path: [ENGINE_EXT, RINGS, GAP, HEART], objective: Cover the teams; block Thanos., power: 75, emotion: Resolved., knowledge: The count.}
+    BATMAN: {look: As S7, damage: 1, equipment: "Scanner, comms", injury: None, path: [ENGINE_EXT, PASSAGE, HEART], objective: Find the way in; give the signal., power: 90, emotion: Cold focus., knowledge: The count.}
+    WW: {look: As S7, damage: 2, equipment: "Sword, shield (dented), lasso", injury: Cut forearm, path: [ENGINE_EXT, GAP, ROOT_GATE, HEART], objective: Break the Guard; then block Thanos., power: 80, emotion: Fierce., knowledge: The count.}
+    FLASH: {look: As S7, damage: 1, equipment: None, injury: Tired legs, path: [ENGINE_EXT, CORRIDOR_T, HEART], objective: Strike the Heart on zero., power: 70, emotion: Terrified and ready., knowledge: The count.}
+    GL: {look: As S7, damage: 1, equipment: Ring, injury: Exhaustion, path: [ENGINE_EXT, GAP, HEART], objective: Bridge the gap; brace the chamber., power: 41, emotion: Strain., knowledge: The count.}
+    AQUAMAN: {look: As S7, damage: 1, equipment: Trident, injury: None, path: [ENGINE_EXT, GAP, ROOT_GATE], objective: Lead the breach., power: 80, emotion: Roaring., knowledge: The count.}
+    CYBORG: {look: As S7, damage: 1, equipment: Integrated tools, injury: None, path: [ENGINE_EXT, CORRIDOR_T, HEART], objective: Lock the carrier pulse., power: 85, emotion: Focused., knowledge: The count.}
+    THANOS: {look: As S1, damage: 0, equipment: Gauntlet, injury: None, path: [HEART], objective: Finish the synchronisation., power: 100, emotion: Calm, then broken composure., knowledge: Learns the heroes acted outside his reading.}
+
+  9:
+    THANOS: {look: As S1, damage: 0, equipment: Gauntlet, injury: None, path: [CAUSEWAY], objective: Reach the control platform., power: 85, emotion: Cold anger., knowledge: The cascade can still be stopped.}
+    SUPERMAN: {look: As S7, damage: 2, equipment: None, injury: Bruised, path: [CAUSEWAY], objective: Buy time., power: 70, emotion: Unbreakable., knowledge: The cascade needs time.}
+    THOR: {look: As S7, damage: 2, equipment: Stormbreaker, injury: Scalp cut, path: [CAUSEWAY], objective: Buy time., power: 60, emotion: Defiant., knowledge: Same.}
+    WW: {look: As S7, damage: 2, equipment: "Sword, shield (dented), lasso", injury: Cut forearm, path: [CAUSEWAY], objective: Protect the platform., power: 75, emotion: Conviction., knowledge: Same.}
+    BATMAN: {look: As S7, damage: 1, equipment: Comms, injury: None, path: [PLATFORM], objective: Drive the cascade., power: 85, emotion: Focused., knowledge: Cascade progress.}
+    CYBORG: {look: As S7, damage: 1, equipment: Integrated tools, injury: None, path: [PLATFORM], objective: Hold the carrier pulse., power: 75, emotion: Strain., knowledge: Cascade progress.}
+    FLASH: {look: As S7, damage: 1, equipment: None, injury: Tired legs, path: [PLATFORM], objective: Run the control nodes., power: 55, emotion: Exhausted focus., knowledge: Cascade progress.}
+
+  10:
+    IRONMAN: {look: As S8, damage: 2, equipment: Armor (all defensive systems), injury: Bruised ribs, path: [PLATFORM, HEART], objective: Release the Engine from the core., power: 50, emotion: Calm acceptance., knowledge: Release is manual only.}
+    BATMAN: {look: As S7, damage: 1, equipment: Comms, injury: None, path: [PLATFORM], objective: Make Thanos choose., power: 80, emotion: Focused., knowledge: The feedback loop.}
+    CYBORG: {look: As S7, damage: 1, equipment: Integrated tools, injury: None, path: [PLATFORM], objective: Read the loop., power: 70, emotion: Alarm., knowledge: Thanos is feeding the Heart from the Stones.}
+    STRANGE: {look: Cloak torn, hands trembling., damage: 2, equipment: "Sling ring, cloak", injury: Strain, path: [PLATFORM, HEART], objective: Keep the seal; evacuate everyone., power: 40, emotion: Strain., knowledge: The Stones are fused into the loop.}
+    FLASH: {look: As S7, damage: 1, equipment: None, injury: Legs failing, path: [HEART], objective: Light every control point., power: 40, emotion: Pushing past the limit., knowledge: The control sequence.}
+    SPIDEY: {look: As S7, damage: 2, equipment: Web-shooters (last cartridges), injury: Scraped knee, path: [HEART], objective: Hold the mechanism together., power: 45, emotion: Determined., knowledge: Hold.}
+    GL: {look: As S7, damage: 1, equipment: Ring, injury: Exhaustion, path: [HEART], objective: Shield the others., power: 3, emotion: Running on will., knowledge: n/a}
+    THANOS: {look: "Full armor, no helmet, chest plate cracked across the centre, gauntlet Stones flaring unevenly.", damage: 1, equipment: Gauntlet, injury: None, path: [CAUSEWAY, HEART, CAUSEWAY], objective: Save the Engine; then kill Stark., power: 60, emotion: Desperation., knowledge: He must choose.}
+    SUPERMAN: {look: "Cape torn half away, suit grey with concrete dust.", damage: 3, equipment: None, injury: Bruised, path: [CAUSEWAY, HEART], objective: Intercept Thanos; get Tony out., power: 55, emotion: Urgent., knowledge: Tony stays behind.}
+    WW: {look: Bracers scored, shield dented., damage: 2, equipment: "Sword, shield, lasso", injury: Cut forearm, path: [CAUSEWAY, HEART], objective: Drive Thanos from the platform., power: 60, emotion: Fierce., knowledge: n/a}
+    THOR: {look: As S9 (Stormbreaker recovered)., damage: 2, equipment: Stormbreaker, injury: Scalp cut, path: [CAUSEWAY, HEART], objective: Spend the storm., power: 50, emotion: Fury., knowledge: n/a}
+    CAP: {look: Dust from the Root, torn shoulder., damage: 2, equipment: Shield, injury: Cut lip, path: [CAUSEWAY, HEART], objective: Hit the last control point., power: 55, emotion: Resolve., knowledge: The last node is exposed.}
+    HULK: {look: As S8, damage: 2, equipment: None, injury: Cracked rib, path: [HEART], objective: Evacuate., power: 50, emotion: Urgent., knowledge: n/a}
+
+  11:
+    CAP: {look: Dust-covered, torn shoulder, cut lip., damage: 2, equipment: None until he recovers the shield (S11_060), injury: Cut lip, path: [WRECKAGE], objective: Account for everyone., power: 30, emotion: Exhausted relief., knowledge: The Engine is gone.}
+    IRONMAN: {look: Out of the armor; undersuit, cuts, smoke., damage: 3, equipment: "Nanotech shell (destroyed)", injury: Bruised ribs, concussion, path: [WRECKAGE], objective: Survive., power: 5, emotion: Wry exhaustion., knowledge: It worked.}
+    THOR: {look: As S10., damage: 2, equipment: Stormbreaker, injury: Scalp cut, path: [WRECKAGE], objective: Rest., power: 20, emotion: Reflective., knowledge: n/a}
+    HULK: {look: Dust, grazes., damage: 2, equipment: None, injury: Cracked rib, path: [WRECKAGE], objective: Rest., power: 30, emotion: Quiet., knowledge: n/a}
+    STRANGE: {look: Cloak torn., damage: 2, equipment: "Sling ring, cloak", injury: Strain, path: [WRECKAGE], objective: Confirm the seal., power: 15, emotion: Relief., knowledge: Every fracture is sealed.}
+    SPIDEY: {look: Mask pushed up, suit torn., damage: 2, equipment: Web-shooters (empty), injury: Scraped knee, path: [WRECKAGE], objective: Breathe., power: 20, emotion: Shaky relief., knowledge: n/a}
+    PANTHER: {look: Scuffed., damage: 1, equipment: Vibranium suit, injury: None, path: [WRECKAGE], objective: Watch over the others., power: 40, emotion: Calm., knowledge: n/a}
+    SUPERMAN: {look: Cape torn half away, suit grey with dust., damage: 3, equipment: None, injury: Bruised, path: [WRECKAGE], objective: Find Tony., power: 40, emotion: Hope., knowledge: Tony is alive.}
+    BATMAN: {look: Cape torn, cowl scratched., damage: 2, equipment: Scanner, injury: None, path: [WRECKAGE], objective: Look for Thanos., power: 50, emotion: Wary., knowledge: No sign of Thanos.}
+    WW: {look: Bracers scored, shield dented., damage: 2, equipment: "Sword, shield, lasso", injury: Cut forearm, path: [WRECKAGE], objective: Help the wounded., power: 45, emotion: Compassion., knowledge: n/a}
+    FLASH: {look: Suit scuffed., damage: 2, equipment: None, injury: Legs failing (cannot run yet), path: [WRECKAGE], objective: Stand up., power: 5, emotion: Spent., knowledge: n/a}
+    GL: {look: Ring dark., damage: 1, equipment: Ring (0%), injury: Exhaustion, path: [WRECKAGE], objective: Rest., power: 0, emotion: Spent., knowledge: n/a}
+    AQUAMAN: {look: Dry for once, armor scuffed., damage: 1, equipment: Trident, injury: None, path: [WRECKAGE], objective: Rest., power: 40, emotion: Gruff relief., knowledge: n/a}
+    CYBORG: {look: Seams dimmed., damage: 1, equipment: Integrated tools, injury: None, path: [WRECKAGE], objective: Scan for residual energy., power: 30, emotion: Uneasy., knowledge: Faint residual energy he cannot place.}
+
+events:
+  # Events take effect AFTER the named shot (the shot itself shows the change happening).
+  S03_150: {IRONMAN: {damage: 1, look: "Back plate scorched by his own blast."}}
+  S03_160: {HULK: {injury: "Neck bruise"}}
+  S04_160: {THANOS: {status: gone}}
+  S06_070: {SUPERMAN: {damage: 2, look: "Suit grey with concrete dust, cape torn by the collapse."}}
+  S06_090: {WW: {damage: 2, equipment: "Sword, shield (dented), lasso"}}
+  S06_110: {IRONMAN: {damage: 2, look: "Armor scorched black down one side."}, THOR: {damage: 2, injury: "Scalp cut"}}
+  S06_200: {GL: {power: 8}}
+  S06_230: {STRANGE: {injury: "Nosebleed (strain)"}}
+  S09_110: {THANOS: {damage: 1, look: "Chest plate cracked."}}
+  S09_140: {THOR: {equipment: "None (Stormbreaker flung into the void)"}}
+  S09_160: {SUPERMAN: {damage: 3, look: "Cape torn half away."}}
+  S09_205: {THOR: {equipment: "Stormbreaker (recalled)"}}
+  S10_070: {GL: {power: 3}}
+  S10_150: {CAP: {equipment: "None (shield thrown)"}}
+  S10_210: {WW: {status: gone}, HULK: {status: gone}, SPIDEY: {status: gone}, THOR: {status: gone}}
+  S10_280: {IRONMAN: {status: unknown}, THANOS: {status: unknown}}
+  S11_060: {CAP: {equipment: "Shield (recovered, deeply scored)"}}

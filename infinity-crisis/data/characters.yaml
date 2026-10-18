@@ -1,0 +1,330 @@
+# Character and asset design bible.
+# `design` is the canonical description that every video-generation prompt repeats verbatim,
+# so it must be complete on its own. `cue` is the character's name in the screenplay.
+# Heights are in-world metres; every model is built to these and checked in turnaround.
+
+style: >
+  Premium theatrical CGI, stylised realism. Physically based materials, filmic tone mapping,
+  volumetric atmosphere, real-world lens behaviour (2.39:1 anamorphic look, oval bokeh,
+  restrained horizontal flares). Faces are expressive but grounded; no cartoon squash on
+  principal characters. Silhouettes are designed to read in black fill at 120 px tall.
+
+characters:
+
+  THANOS:
+    cue: THANOS
+    name: Thanos
+    side: antagonist
+    height: 2.60
+    design: >
+      Thanos: a 2.6 m purple-skinned Titan with a massive, heavily muscled build, a broad
+      deeply ridged chin, heavy brow and calm, intelligent eyes. He wears heavy battle armor
+      of dark gunmetal plates edged in worn gold, with a high gorget, segmented pauldrons and
+      a long armored skirt, and no helmet. On his left hand, a golden gauntlet set with six
+      gemstones (blue, yellow, red, purple, green, orange). Movement is slow, deliberate and
+      enormously heavy.
+    silhouette: Wide shoulders, small head relative to shoulders, armored skirt, single bright gauntlet.
+    palette: ["#5b3f8c skin", "#2b2d33 gunmetal", "#b08a3e worn gold", "Stone colours as listed"]
+    materials: Subsurface skin with fine pores and scarring on the chin ridges; anisotropic brushed gunmetal; gold with edge wear; gemstones with internal caustics.
+    movement: >
+      Heaviest mover in the film. Accelerates slowly, never hurries, plants every step
+      (ground contact 4-6 frames). Fighting rhythm: stillness, read, one decisive counter.
+      He never throws two identical counters in the film.
+    power_signature: Deep purple energy with restrained individual Stone colours; heavy shadow; gold reflections.
+    sonic_identity: Sub-bass weight on footsteps; Stones hum as a six-note cluster; voice close-miked and quiet.
+    voice: Low, slow, never shouting except once (S10_180).
+
+  IRONMAN:
+    cue: TONY
+    name: Iron Man / Tony Stark
+    side: avengers
+    height: 1.98
+    design: >
+      Iron Man: a sleek red-and-gold powered armor suit, glossy red plates over brushed gold
+      under-plates, a glowing circular arc reactor in the chest, repulsor emitters glowing in
+      both palms and boot soles, and a mechanical faceplate with narrow glowing eye slits.
+      Tony Stark inside: mid-40s, dark goatee, sharp tired eyes.
+    silhouette: Broad chest, tapered waist, chest light, hand glows.
+    palette: ["#a3171d candy red", "#c9a24a gold", "#bfe6ff reactor white-blue"]
+    materials: Clear-coated metallic red with orange-peel micro-normal; brushed gold; emissive reactor; HUD reflections on the inner faceplate.
+    movement: Aerial; banks with the whole body; hover has a constant micro-correction; landings are three-point superhero landings only when he's showing off (never in S6-S11).
+    power_signature: Warm repulsor light, controlled blue-white energy, red/gold reflections.
+    sonic_identity: Bright rising repulsor whine; servo clicks on the faceplate.
+    voice: Quick, dry, technical; loses the jokes as stakes rise.
+
+  CAP:
+    cue: STEVE
+    name: Captain America / Steve Rogers
+    side: avengers
+    height: 1.88
+    design: >
+      Captain America: a tall, athletic man in his late 30s with short blond hair, wearing a
+      dark navy blue tactical combat suit with a white star on the chest, red and white
+      stripes across the abdomen, brown leather straps and gloves, and a round metallic
+      shield painted with concentric red and white rings and a white star on a blue centre;
+      the shield's surface is polished and reflects nearby fire and explosions.
+    silhouette: Round shield is the key read.
+    palette: ["#1f2d4f navy", "#a52a2a red", "#e9e6df white", "#8d8f93 shield steel"]
+    materials: Ballistic weave with scuffing; matte leather; shield painted metal with deep scratches accumulating per sequence.
+    movement: Grounded, efficient; every throw starts in the hips; catches with a body turn.
+    power_signature: None (reflections only).
+    sonic_identity: Shield has a clean bell-like ring on ricochets.
+    voice: Direct, calm, carries.
+
+  THOR:
+    cue: THOR
+    name: Thor
+    side: avengers
+    height: 1.98
+    design: >
+      Thor: a towering, broad-shouldered warrior with long blond hair and a short beard,
+      wearing weathered dark armor of overlapping scale plates with circular silver discs on
+      the chest and a long red cape, carrying Stormbreaker, a heavy battle-axe with a hammer
+      head and a long wooden haft wrapped in leather. White-blue lightning crawls over his
+      body and his eyes glow white when he summons it.
+    silhouette: Cape plus axe-hammer head.
+    palette: ["#2a2a2e armor", "#9aa0a8 silver discs", "#7d1717 cape", "#dfe9ff lightning"]
+    materials: Scaled armor with battle wear; cloth cape with heavy weight; lightning emissive with bloom kept tight.
+    movement: Big, mythic arcs; heavy landings (crater) but quick recovery; weapon swings lead with the shoulders.
+    power_signature: White-blue branching lightning, storm illumination, brief high-intensity flashes.
+    sonic_identity: High electrical sizzle under thunder.
+    voice: Confident, formal, never parody.
+
+  HULK:
+    cue: HULK
+    name: Hulk
+    side: avengers
+    height: 2.40
+    design: >
+      Hulk: a 2.4 m giant with green skin and an enormous, heavily muscled body, a broad
+      jaw, thick dark hair, and torn dark purple shorts; his skin is dusty and scraped from
+      the fighting, with visible veins and fine skin detail.
+    silhouette: Massive triangle, short legs, huge forearms.
+    palette: ["#5d7b3a skin", "#3c2a4d shorts", "#9a9384 dust"]
+    materials: Thick subsurface skin, dust and scrape layers that accumulate per sequence.
+    movement: Huge leaps with long hang time; landings crater; ground contact 6-8 frames; punches wind up from the floor.
+    power_signature: None (dust and debris).
+    sonic_identity: Growl layered with stone grinding; landings have sub-bass.
+    voice: Grunts; no catchphrases.
+
+  STRANGE:
+    cue: STRANGE
+    name: Doctor Strange
+    side: avengers
+    height: 1.83
+    design: >
+      Doctor Strange: a lean man in his 40s with grey-streaked dark hair at the temples and a
+      neat goatee, wearing layered dark blue robes with a wide belt and a high-collared,
+      flowing red Cloak of Levitation that moves on its own; when casting, glowing orange
+      mandalas and rings of sparks form around his hands.
+    silhouette: High collar and cloak.
+    palette: ["#1e2a45 robes", "#8e1b1b cloak", "#ff8a1f spell orange"]
+    materials: Layered cloth with embroidery; cloak with a sentient secondary motion layer.
+    movement: Floats; hand choreography is precise and finger-led; strain shows in the hands (tremor) before the face.
+    power_signature: Orange magical geometry, layered transparent spell rings, sparks, spatial distortion.
+    sonic_identity: Crystalline chimes with a crackle of sparks.
+    voice: Controlled urgency, technical.
+
+  SPIDEY:
+    cue: SPIDER-MAN
+    name: Spider-Man / Peter Parker
+    side: avengers
+    height: 1.78
+    design: >
+      Spider-Man: a lean, agile young man in a red-and-blue full-body suit with a fine black
+      web-line pattern over the red, a black spider emblem on the chest, and large white
+      expressive eye lenses that widen and narrow with his emotions.
+    silhouette: Slim, crouched, splayed limbs.
+    palette: ["#b3121b red", "#1d3e8a blue", "#101010 web lines", "#f2f2f2 lenses"]
+    materials: Technical fabric with raised web lines; lenses with mechanical shutter rims.
+    movement: Momentum-driven; every swing has a visible attachment point and body rotation at the bottom of the arc; perches are asymmetric.
+    power_signature: Web lines (white, slightly translucent).
+    sonic_identity: Web 'thwip', fabric flutter.
+    voice: Fast, nervous jokes; drops to a young voice when scared.
+
+  PANTHER:
+    cue: BLACK PANTHER
+    name: Black Panther / T'Challa
+    side: avengers
+    height: 1.83
+    design: >
+      Black Panther: an athletic man in a sleek black vibranium suit with a fine textured
+      weave, silver accents along the necklace and seams, a feline mask with pointed ears
+      and white eye lenses, and retractable claws; absorbed kinetic energy lights the suit's
+      weave in glowing purple patterns.
+    silhouette: Sleek, feline mask ears.
+    palette: ["#111214 suit", "#c0c4c9 silver", "#8b5cf6 kinetic purple"]
+    materials: Micro-textured weave with anisotropic sheen; emissive pattern layer driven by stored energy.
+    movement: Low centre of gravity, controlled, feline; never wastes motion.
+    power_signature: Purple kinetic absorption and release.
+    sonic_identity: Rising hum as energy is stored; deep release.
+    voice: No lines in this cut.
+
+  SUPERMAN:
+    cue: SUPERMAN
+    name: Superman / Clark Kent
+    side: justice_league
+    height: 1.91
+    design: >
+      Superman: a tall, powerfully built man with short black hair and a calm, kind face,
+      wearing a deep blue suit with a fine textured weave, a red-and-yellow diamond crest on
+      the chest, a red belt, red boots and a long flowing red cape; he looks as if lit by
+      natural sunlight even at night, and his eyes glow red-white when he uses heat vision.
+    silhouette: Cape and chest crest.
+    palette: ["#1f3d8f blue", "#b31b1b red", "#e8c547 crest yellow"]
+    materials: Kryptonian weave with subtle scale micro-pattern; heavy cape cloth (sim-driven).
+    movement: Flight is effortless until it isn't; controlled strength (he pulls punches by default); landings are soft except S4_070.
+    power_signature: Natural daylight, atmospheric rim lighting, carefully controlled heat vision.
+    sonic_identity: Clean air-shock whoosh; sonic boom on arrivals.
+    voice: Calm determination; concern for ordinary people.
+
+  BATMAN:
+    cue: BATMAN
+    name: Batman / Bruce Wayne
+    side: justice_league
+    height: 1.88
+    design: >
+      Batman: a tall, heavily armored man in a dark charcoal-grey tactical batsuit with
+      segmented armor plates, a black bat emblem on the chest, a utility belt, scalloped
+      gauntlets, a cowl with short pointed ears and subtly glowing white eye lenses, and a
+      long black cape.
+    silhouette: Cowl ears and cape.
+    palette: ["#2a2c30 armor", "#0d0d0f black", "#e6f1ff lens glow"]
+    materials: Matte armor with hard-surface seams; cape with a heavy leather-like drape.
+    movement: Precise, economical, often still; analysis beats are holds.
+    power_signature: Gadgets only (scanner light, holograms).
+    sonic_identity: Leather and armor creak; gadget beeps.
+    voice: Concise, low, tactical.
+
+  WW:
+    cue: WONDER WOMAN
+    name: Wonder Woman / Diana Prince
+    side: justice_league
+    height: 1.83
+    design: >
+      Wonder Woman: a tall, strong warrior woman with long dark hair and a gold tiara with a
+      red star, wearing red-and-gold armor with an eagle-shaped breastplate, a dark blue
+      armored skirt, silver bracers, a sword, a round shield and a glowing golden lasso at
+      her hip.
+    silhouette: Tiara, shield and sword, bracers.
+    palette: ["#a3201f red", "#c99b3a gold", "#1d2f6b blue", "#c7c9cc silver"]
+    materials: Hammered metal armor, battle wear; lasso emissive gold.
+    movement: Acrobatic power; plants and pivots; refuses to give ground (she backs up only when she chooses).
+    power_signature: Metallic gold highlights, sparks from bracer impacts, sharp reflective sword edges.
+    sonic_identity: Bracers ring like struck bells.
+    voice: Conviction and authority.
+
+  FLASH:
+    cue: THE FLASH
+    name: The Flash / Barry Allen
+    side: justice_league
+    height: 1.83
+    design: >
+      The Flash: a lean young man in a deep red textured speed suit with gold lightning-bolt
+      accents on the cowl's ear pieces and a gold lightning-bolt emblem on a white circle on
+      the chest; when he runs, crackling yellow-orange lightning trails off his body.
+    silhouette: Lean runner, ear bolts.
+    palette: ["#9e1b1b red", "#e3b23c gold", "#ffd36b lightning"]
+    materials: Textured suit with panel seams; lightning emissive.
+    movement: Readable speed - his route is always visible as a lightning trail; stops are skids, never pops.
+    power_signature: Yellow-orange lightning trails, subtle environmental distortion, motion blur that preserves the silhouette.
+    sonic_identity: Crackling whoosh; time-slice stutter in fragmented areas.
+    voice: Humour under anxiety; focused when it counts.
+
+  GL:
+    cue: GREEN LANTERN
+    name: Green Lantern / Hal Jordan
+    side: justice_league
+    height: 1.88
+    design: >
+      Green Lantern: a fit man in his late 30s with short brown hair and a green domino mask,
+      wearing a black-and-green suit with luminous green accents and a white circle with the
+      green lantern symbol on the chest, and a glowing green ring on his right hand; he
+      creates large translucent constructs of solid green light.
+    silhouette: Ring hand forward; constructs.
+    palette: ["#16a34a construct green", "#0f1a12 suit black", "#eafff1 ring core"]
+    materials: Suit with emissive accents; constructs translucent with bright edges and internal particles, casting green light on surfaces.
+    movement: Flies upright, ring arm leading; concentration shows as arm tremor; constructs dim with his power level.
+    power_signature: Luminous green constructs, translucent edges, reflected light, visible particles.
+    sonic_identity: Construct hum (pitch drops with power level); ring voice.
+    voice: Confident pilot.
+
+  AQUAMAN:
+    cue: AQUAMAN
+    name: Aquaman / Arthur Curry
+    side: justice_league
+    height: 1.93
+    design: >
+      Aquaman: a broad, powerfully built man with long wet dark hair and a full beard,
+      wearing scaled gold-and-green armor with orange-gold scales on the torso and dark green
+      on the legs, and carrying a large golden trident; his skin and armor are always wet
+      with running water droplets.
+    silhouette: Trident, long hair.
+    palette: ["#c9952f gold scales", "#1f4d3a green", "#d7b46a trident"]
+    materials: Wet shader on everything (droplet layer); scaled armor.
+    movement: Heavy frontline power; spins the trident; fluid underwater.
+    power_signature: Water spray, trident glow.
+    sonic_identity: Water crash, trident hum.
+    voice: Blunt.
+
+  CYBORG:
+    cue: CYBORG
+    name: Cyborg / Victor Stone
+    side: justice_league
+    height: 1.98
+    design: >
+      Cyborg: a tall man whose body is mostly silver-grey cybernetic armor with exposed
+      mechanical joints and blue-lit seams, the left half of his human face visible and the
+      right side metal with a glowing red cybernetic eye; his arm can reconfigure into tools
+      and interface plugs.
+    silhouette: Asymmetric head, plated body.
+    palette: ["#9ca3ab alloy", "#2563eb seam blue", "#ef4444 eye red"]
+    materials: Layered alloy with emissive seams; human skin on the left face.
+    movement: Mechanical precision with human hesitation; servo micro-steps.
+    power_signature: Blue data light, red eye, scan beams.
+    sonic_identity: Servo whirs, data chatter.
+    voice: Focused, quick.
+
+  RING:
+    cue: LANTERN RING
+    name: Green Lantern's ring (voice)
+    side: justice_league
+    height: 0
+    design: The ring's synthetic voice, heard only.
+    silhouette: n/a
+    palette: []
+    materials: n/a
+    movement: n/a
+    power_signature: n/a
+    sonic_identity: Flat synthetic voice with a green hum.
+    voice: Flat, synthetic.
+
+extras:
+  WOMAN: A woman in her 30s, rain-dark wool coat, wet dark hair, no umbrella.
+  OKAFOR: Dr. Lena Okafor, astrophysicist, 50s, short grey natural hair, cardigan over a lab shirt, reading glasses pushed up.
+  CHILD: A child of about six in a yellow raincoat.
+  PARENT: The child's parent, grey parka sleeve.
+  PEDESTRIANS: New Yorkers at night in rain gear; varied ages and builds; invented clothing brands only.
+  RESPONDERS: Police, firefighters and paramedics in generic (non-branded) gear.
+  HOSPITAL_STAFF: Nurses and a doctor in scrubs on the hospital roof.
+  WORKERS: Two window cleaners in harnesses and orange overalls.
+  CHILD_RESCUED: A boy of about eight in a school hoodie.
+  PARAMEDIC: An injured paramedic in a reflective jacket.
+
+forces:
+  HOLLOWS: Thanos's foot soldiers. 2.1 m, ash-grey armor with a blank faceplate and one thin violet visor slit, energy rifles. They move in eerie unison.
+  CRAWLER: Six-legged assault tank, 9 m long, ash-grey armor, violet sensor cluster, twin cannons.
+  LEVIATHAN: Aquatic adaptive war machine, 60 m tall, crab-like legs and a cathedral-like carapace, a sonic cannon, and armor that re-forms into layered violet kinetic scales. Weak point - an open cooling intake below the waterline.
+  MONOLITH: Battleship-class cruiser, a black slab 400 m long with violet slit lights.
+  CARRIER: Hollow carrier, 250 m, with an exposed engine bank at the stern.
+  FLEET: Hundreds of angular black ships of three classes (gunship, carrier, Monolith) with violet running lights. Late-war gunships have mirrored hulls that reflect energy weapons.
+  SILENT_THRONE: Thanos's flagship, a black cathedral-like vessel tens of kilometres long with an open observation prow, buttress-like fins and sparse violet slits.
+  ASCENDANT_GUARD: Thanos's elite guard, 3 m tall, gunmetal-and-gold armor echoing Thanos's own, crackling glaives and shoulder cannons.
+
+environments:
+  NYC_NIGHT: Rain-soaked Manhattan at night; glass towers, sodium streetlights, the East River and harbor; becomes violet-lit after the rupture and progressively damaged.
+  THE_CROSSING: A broad ruined Midtown intersection (four avenues), the film's recurring battleground; damage persists across S2-S6.
+  WATERFRONT: Brooklyn waterfront with apartment towers, piers and an abandoned brick refinery.
+  BUNKER: Stark emergency operations bunker, sublevel 9; concrete, dead screens, red emergency light, water leaks.
+  ENGINE: The Eternity Engine above the shattered world of Oruun; three counter-rotating rings (outer ring about 1,000 km), a central violet sphere containing the Heart chamber, the Crown spire on the top ring, the Root gate and crystal at the mooring point, floating rock causeways.
+  WRECKAGE: The Engine's remains lying across Oruun's surface after the collapse; dead stone, twisted ring fragments, thin cold air, Earth visible in the closing rift.

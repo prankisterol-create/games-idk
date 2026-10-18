@@ -1,0 +1,673 @@
+sequence: 5
+title: THE FIRST GREAT COMBINED BATTLE
+target: 90.5
+music: "5M1 'Alliance in Motion' (merged theme at tempo; each zone keeps its own instrument family; false-victory swell; freeze to a single tone)"
+purpose: >
+  Five interconnected zones, each with its own beginning, middle and end, cross-cut on
+  clear screen directions (sky = up, waterfront = screen right, rescue = screen left). Every
+  zone pays off a pairing of powers. The win is real enough to believe, so the freeze lands.
+zones:
+  A: "SKY_A - the sky over the harbor (Iron Man, Green Lantern, Superman, Thor)"
+  B: "MADISON - the street defense line (Captain America, Wonder Woman)"
+  C: "WATERFRONT - the Brooklyn waterfront ruins (Hulk, Aquaman vs the Leviathan)"
+  D: "DIM_FRONT - the dimensional front rooftop (Batman, Doctor Strange, Cyborg)"
+  E: "RESCUE / CORRIDOR - the evacuation (Flash, Spider-Man, Black Panther)"
+locations: [AERIAL, CROSSING, SKY_A, MADISON, WATERFRONT, DIM_FRONT, RESCUE, CORRIDOR]
+shots:
+
+- id: S05_010
+  scene: "5.1"
+  title: The battlefield map
+  dur: 3.0
+  location: AERIAL
+  characters: [FLEET, HOLLOWS]
+  camera: High wide over the harbor, 900 m altitude, looking north-west.
+  lens: 35 mm.
+  movement: Slow orbit 10 deg.
+  framing: Harbor lower right (waterfront), Midtown centre, bridges left; carriers regrouping above the water.
+  action: Enemy carriers regroup; dropships pour Hollows toward the evacuation routes.
+  lighting: Fires, violet sky, city lights half dark.
+  environment: Smoke columns leaning in the wind.
+  vfx: Fleet instancing, dropship trails, fires.
+  sound: Distant battle bed, rotor thumps, score's tempo pulse starts.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_020
+  scene: "5.2"
+  title: Steve gives the plan
+  dur: 3.0
+  location: CROSSING
+  characters: [CAP, IRONMAN, GL, WW]
+  camera: Low, 5 m, looking up at Steve on the wrecked truck.
+  lens: 35 mm.
+  movement: Slow push-in.
+  framing: Steve centre-top; heroes at the frame edges reacting.
+  action: Steve assigns the first pairs; Iron Man and Lantern lift off as he speaks.
+  lighting: Fire key, green and red accent from the heroes.
+  environment: Smoke, rain.
+  vfx: Repulsor and ring lift-off glows.
+  sound: His voice cuts through clean; lift-off whooshes.
+  dialogue:
+  - {who: STEVE, line: "Stark, Lantern, take the sky. Diana, with me on the line."}
+  transition: Cut on movement.
+
+- id: S05_030
+  scene: "5.2"
+  title: Everyone moves
+  dur: 3.0
+  location: CROSSING
+  characters: [CAP, HULK, AQUAMAN, STRANGE, BATMAN, CYBORG, FLASH, SPIDEY, SUPERMAN, THOR]
+  camera: Wide behind Steve, 4 m high.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Steve foreground centre; heroes moving off in their directions.
+  action: As Steve names them, Hulk and Aquaman head for the water, Strange and Batman for the light pillar, Flash and Spider-Man for the crowds; Superman and Thor rise.
+  lighting: Fire.
+  environment: Dust kicked up by departures.
+  vfx: Speed streak, web line, flight trails.
+  sound: Departures layered left to right.
+  dialogue:
+  - {who: STEVE, line: "Hulk, Aquaman, the waterfront. Strange, Batman, find what's powering this. Flash, kid, get those people out."}
+  transition: Cut.
+
+- id: S05_040
+  scene: "5.2"
+  title: They peel away
+  dur: 2.5
+  location: CROSSING
+  characters: [IRONMAN, GL, HULK, AQUAMAN, FLASH, SPIDEY]
+  camera: High wide, 30 m above the Crossing.
+  lens: 24 mm.
+  movement: Crane up.
+  framing: "Heroes radiating outward like a compass: fliers up, waterfront screen right, rescue screen left."
+  action: The team splits into its zones; the screen directions are locked here for the rest of the sequence.
+  lighting: Fire, green, red.
+  environment: Smoke.
+  vfx: Trails.
+  sound: Score kicks into tempo.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_050
+  scene: "5.3"
+  title: "Zone A: ever ride a ramp?"
+  dur: 2.5
+  zone: A
+  location: SKY_A
+  characters: [IRONMAN, GL]
+  camera: Air-to-air, 5 m ahead of the pair, looking back at them.
+  lens: 35 mm.
+  movement: Fast track, matched speed.
+  framing: Iron Man left, Lantern right, wingtip to wingtip; gunships ahead (reflected in the faceplate).
+  action: They fly side by side toward a wall of gunships.
+  lighting: Warm repulsor and green ring light side by side.
+  environment: Smoke streaming past.
+  vfx: Thrust plumes, ring glow.
+  sound: Wind roar under comms-quality dialogue.
+  dialogue:
+  - {who: GL, line: "Ever ride a ramp, Stark?"}
+  - {who: TONY, line: "Is that a real question?"}
+  transition: Cut.
+
+- id: S05_060
+  scene: "5.4"
+  title: "Zone C: the Leviathan rises"
+  dur: 3.0
+  zone: C
+  location: WATERFRONT
+  characters: [LEVIATHAN]
+  camera: Water level, 300 m from the machine, looking up.
+  lens: 35 mm.
+  movement: Tilt up with its rise.
+  framing: Harbor surface bulging; the machine rising out of frame top; apartment towers on the shore at frame right.
+  action: The harbor bulges and the Leviathan rises, water sheeting off; its sonic cannon swings toward the shore towers.
+  lighting: Violet weapon glow, fire on the shore.
+  environment: Massive water cascades, waves.
+  vfx: Water simulation, wet carapace shading.
+  sound: Deep mechanical groan, waterfall roar, cannon charge-up whine.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_070
+  scene: "5.5"
+  title: "Zone B: the line"
+  dur: 3.0
+  zone: B
+  location: MADISON
+  characters: [CAP, WW, RESPONDERS, PEDESTRIANS, HOLLOWS]
+  camera: Low behind the defense line, 3 m.
+  lens: 35 mm.
+  movement: Slow push between Steve and Diana.
+  framing: Steve and Diana centre; police and firefighters flanking; civilians streaming behind; Hollow phalanx ahead.
+  action: Steve and Diana stand at the head of the line as the phalanx advances behind energy shields.
+  lighting: Fire key, shield glow from the phalanx.
+  environment: Crowd flow behind, smoke ahead.
+  vfx: Energy shields.
+  sound: Marching clank of the phalanx; crowd behind.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_080
+  scene: "5.6"
+  title: "Zone A: the ramp"
+  dur: 3.0
+  zone: A
+  location: SKY_A
+  characters: [IRONMAN, GL]
+  camera: Long-take tracking alongside the ramp, 15 m off its edge.
+  lens: 28 mm.
+  movement: Continuous track along the curve; one take.
+  framing: The green ramp sweeping up through frame; Iron Man accelerating along it.
+  action: Lantern unrolls a long curved ramp of light toward the largest carrier; Iron Man hits it at full burn and accelerates.
+  lighting: Green underlight on Iron Man.
+  environment: Sparks off his boots on the construct.
+  vfx: Construct ramp (translucent, edge glow, particle shimmer).
+  sound: Ramp ringing under him, repulsor scream rising.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_090
+  scene: "5.6"
+  title: "Zone A: the barrage"
+  dur: 2.5
+  zone: A
+  location: SKY_A
+  characters: [IRONMAN]
+  camera: Above the carrier, 40 m, looking down past Iron Man.
+  lens: 24 mm.
+  movement: Follows his flip.
+  framing: Iron Man inverted at frame top; exposed engine bank below.
+  action: He launches off the end, soars above the carrier, flips and pours a concentrated barrage into the engine bank.
+  lighting: Repulsor warm white.
+  environment: Smoke.
+  vfx: Repulsor barrage, engine vent glows.
+  sound: Repulsor volley.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_100
+  scene: "5.7"
+  title: "Zone C: Hulk is winning"
+  dur: 2.5
+  zone: C
+  location: WATERFRONT
+  characters: [HULK, LEVIATHAN]
+  camera: On the machine's back, 6 m from Hulk.
+  lens: 28 mm.
+  movement: Handheld-style, controlled, with each punch.
+  framing: Hulk centre pounding the armor.
+  action: "Hulk lands on the Leviathan's back. Punch: a plate buckles. Punch: a seam splits. The machine staggers."
+  lighting: Fire, violet panel glow.
+  environment: Armor fragments flying, water.
+  vfx: Armor deformation.
+  sound: Heavy punches with metal tearing.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_110
+  scene: "5.8"
+  title: "Zone D: three somethings"
+  dur: 3.0
+  zone: D
+  location: DIM_FRONT
+  characters: [BATMAN, STRANGE, CYBORG]
+  camera: Medium, 4 m, the light pillar behind them.
+  lens: 35 mm.
+  movement: Slow arc.
+  framing: Batman, Strange and Cyborg crouched around a blue holographic model.
+  action: Batman projects a model built from the wreckage scans; Cyborg reads it.
+  lighting: Violet pillar backlight, blue holo light on faces.
+  environment: Embers rising in the pillar.
+  vfx: Holographic model, light pillar.
+  sound: Pillar hum, holo chirps.
+  dialogue:
+  - {who: CYBORG, line: "Their tech's talking to something. Three somethings."}
+  transition: Cut.
+
+- id: S05_120
+  scene: "5.9"
+  title: "Zone E: the Flash clears a street"
+  dur: 2.5
+  zone: E
+  location: RESCUE
+  characters: [FLASH, PEDESTRIANS]
+  camera: Wide, 2 m high, on Seventh Avenue.
+  lens: 28 mm.
+  movement: Locked (single take; the route is visible).
+  framing: Burning awning frame left; corridor barricade frame right.
+  action: The Flash becomes a red streak; in one heartbeat every trapped person stands safely at the barricade.
+  lighting: Fire, lightning trail.
+  environment: Awning collapses onto an empty sidewalk.
+  vfx: Lightning trail tracing a readable zigzag route; people displaced with motion trails.
+  sound: Speed crackle, then the awning crash.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_130
+  scene: "5.10"
+  title: "Zone E: Spider-Man catches the workers"
+  dur: 2.5
+  zone: E
+  location: RESCUE
+  characters: [SPIDEY, WORKERS]
+  camera: Outside the high-rise, 20 m out, level with the falling platform.
+  lens: 35 mm.
+  movement: Follows Spider-Man's arc.
+  framing: Breaking platform upper left; Spider-Man swinging in from the right.
+  action: A window-washing platform snaps; two workers fall; Spider-Man snags one, webs the other, and swings both onto a balcony.
+  lighting: Window light, fire.
+  environment: Platform debris.
+  vfx: Webs, cable snap.
+  sound: Cable twang, web thwips.
+  dialogue:
+  - {who: SPIDEY, line: "Hi! Hey! You're okay. Don't look down."}
+  transition: Cut.
+
+- id: S05_140
+  scene: "5.11"
+  title: "Zone B: shield ricochet"
+  dur: 4.0
+  zone: B
+  location: MADISON
+  characters: [CAP, WW, HOLLOWS]
+  camera: Long lateral take, 18 m from the line of action, 2 m high.
+  lens: 35 mm.
+  movement: One continuous lateral track following the shield's whole path and back.
+  framing: Steve left, phalanx right, Diana centre-left.
+  action: >
+    Steve hurls the shield: it cracks off a helmet, a shield, a chest, and returns hot.
+    Diana meets it with her bracers in a burst of sparks and redirects it into the phalanx,
+    scattering them; it rebounds into Steve's hand. They exchange a glance.
+  lighting: Fire, shield reflections, bracer sparks.
+  environment: Hollows tumbling.
+  vfx: Shield trail, spark burst.
+  sound: Three distinct ricochet rings, bracer clang, pins-scatter clatter.
+  dialogue:
+  - {who: WW, line: "Again?"}
+  - {who: STEVE, line: "Again."}
+  transition: Cut.
+
+- id: S05_150
+  scene: "5.12"
+  title: "Zone C: the machine adapts"
+  dur: 2.5
+  zone: C
+  location: WATERFRONT
+  characters: [HULK, LEVIATHAN]
+  camera: Wide, 60 m, waterline.
+  lens: 35 mm.
+  movement: Locked; follows Hulk's flight.
+  framing: Machine centre; Hulk flung screen left into the harbor.
+  action: Hulk strikes; the armor ripples into layered violet scales; the punch rebounds in a shockwave that flings him a hundred meters into the water.
+  lighting: Violet scale glow.
+  environment: Huge splash.
+  vfx: Adaptive armor reconfiguration, rebound ring, splash.
+  sound: Armor ripple (chitinous click wave), rebound boom, splash.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_160
+  scene: "5.13"
+  title: "Zone D: three anchors"
+  dur: 3.0
+  zone: D
+  location: DIM_FRONT
+  characters: [STRANGE, BATMAN, CYBORG]
+  camera: Close on the hologram, Strange's hands entering.
+  lens: 50 mm.
+  movement: Slow push into the model.
+  framing: Blue model wrapped in orange geometry; three nodes lighting.
+  action: Strange translates the model into magical geometry; three nodes light up deep inside.
+  lighting: Blue and orange mixing.
+  environment: Sparks.
+  vfx: Spell geometry wrapping holo geometry.
+  sound: Two tonalities (electronic and choral) resolving into one chord.
+  dialogue:
+  - {who: STRANGE, line: "Three anchors. They're holding the machine in place."}
+  transition: Cut.
+
+- id: S05_170
+  scene: "5.14"
+  title: "Zone A: the carrier falls"
+  dur: 2.0
+  zone: A
+  location: SKY_A
+  characters: [IRONMAN, GL, THOR]
+  camera: Wide, 800 m from the carrier.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Carrier centre listing toward the open bay; Thor's lightning on gunships in the background.
+  action: The engines detonate in sequence; the carrier lists and drops away from the city toward the open bay.
+  lighting: Chain of explosions.
+  environment: Smoke trails.
+  vfx: Sequential explosions, carrier fall.
+  sound: Chained booms, delayed.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_180
+  scene: "5.14"
+  title: "Zone A: Superman throws the transport"
+  dur: 2.5
+  zone: A
+  location: SKY_A
+  characters: [SUPERMAN]
+  camera: Wide from the bridge deck, looking up.
+  lens: 35 mm.
+  movement: Pan with the throw.
+  framing: Bridge in the foreground; transport falling toward it; Superman catching it; open water at frame right.
+  action: A burning transport tumbles toward a bridge; Superman catches it, spins and hurls it over open water, where it skips and sinks.
+  lighting: Fire on the transport.
+  environment: Water skips and spray.
+  vfx: Transport throw, splash.
+  sound: Whoosh of the spin, skipping splashes.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_190
+  scene: "5.15"
+  title: "Zone C: the intake"
+  dur: 2.0
+  zone: C
+  location: WATERFRONT
+  characters: [AQUAMAN, LEVIATHAN]
+  camera: Underwater, 8 m below the surface, looking up at the machine's underside.
+  lens: 24 mm.
+  movement: Glides with Aquaman.
+  framing: Aquaman foreground; glowing intake mid-frame between the legs.
+  action: Aquaman glides beneath the legs and sees the unarmored cooling intake below the waterline.
+  lighting: Green-black water, violet intake glow, caustics.
+  environment: Bubbles, silt.
+  vfx: Underwater caustics, particulate.
+  sound: Muffled underwater world, intake thrum.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_200
+  scene: "5.16"
+  title: "Zone C: take its legs"
+  dur: 2.5
+  zone: C
+  location: WATERFRONT
+  characters: [HULK, AQUAMAN, LEVIATHAN]
+  camera: Water level, 10 m.
+  lens: 28 mm.
+  movement: Locked, tilt as the machine tilts.
+  framing: Hulk and Aquaman surfacing; foreleg frame right.
+  action: Hulk surfaces, furious; Aquaman bursts up beside him and shouts; Hulk grabs a foreleg, plants his feet and heaves; the machine tilts.
+  lighting: Fire on wet skin.
+  environment: Water churn.
+  vfx: Water.
+  sound: Surfacing splash, strain, metal groan.
+  dialogue:
+  - {who: AQUAMAN, line: "Stop punching it! Take its legs!"}
+  transition: Cut.
+
+- id: S05_210
+  scene: "5.16"
+  title: "Zone C: the trident"
+  dur: 2.0
+  zone: C
+  location: WATERFRONT
+  characters: [AQUAMAN, LEVIATHAN]
+  camera: Underwater close, 3 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Trident driven into the intake centre.
+  action: Aquaman drives his trident into the open intake; lightning flashes through the water.
+  lighting: White electrical flash underwater.
+  environment: Bubbles.
+  vfx: Underwater discharge.
+  sound: Muffled crack and sizzle.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_220
+  scene: "5.17"
+  title: "Zone D: not in the wrong order"
+  dur: 4.0
+  zone: D
+  location: DIM_FRONT
+  characters: [BATMAN, STRANGE, CYBORG]
+  camera: Three-shot, 3 m, low.
+  lens: 40 mm.
+  movement: Locked.
+  framing: Batman left, Strange centre, Cyborg right.
+  action: Batman wants to break all three; Strange warns about the order.
+  lighting: Holo and pillar.
+  environment: Embers.
+  vfx: Model shows a cascade collapse when one node is removed.
+  sound: Dialogue clear.
+  dialogue:
+  - {who: BATMAN, line: "Then we break all three."}
+  - {who: STRANGE, line: "Not in the wrong order. Pull one too soon and the others tear free. It wouldn't stop the collapse. It would accelerate it."}
+  transition: Cut.
+
+- id: S05_230
+  scene: "5.17"
+  title: "Zone D: timing"
+  dur: 1.5
+  zone: D
+  location: DIM_FRONT
+  characters: [CYBORG, BATMAN]
+  camera: Two-shot, 3 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Cyborg and Batman.
+  action: The problem defined in one word.
+  lighting: Same.
+  environment: Same.
+  vfx: None.
+  sound: Dialogue.
+  dialogue:
+  - {who: CYBORG, line: "So, timing."}
+  - {who: BATMAN, line: "Timing."}
+  transition: Cut.
+
+- id: S05_240
+  scene: "5.18"
+  title: "Zone E: need a hand?"
+  dur: 2.5
+  zone: E
+  location: RESCUE
+  characters: [SPIDEY, FLASH, CHILD_RESCUED]
+  camera: Medium-wide at the web anchor point, 5 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Spider-Man swinging in with a child; Flash already standing at the anchor with evacuees behind.
+  action: Spider-Man lands with a rescued child; the Flash is already there.
+  lighting: Fire.
+  environment: Rain.
+  vfx: Residual Flash arcs.
+  sound: "Comic timing: swing whoosh, landing scuff."
+  dialogue:
+  - {who: FLASH, line: "Need a hand?"}
+  - {who: SPIDEY, line: "I have two! I'm using them!"}
+  transition: Cut.
+
+- id: S05_250
+  scene: "5.19"
+  title: "Zone E: Panther holds the corridor"
+  dur: 2.5
+  zone: E
+  location: CORRIDOR
+  characters: [PANTHER, HOLLOWS, PEDESTRIANS]
+  camera: Low behind Panther, 4 m.
+  lens: 28 mm.
+  movement: Locked; shake on release.
+  framing: Panther centre; Hollows ahead; civilians on the bridge behind.
+  action: Panther takes the volley, glowing brighter with every hit, then unleashes a purple shockwave; the corridor holds.
+  lighting: Purple build, muzzle flashes.
+  environment: Asphalt lifted, civilians streaming to the ferries.
+  vfx: Kinetic absorption pattern, release ring.
+  sound: Rising absorbed-energy hum, release whoomp.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_260
+  scene: "5.20"
+  title: "Zone C: the Leviathan falls"
+  dur: 3.0
+  zone: C
+  location: WATERFRONT
+  characters: [LEVIATHAN, HULK, AQUAMAN]
+  camera: Wide, 400 m, from across the water.
+  lens: 50 mm.
+  movement: Locked; speed ramp to 50% at the collapse.
+  framing: Machine falling through the abandoned refinery, centre.
+  action: The Leviathan topples through the refinery shell; brick, steel and dust roll across the waterfront.
+  lighting: Fire, dust lit orange.
+  environment: Dust wave, falling steel.
+  vfx: Rigid-body destruction, dust wave.
+  sound: Long layered collapse, delayed by distance.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_270
+  scene: "5.21"
+  title: "Zone E: the window"
+  dur: 2.0
+  zone: E
+  location: RESCUE
+  characters: [FLASH]
+  camera: Over the Flash's shoulder at a building across the street, 15 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Flash shoulder left; window upper right.
+  action: A pane falls, shatters, and is back in its frame; it falls again. The Flash notices.
+  lighting: Streetlight.
+  environment: Glass loop (three cycles).
+  vfx: Exact-repeat glass shatter loop.
+  sound: The same shatter sound three times, identical.
+  dialogue:
+  - {who: FLASH, line: "That window's fallen three times."}
+  transition: Cut.
+
+- id: S05_280
+  scene: "5.22"
+  title: The tide turns
+  dur: 3.0
+  location: AERIAL
+  characters: [FLEET]
+  camera: High wide, 700 m.
+  lens: 35 mm.
+  movement: Slow orbit.
+  framing: Carrier sinking in the bay, Leviathan broken on the waterfront, heroes' trails converging on the Crossing.
+  action: Every zone has won its fight; the heroes converge on the Crossing.
+  lighting: Fires subsiding.
+  environment: Smoke thinning.
+  vfx: Hero trails converging.
+  sound: Score swells into a triumphant statement of the merged theme (false victory).
+  dialogue: []
+  transition: Cut.
+
+- id: S05_290
+  scene: "5.23"
+  title: They break
+  dur: 2.5
+  location: CROSSING
+  characters: [SUPERMAN, THOR, WW, IRONMAN, HOLLOWS]
+  camera: Low wide, 8 m.
+  lens: 28 mm.
+  movement: Push with the advance.
+  framing: The four heroes advancing; last Hollows retreating ahead.
+  action: Superman, Thor, Wonder Woman and Iron Man drive back the last Hollows; Superman draws back his fist.
+  lighting: Fire.
+  environment: Debris.
+  vfx: Impacts.
+  sound: Score at full height.
+  dialogue:
+  - {who: THOR, line: "They break!"}
+  transition: Hard cut on the freeze.
+
+- id: S05_300
+  scene: "5.23"
+  title: The freeze
+  dur: 2.5
+  location: CROSSING
+  characters: [SUPERMAN, THOR, WW, IRONMAN, SPIDEY]
+  camera: Wide, 3 m high, 30 m.
+  lens: 28 mm.
+  movement: Locked. Absolute stillness.
+  framing: Explosions hanging like paper lanterns; debris suspended; a burning car upside down a meter off the ground.
+  action: "Everything stops: fireballs, debris, rain, heroes."
+  lighting: Fire frozen mid-flicker (constant light).
+  environment: Rain as hanging glass beads.
+  vfx: Freeze-frame simulation state, with only eye motion allowed.
+  sound: All sound cuts to a single thin high tone.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_310
+  scene: "5.23"
+  title: Only their eyes
+  dur: 2.0
+  location: CROSSING
+  characters: [SUPERMAN, SPIDEY]
+  camera: Close-ups, 1 m.
+  lens: 85 mm.
+  movement: Locked.
+  framing: Superman's frozen face mid-punch; then Spider-Man mid-swing.
+  action: The heroes cannot move. Only their eyes move.
+  lighting: Frozen fire light.
+  environment: Frozen rain beads in the foreground.
+  vfx: Eye animation only.
+  sound: High tone.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_320
+  scene: "5.23"
+  title: Thank you
+  dur: 4.0
+  location: CROSSING
+  characters: [THANOS, SUPERMAN]
+  camera: Lateral long take tracking with Thanos, 6 m, at his shoulder height.
+  lens: 50 mm.
+  movement: Continuous lateral track at his walking pace.
+  framing: Thanos walking screen right through frozen fireballs; frozen Superman enters frame right.
+  action: Thanos walks calmly through the frozen battlefield; suspended rain parts around him; he passes within a meter of Superman's fist.
+  lighting: Frozen fire light; violet gauntlet glow moving with him.
+  environment: Rain beads parting around him.
+  vfx: Rain displacement around his body.
+  sound: High tone; his footsteps the only real sound.
+  dialogue:
+  - {who: THANOS, line: "Thank you.", note: softly}
+  transition: Cut.
+
+- id: S05_330
+  scene: "5.23"
+  title: The Stones
+  dur: 2.5
+  location: CROSSING
+  characters: [THANOS]
+  camera: Close-up on the gauntlet, 0.8 m.
+  lens: 100 mm.
+  movement: Locked.
+  framing: Gauntlet centre.
+  action: He touches the Stones one by one; each ignites.
+  lighting: Each Stone's color flaring in turn.
+  environment: None.
+  vfx: Stone ignitions.
+  sound: Six tones, one per Stone, building a chord.
+  dialogue: []
+  transition: Cut.
+
+- id: S05_340
+  scene: "5.23"
+  title: Reality runs backward
+  dur: 2.0
+  location: CROSSING
+  characters: [SUPERMAN, THOR, WW, IRONMAN]
+  camera: Wide, same as S05_300.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Same composition as the freeze.
+  action: Explosions shrink back; debris rises; rain falls upward.
+  lighting: Fire reversing.
+  environment: Everything reversing.
+  vfx: Reversed simulation playback.
+  sound: Reversed explosion swells sucking inward.
+  dialogue: []
+  transition: Cut into S06_010.

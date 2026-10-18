@@ -1,0 +1,120 @@
+# Location descriptions used in storyboards and video-generation prompts.
+# `state` notes how a location's damage evolves; damage persists between shots and sequences.
+
+ORBIT: >
+  Low Earth orbit on the night side above the North Atlantic: Earth's night hemisphere with
+  gold city lights, thin moonlit cloud, a blue-white atmospheric rim and a sliver of dawn on
+  the eastern limb, a black star field, a communications satellite in the foreground.
+ATMOSPHERE: >
+  Descending through a thin deck of moonlit cloud over New York Harbor at night; silver cloud
+  tops, warm sodium-lit cloud bases, the city grid glowing through gaps.
+SKYLINE: >
+  The Manhattan skyline at night in steady rain, seen across the East River: glass towers lit
+  from within, low cloud swallowing the tallest spires, red aircraft lamps, long trembling
+  reflections on the water.
+AVENUE: >
+  A Midtown Manhattan avenue at night in the rain: wet asphalt mirroring headlights, umbrellas,
+  taxis, steam from manholes, storefronts with invented signage, towers rising into low cloud.
+OBSERVATORY: >
+  The control room of a small radio observatory on the Hudson at night: a wall of monitors,
+  racks of equipment, a paper seismograph, a rotating red alarm beacon.
+ROOFTOP: >
+  A stone cornice on an old Midtown rooftop at night, water towers behind, the violet sky and
+  the rupture beyond.
+HARBOR_SKY: >
+  The sky above New York Harbor at night: the city a strip of light on the horizon, the colossal
+  violet rupture filling the sky, cloud spiralling into it.
+THRONE: >
+  The open observation prow of Thanos's flagship, the Silent Throne: a vast dark-metal platform
+  with no railings, buttress fins rising behind, high above New York with the city lights far
+  below through broken cloud and the violet rupture overhead.
+MIDTOWN_SKY: >
+  The air between Midtown towers at night during the invasion: smoke columns, rain, burning
+  ships, glass façades reflecting fire, a violet sky.
+FIFTH_AVE: >
+  Fifth Avenue during the evacuation: abandoned buses and taxis, a subway entrance, crowds
+  streaming past, first responders, fire glow and smoke.
+EAST_RIVER: >
+  The East River at night with the bridges in the background, rain on the water, burning wreckage.
+ROOFTOPS: >
+  Midtown rooftops at night: water towers, HVAC units, parapets, the street canyon below.
+SIXTH_AVE: >
+  Sixth Avenue between glass skyscrapers during the invasion: shattered façades, crowds below.
+BRYANT_PARK: >
+  Bryant Park and the surrounding blocks at night during the invasion: trees, lawn, a blocked
+  side street, burning water towers on nearby roofs.
+CORRIDOR: >
+  The Manhattan approach to the Brooklyn Bridge, turned into an evacuation corridor with a
+  barricade of city buses; civilians streaming onto the bridge and down to the ferry slips.
+STREET_42: >
+  A block of 42nd Street where gravity has failed: rain falling upward, a taxi floating, every
+  shadow pointing toward the light.
+CROSSING: >
+  The Crossing: a broad ruined Midtown intersection of four avenues, cratered asphalt, wrecked
+  buses and taxis, a bent traffic signal, burning buildings on two corners, rain and smoke.
+HOSPITAL: >
+  The roof and helipad of Mercy General Hospital at night: floodlights, nurses with patients in
+  beds, a stairwell door, the city beyond.
+AERIAL: >
+  High aerial view over New York Harbor and lower Manhattan during the battle: the bridges, the
+  waterfront, fires and smoke columns, the enemy fleet above the water.
+SKY_A: >
+  The sky over the harbor during the combined battle: enemy carriers and gunships, smoke trails,
+  the bay and bridges below.
+MADISON: >
+  Madison Avenue as a defensive line: police and firefighters in a line across the avenue,
+  civilians streaming behind toward the bridge, a phalanx of Hollows advancing ahead.
+WATERFRONT: >
+  The Brooklyn waterfront at night: piers, apartment towers along the shore, an abandoned brick
+  refinery, dark harbor water; underwater shots are green-black with caustics and silt.
+DIM_FRONT: >
+  A Midtown rooftop beside a crater from which a pillar of violet light rises to the rupture; the
+  dimensional front.
+RESCUE: >
+  The rescue zone of Seventh Avenue and nearby high-rises: burning awnings, a window-washing
+  platform, a corridor barricade where evacuees gather.
+SEVENTH_AVE: >
+  Seventh Avenue: a newsstand, a red fire hydrant, a corner that repeats as a time loop.
+HARBOR: >
+  New York Harbor at night with evacuation ferries crossing toward Brooklyn and Staten Island
+  under bombardment.
+BUNKER: >
+  Stark emergency operations bunker, sublevel 9: bare concrete, half the screens dead, red
+  emergency lighting, water dripping from cracked ceilings, a central holographic table.
+ENGINE_EXT: >
+  The Eternity Engine above the shattered world of Oruun: a dead world broken into floating
+  continents of rock; three colossal counter-rotating metallic rings around a central sphere of
+  violet fire; starlight bending around the structure; lightning along invisible geometric
+  pathways; a thin, cold breathable atmosphere held around the structure.
+RINGS: >
+  Between the Engine's rotating rings: machined alloy surfaces kilometres wide racing past,
+  enemy gunships, energy beams, the violet core light.
+GAP: >
+  A widening crack in space between two floating rock fragments near the Engine's base,
+  bridged by a green construct.
+CROWN: >
+  The summit of the Engine's highest ring: a crystal spire pulsing violet, conduits running into
+  it, a screen of gunships around it.
+ROOT_GATE: >
+  The base of the Engine where it is moored to the dead world: a black armored gate 200 m high
+  and, beyond it, the Root, a crystal pillar as thick as a skyscraper sunk into the ground.
+PASSAGE: >
+  A narrow passage inside the Engine where house-sized gear-rings grind past each other.
+CORRIDOR_T: >
+  A corridor inside the Engine that is coming apart in time: floor sections repeating, hanging,
+  jumping forward.
+HEART: >
+  The Heart chamber: a spherical space so vast clouds form inside it; at its centre a core of
+  white light inside a churning purple energy shell; a dais at its mouth and a control platform
+  on a floating causeway.
+CAUSEWAY: >
+  A floating rock causeway leading to the control platform inside the Heart chamber; low
+  gravity, fragments drifting upward; the Heart collapsing beyond.
+PLATFORM: >
+  The control platform: a circular metal platform with a central console, control nodes around
+  its rim, facing the Heart's core.
+WRECKAGE: >
+  The remains of the Engine lying across the dead stone of Oruun after the collapse: twisted ring
+  fragments, glowing dust settling like snow, thin cold air, a black sky with Earth small and
+  blue in the last seam of a closing rift.
+VOID: Black. Title cards only.

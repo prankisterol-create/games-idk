@@ -1,0 +1,438 @@
+sequence: 1
+title: THE SKY BREAKS
+target: 58.0
+music: "1M1 'Stillness' (silence > sub-ambience > distant choir > invasion brass)"
+purpose: >
+  Establish a peaceful, specific world, then break it. The audience must feel scale
+  (planet > city > street > a child's hand) before the threat arrives, and must meet
+  Thanos as a calm, absolute presence rather than a monster.
+locations: [ORBIT, ATMOSPHERE, SKYLINE, AVENUE, OBSERVATORY, ROOFTOP, HARBOR_SKY, THRONE]
+shots:
+
+- id: S01_010
+  scene: "1.1"
+  title: Earth from orbit
+  dur: 6.0
+  location: ORBIT
+  characters: []
+  camera: >
+    Virtual camera in high orbit about 2,000 km above the mid-Atlantic, looking
+    west-north-west at the US east coast. Earth's limb crosses the upper third; the dawn
+    terminator sits just past frame right. A communications satellite passes 40 m from lens.
+  lens: >
+    85 mm (HFOV 24 deg). Long enough to flatten the curvature so the planet reads as vast and
+    calm. Deep focus (f/8 equivalent); satellite slightly soft as it crosses.
+  movement: >
+    Very slow dolly-in toward the eastern seaboard (image scale 1.00 to 1.12, ease in-out)
+    with 0.5 deg of counter-roll. The satellite crosses lower-left to right in 4.5 s, its
+    parallax giving the only sense of depth.
+  framing: >
+    Soft limb arc across the top third; night hemisphere fills the lower two-thirds; the
+    Boston-Washington light corridor on the right power point. 16:9 open gate shows more
+    star field above; all story content inside the 2.39 extraction.
+  action: No characters. A peaceful planet turns.
+  lighting: >
+    Sun hidden below the eastern limb: thin blue-white scattering rim plus a warm dawn sliver
+    at frame right. Night side lit by cool moonlight and sodium-gold city lights. Satellite
+    panels catch direct sun as a specular glint at 3.0 s.
+  environment: >
+    Cloud bands drift imperceptibly; two lightning flickers inside an Atlantic storm cell
+    (2.1 s, 4.6 s); Earth's rotation implied by the slow push, never seen.
+  vfx: >
+    Atmospheric scattering rim; moonlit cloud layer with self-shadowing; emissive city-light
+    map with tight bloom; non-twinkling star field; satellite glint with one restrained
+    horizontal anamorphic streak.
+  sound: >
+    DIGITAL SILENCE 00:00-02:12. At 02:12 a 30 Hz pressure tone fades in at -42 dBFS (felt
+    more than heard). At 04:00 a distant choir breathes in on a single sustained 'oo' (D),
+    ppp.
+  dialogue: []
+  transition: >
+    Continuous push. The dolly carries into the cloud deck; an invisible cloud-wipe cut
+    lands in S01_020 at the frame where cloud fills the screen.
+
+- id: S01_020
+  scene: "1.2"
+  title: Through the cloud deck
+  dur: 4.5
+  location: ATMOSPHERE
+  characters: []
+  camera: >
+    Descending from 12 km to 3 km above New York Harbor, starting pitched 55 deg down and
+    levelling toward the horizon.
+  lens: 35 mm (HFOV 54 deg).
+  movement: >
+    Continuous crane-down with a tilt-up from -55 deg to -25 deg and a slight forward drift,
+    matching the speed of the previous push so the two shots feel like one move.
+  framing: >
+    Gaps in the cloud reveal the coastline, harbor and Manhattan grid on the right third;
+    the horizon enters at the top in the final second.
+  action: None.
+  lighting: >
+    Moonlight from upper left silvers the cloud tops; the city's sodium glow warms the cloud
+    base from below. Cool tops against warm bottoms.
+  environment: >
+    Three layers of cloud wisps stream past at different speeds; drizzle streaks appear in
+    the final 0.8 s.
+  vfx: Volumetric cloud passes (three depth layers), atmospheric haze, city emissive grid with soft bokeh.
+  sound: >
+    Wind hush swells (filtered noise, low-pass 800 Hz); choir sustains; first faint rain
+    hiss arrives on the last half-second.
+  dialogue: []
+  transition: Hard cut on movement as the last wisp clears.
+
+- id: S01_030
+  scene: "1.3"
+  title: Skyline in rain
+  dur: 5.0
+  location: SKYLINE
+  characters: []
+  camera: >
+    Across the East River from Midtown, 60 m above the water on the Queens side, looking
+    west at the skyline.
+  lens: 50 mm (HFOV 40 deg).
+  movement: >
+    Slow lateral truck right (about 8 m/s) with a slight crane down; parallax between
+    foreground pier pilings, the river, mid-ground towers and background spires.
+  framing: >
+    Skyline across the middle band, river reflections in the lower third, low cloud in the
+    upper third with the tallest spires vanishing into it.
+  action: >
+    No characters. Life in the windows: thousands lit, a few switching on and off, an
+    elevator light climbing a glass tower.
+  lighting: >
+    Mixed warm/cool interior window light, sodium streetlights, cloud base underlit orange,
+    rain streaks backlit by the city.
+  environment: >
+    Rain falling 15 deg off vertical, river ripples, trembling reflections, a ferry crossing
+    with running lights, red aircraft-warning lamps blinking at 1 Hz on the spires.
+  vfx: Three rain layers with motion blur, wet-glass reflections, window bloom, depth fog.
+  sound: >
+    Rain ambience fades fully in (wide stereo); distant traffic bed; one far-off ship horn;
+    the choir thins out mid-shot. An ordinary night.
+  dialogue: []
+  transition: Hard cut to street level.
+
+- id: S01_040
+  scene: "1.4"
+  title: Street level
+  dur: 4.0
+  location: AVENUE
+  characters: [PEDESTRIANS]
+  camera: Sidewalk of a Midtown avenue, 1.5 m height, looking north up the avenue.
+  lens: 35 mm (HFOV 54 deg).
+  movement: Slow push forward at walking pace (1.2 m/s), stabilised.
+  framing: >
+    Pedestrians with umbrellas in the foreground and mid-ground; traffic lanes right;
+    storefronts left; building lights converging on a centre vanishing point.
+  action: >
+    People walk; a delivery cyclist weaves between taxis; a couple shares a jacket over
+    their heads, laughing; a taxi splashes through a puddle.
+  lighting: >
+    Warm storefront key, neon accents (invented signage, no real brands), head- and tail-
+    lights; wet asphalt mirrors everything.
+  environment: Rain, splashes, manhole steam, traffic flow; the signal turns green at 2.0 s.
+  vfx: Headlight streaks, puddle splashes, asphalt reflection pass, rain.
+  sound: >
+    Tyres hissing on wet road, footsteps, umbrella patter, muffled chatter and laughter, a
+    bike bell, a crosswalk chirp. Intimate mix.
+  dialogue: []
+  transition: Hard cut.
+
+- id: S01_050
+  scene: "1.5"
+  title: The point of light
+  dur: 4.0
+  location: AVENUE
+  characters: [PEDESTRIANS]
+  camera: Street level across a wide avenue, 2 m height, looking up at the skyline at +18 deg.
+  lens: 40 mm (HFOV 48 deg).
+  movement: Locked off. Total stillness so the tiny anomaly reads.
+  framing: >
+    Skyline silhouette in the lower 45%; low cloud above; the point of light high above the
+    tallest spire, upper third, left of centre. Two soft-focus pedestrians foreground right.
+  action: >
+    At 1.0 s the point appears. At 2.5 s the nearer pedestrian slows and stops; the second
+    turns to look.
+  lighting: Unchanged city light; the point is a tiny violet-white star with no spill yet.
+  environment: Rain continues; clouds static.
+  vfx: >
+    Point of light: a 3 px core at 1080p with faint four-point diffraction spikes and a slow
+    breathing pulse (period 1.2 s).
+  sound: >
+    City ambience continues. At 1.0 s a pure high shimmer (2.8 kHz + 4.2 kHz partials,
+    -36 dB), barely audible. Rain ducks 3 dB.
+  dialogue: []
+  transition: Hard cut.
+
+- id: S01_060
+  scene: "1.6"
+  title: The rupture opens
+  dur: 6.0
+  location: AVENUE
+  characters: []
+  camera: Low on the avenue, 0.6 m from the asphalt, looking straight up the canyon of towers.
+  lens: 24 mm (HFOV 74 deg). Wide for scale and converging verticals.
+  movement: Slow tilt up from +35 deg to +70 deg with a 1 m crane up, eased in.
+  framing: >
+    Converging towers frame the sky; the rupture expands at top centre; the cloud spiral
+    fills the upper half by the end.
+  action: >
+    The point opens into a ring that grows to 40 deg of sky in 4 s. A geometric lattice
+    (concentric rings, then hexagons) etches outward across the clouds. The clouds begin to
+    spiral toward the opening.
+  lighting: >
+    City light shifts from sodium orange to violet-magenta over 3 s. Tower glass reflects
+    the ring; wet rims turn violet.
+  environment: >
+    Cloud vortex turns; rain bends slightly toward the ring; litter lifts off the street;
+    car hazard lights begin blinking at frame bottom.
+  vfx: >
+    Rupture ring (emissive torus with a dark violet interior opening onto a distant star
+    field), propagating hex-lattice line glow, cloud vortex, live glass reflections, thin
+    chromatic fringe on the ring edge.
+  sound: >
+    Sub-bass swell rising 25 to 45 Hz; window-glass hum (120 Hz plus harmonics) builds; the
+    first car alarm at 3.5 s, more join; rain continues.
+  dialogue: []
+  transition: Hard cut on the peak of the glass hum.
+
+- id: S01_070
+  scene: "1.7"
+  title: Windows vibrate
+  dur: 1.5
+  location: AVENUE
+  characters: []
+  camera: Close on a glass curtain wall at street level, 0.4 m from the glass, angled 30 deg.
+  lens: 100 mm macro (HFOV 20 deg), very shallow focus.
+  movement: Locked camera; the glass itself micro-vibrates.
+  framing: Raindrops on the glass sharp; the warped reflection of the ring soft behind them.
+  action: Raindrops shiver; at 0.9 s a hairline crack races diagonally across the pane.
+  lighting: Violet reflection over cool interior light behind the glass.
+  environment: Droplets tremble at 30 Hz.
+  vfx: Procedural crack propagation, droplet micro-motion, refraction.
+  sound: Glass hum peaks, then the sharp tick-crackle of the crack.
+  dialogue: []
+  transition: Hard cut.
+
+- id: S01_080
+  scene: "1.8"
+  title: The woman
+  dur: 2.5
+  location: AVENUE
+  characters: [WOMAN]
+  camera: Close-up, slightly below eye level (1.4 m), 1 m from the woman, looking up at her face.
+  lens: 85 mm (HFOV 24 deg), shallow focus (f/2).
+  movement: Very slow push-in (2%).
+  framing: Face fills the right two-thirds, eyes on the upper third; city bokeh turning violet behind.
+  action: >
+    She looks up. At 0.5 s the rain around her face stops mid-air. She exhales; her breath
+    does not move the drops. At 2.0 s the rain falls again.
+  lighting: Violet key from above (the rupture), warm streetlight fill from below left, wet skin highlights.
+  environment: Frozen rain beads; car hazard lights blinking in the bokeh.
+  vfx: Localized time-freeze on rain (droplets stop and glint), then release.
+  sound: >
+    Local silence: the rain drops out completely during the freeze, leaving a soft high
+    ringing and her breath. Rain crashes back on release.
+  dialogue: []
+  transition: Hard cut.
+
+- id: S01_090
+  scene: "1.9"
+  title: Birds scatter
+  dur: 1.5
+  location: ROOFTOP
+  characters: []
+  camera: Rooftop height, 1 m from a stone cornice, looking out and up toward the rupture.
+  lens: 35 mm.
+  movement: Slight tilt up following the flock.
+  framing: Cornice across the lower third; the rupture in the background upper right.
+  action: About forty pigeons burst off the ledge and scatter away from the ring.
+  lighting: Silhouettes against the violet sky; violet rim light.
+  environment: Loose feathers drift.
+  vfx: Flock simulation (boids), feathers.
+  sound: Burst of wing flutter, alarmed coos.
+  dialogue: []
+  transition: Cut.
+
+- id: S01_100
+  scene: "1.10"
+  title: Airliner banks away
+  dur: 2.0
+  location: HARBOR_SKY
+  characters: []
+  camera: Air-to-air, 300 m off the airliner's right wing, slightly below, looking up.
+  lens: 135 mm (HFOV 15 deg). Long lens compresses the giant ring behind the aircraft.
+  movement: Pan to follow the airliner as it banks left, away from camera.
+  framing: Airliner centred; the rupture ring huge behind it.
+  action: The airliner rolls into a steep 45 deg left bank, landing lights blazing, turning away from the ring.
+  lighting: Landing lights, nav lights (red left, green right), white strobes, violet backlight.
+  environment: Rain streaks, cloud wisps.
+  vfx: Wingtip vortex condensation trails, strobe flashes.
+  sound: Jet engines spool up with a Doppler sweep.
+  dialogue: []
+  transition: Cut.
+
+- id: S01_110
+  scene: "1.11"
+  title: Instruments spike
+  dur: 2.0
+  location: OBSERVATORY
+  characters: [OKAFOR]
+  camera: Over the monitors toward Dr. Okafor, 1.2 m away.
+  lens: 50 mm.
+  movement: Slow push across the monitors; rack focus from screens to her face at 1.2 s.
+  framing: Screens in the foreground with traces climbing; her face centre right, lit by them.
+  action: Every trace spikes off its scale; a seismograph pen scribbles black; she stands frozen.
+  lighting: Cyan-green monitor glow on her face; a rotating red alarm beacon.
+  environment: Paper chart scrolling.
+  vfx: Screen graphics (spectrogram, magnetometer, gravimeter) all clipping.
+  sound: Muted electronic alarm beeps, pen scratch, equipment hum.
+  dialogue: []
+  transition: Cut.
+
+- id: S01_120
+  scene: "1.12"
+  title: The child's hand
+  dur: 2.0
+  location: AVENUE
+  characters: [CHILD, PARENT]
+  camera: Extreme close-up at child height (0.9 m) on the two hands.
+  lens: 100 mm.
+  movement: Locked; only the light moves.
+  framing: Hands centred; the parent's coat sleeve and the child's sleeve; raindrops on skin.
+  action: Violet light sweeps across; the small fingers tighten around the parent's.
+  lighting: Violet key sweeping left to right; warm fill.
+  environment: Raindrops on the hands.
+  vfx: Moving light sweep.
+  sound: The child's quiet breath; a heartbeat-like sub thump begins in the score.
+  dialogue: []
+  transition: Cut.
+
+- id: S01_130
+  scene: "1.13"
+  title: The fleet emerges
+  dur: 3.0
+  location: AVENUE
+  characters: [FLEET]
+  camera: Rooftop height, about 200 m from the impact zone, looking up at the rupture at +50 deg.
+  lens: 50 mm.
+  movement: Slow push-in toward the rupture.
+  framing: The rupture fills the upper two-thirds; ships pour toward camera and outward.
+  action: Hundreds of angular ships emerge in waves and spread across the sky.
+  lighting: Violet running lights; the ring backlights the hulls.
+  environment: Clouds spiral; lightning flickers inside the vortex.
+  vfx: Ship instancing (three classes), engine glows, motion trails.
+  sound: >
+    Score: heavy percussion pulse. A layer of many low engine drones (chorused) and a
+    rising whine.
+  dialogue: []
+  transition: Cut.
+
+- id: S01_140
+  scene: "1.14"
+  title: The Silent Throne
+  dur: 4.0
+  location: HARBOR_SKY
+  characters: [FLEET, SILENT_THRONE]
+  camera: >
+    Extreme wide from 8 km away across the harbor at water level (Staten Island side),
+    looking north at Manhattan.
+  lens: 200 mm (HFOV 10 deg). Compresses distance so the flagship looms over the city.
+  movement: Locked off with a very slight crane up to hold the flagship.
+  framing: >
+    The city is a thin strip of light in the bottom 10%; the rupture fills the sky; the
+    flagship emerges from the centre of the ring and covers 60% of frame width by the end.
+  action: The fleet parts; the flagship's prow emerges slowly from the ring, then the whole vessel.
+  lighting: >
+    Underside warmed by city glow, edges rimmed violet; sparse violet slit lights along the
+    hull.
+  environment: Water ripples in the foreground; the swarm of smaller ships shifts aside.
+  vfx: Haze layers between flagship and city for scale; tiny escort ships for size reference.
+  sound: >
+    Score: the Thanos motif enters for the first time on low brass (trombones, tubas) with
+    choir. Sub-bass engine drone; tiny distant sirens.
+  dialogue: []
+  transition: Cut.
+
+- id: S01_150
+  scene: "1.15"
+  title: Thanos at the prow
+  dur: 4.0
+  location: THRONE
+  characters: [THANOS]
+  camera: Behind and below Thanos on the observation prow, 4 m back, 1.0 m high, past his right shoulder.
+  lens: 32 mm (HFOV 59 deg).
+  movement: Slow crane up and push (over-the-shoulder reveal).
+  framing: >
+    Thanos's silhouette fills the left 45%; the city 3 km below through broken cloud on the
+    right; rupture glow overhead.
+  action: Thanos stands motionless, looking down, and speaks.
+  lighting: >
+    Violet backlight from the rupture; warm underlight from city fires along his armor
+    edges; gold highlights.
+  environment: Wind whips across the platform; cloud wisps race below.
+  vfx: Wind particles, distant city plate.
+  sound: Wind roar (low-passed under the dialogue), engine rumble; score holds a sustain.
+  dialogue:
+  - {who: THANOS, line: "Every world believes it is the exception.", note: quietly}
+  transition: Cut.
+
+- id: S01_160
+  scene: "1.16"
+  title: Close on Thanos
+  dur: 3.5
+  location: THRONE
+  characters: [THANOS]
+  camera: Close-up profile at his eye level, 2 m away on a crane off the prow.
+  lens: 85 mm.
+  movement: Slow push-in (8%).
+  framing: Profile facing screen right; jaw ridges catch the light; eyes looking down.
+  action: He lets the silence sit for 1.5 s, then speaks.
+  lighting: Violet rim on the profile, warm under-fill, deep shadow on the far side.
+  environment: The wind moves nothing on him.
+  vfx: Subtle volumetric haze.
+  sound: Score falls to near silence (one held low note), wind, then the line.
+  dialogue:
+  - {who: THANOS, line: "Every world learns the truth."}
+  transition: Hard cut.
+
+- id: S01_170
+  scene: "1.17"
+  title: The fleet descends
+  dur: 1.5
+  location: HARBOR_SKY
+  characters: [FLEET]
+  camera: Above and behind the fleet, looking down past the ships at the city.
+  lens: 28 mm.
+  movement: Camera pitches forward with the fleet and accelerates.
+  framing: Ships in the foreground tipping down toward the city lights below.
+  action: The ships tip forward and dive; engines flare.
+  lighting: Violet-white engine flare.
+  environment: Cloud below rushes up.
+  vfx: Engine flares and trails.
+  sound: Score rises toward a full orchestral hit; engine roar crescendo.
+  dialogue: []
+  transition: Cut.
+
+- id: S01_180
+  scene: "1.18"
+  title: First strike
+  dur: 1.0
+  location: AVENUE
+  characters: []
+  camera: Street level, wide, at the end of a long avenue looking toward Midtown.
+  lens: 24 mm.
+  movement: Locked off; an 8-frame shake begins on the frame the shockwave arrives.
+  framing: Skyline with the impact point in the middle distance.
+  action: >
+    At frame 6 the first wave strikes: a white flash, then a shockwave ring expanding across
+    the skyline, blowing the rain into mist.
+  lighting: Two frames of white flash, then an orange-violet fireball.
+  environment: Rain blown outward by the pressure front.
+  vfx: Flash, refractive condensation shockwave ring, fireball, debris.
+  sound: >
+    Delayed sound: silence on the flash, then the boom arrives 14 frames later as the
+    shockwave reaches camera, and is cut off by the smash cut.
+  dialogue: []
+  transition: SMASH CUT to S02_010 (tinnitus).

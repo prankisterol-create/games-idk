@@ -1,0 +1,522 @@
+sequence: 4
+title: THE JUSTICE LEAGUE ARRIVES
+target: 66.5
+music: "4M1 'Dawn' (Justice League horn call > strain > arrival fanfare > uneasy strings > merged motif)"
+purpose: >
+  Superman arrives as hope with limits. Thanos withdraws on his own terms. Two teams that do
+  not trust each other find common ground through evidence, not speeches, and close ranks.
+locations: [HOSPITAL, MIDTOWN_SKY, CROSSING]
+shots:
+
+- id: S04_010
+  scene: "4.1"
+  title: The cruiser falls toward the hospital
+  dur: 3.0
+  location: HOSPITAL
+  characters: [MONOLITH, HOSPITAL_STAFF]
+  camera: Hospital roof level, 30 m from the roof edge, looking up.
+  lens: 24 mm.
+  movement: Locked, slow tilt up.
+  framing: Roof with nurses and beds in the lower third; the cruiser's hull filling the sky.
+  action: A crippled Monolith cruiser drops toward the hospital; nurses push beds toward a stairwell; a doctor looks up and stops.
+  lighting: Cruiser underside fires, helipad floodlights, violet sky.
+  environment: Downdraft blowing sheets and IV stands; rain.
+  vfx: Cruiser descent, burning hull sections.
+  sound: Rising engine failure shriek, beds' wheels, shouting.
+  dialogue: []
+  transition: Cut on Superman's impact (blur of red and blue entering frame).
+
+- id: S04_020
+  scene: "4.2"
+  title: The weight
+  dur: 2.5
+  location: HOSPITAL
+  characters: [SUPERMAN]
+  camera: Close-up under the hull, 2 m from Superman, looking up past him.
+  lens: 35 mm.
+  movement: Camera sinks with him as the weight drives him down.
+  framing: Superman's face and arms centre; hull filling frame top.
+  action: His hands sink into the metal; the weight drives him down; teeth bared, body shaking; hull groaning.
+  lighting: Warm fire bounce on his face, blue-white rim (daylight quality).
+  environment: Sparks raining off the hull, cape snapping.
+  vfx: Hull deformation around his hands, sparks.
+  sound: Deep metallic groan, his strained breath, the score's horn call held under strain.
+  dialogue: []
+  transition: Cut.
+
+- id: S04_030
+  scene: "4.3"
+  title: It stops
+  dur: 2.5
+  location: HOSPITAL
+  characters: [SUPERMAN, HOSPITAL_STAFF]
+  camera: Roof level, low, 20 m.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Staff on the roof in the foreground; prow above them, Superman under it.
+  action: The prow sinks to five meters above the roof and stops; Superman roars; the ship begins to rise.
+  lighting: Same.
+  environment: Downdraft reverses as it rises.
+  vfx: Hull motion, roof debris.
+  sound: Roar, metal shudder, horn call breaks through into the heroic motif.
+  dialogue: []
+  transition: Cut.
+
+- id: S04_040
+  scene: "4.4"
+  title: Carrying the ship
+  dur: 3.5
+  location: MIDTOWN_SKY
+  characters: [SUPERMAN, MONOLITH]
+  camera: Tracking from behind and below Superman, 12 m back.
+  lens: 24 mm.
+  movement: Fast follow, rising with him.
+  framing: Superman centre; city lights sliding away beneath; black hull filling the sky above.
+  action: He drives the cruiser up and over the city toward an empty industrial zone by the water.
+  lighting: Hull fires above, city glow below.
+  environment: Smoke trailing off the hull.
+  vfx: Hull fire trail, city plate.
+  sound: Wind roar, hull groan, score building.
+  dialogue: []
+  transition: Cut.
+
+- id: S04_050
+  scene: "4.4"
+  title: Release
+  dur: 2.0
+  location: MIDTOWN_SKY
+  characters: [SUPERMAN, MONOLITH]
+  camera: Wide from above, 300 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Superman upper frame; cruiser arcing down into a dark industrial grid lower right.
+  action: He lets go; the cruiser falls into the empty district and erupts in a distant fireball.
+  lighting: Fireball.
+  environment: Shock ring in smoke.
+  vfx: Distant explosion, no structures with people.
+  sound: Delayed explosion boom (1.2 s).
+  dialogue: []
+  transition: Cut.
+
+- id: S04_060
+  scene: "4.4"
+  title: He sees Thanos
+  dur: 2.0
+  location: MIDTOWN_SKY
+  characters: [SUPERMAN]
+  camera: Medium, then POV down at the intersection.
+  lens: 50 mm then 135 mm POV.
+  movement: Cape swirl turn, then POV push-in.
+  framing: Superman turning; POV shows the Crossing far below with Thanos and fallen heroes.
+  action: Superman turns in midair and sees Thanos standing among fallen heroes.
+  lighting: Fire glow from below.
+  environment: Smoke.
+  vfx: Long-lens POV with heat haze.
+  sound: Wind; score drops to a tense pulse.
+  dialogue: []
+  transition: Cut.
+
+- id: S04_070
+  scene: "4.5"
+  title: Superman lands
+  dur: 3.0
+  location: CROSSING
+  characters: [SUPERMAN, THANOS, CAP, IRONMAN, THOR, HULK, SPIDEY, STRANGE]
+  camera: Low wide, behind the injured Avengers, 1 m high.
+  lens: 28 mm.
+  movement: Locked; dust shake.
+  framing: Avengers in the foreground; Superman lands centre between them and Thanos (right).
+  action: Superman lands; the ground dishes; a dust ring rolls out; his cape settles slowly.
+  lighting: Fire and violet; Superman rimmed in cleaner, whiter light.
+  environment: Dust ring, cape settle in wind.
+  vfx: Landing crater, dust, cape cloth sim.
+  sound: Heavy but controlled landing thud, then quiet.
+  dialogue: []
+  transition: Cut.
+
+- id: S04_080
+  scene: "4.5"
+  title: Another champion
+  dur: 2.5
+  location: CROSSING
+  characters: [THANOS, SUPERMAN]
+  camera: Over Superman's shoulder at Thanos, 5 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Superman's shoulder and cape frame left; Thanos right.
+  action: Thanos looks him over, unimpressed.
+  lighting: Violet key on Thanos.
+  environment: Embers.
+  vfx: None.
+  sound: Score holds.
+  dialogue:
+  - {who: THANOS, line: "Another champion."}
+  transition: Cut.
+
+- id: S04_090
+  scene: "4.5"
+  title: Go through us
+  dur: 3.5
+  location: CROSSING
+  characters: [SUPERMAN]
+  camera: Low-angle hero shot, 2 m, 0.8 m high.
+  lens: 35 mm.
+  movement: Slow push-in.
+  framing: Superman centre, sky behind.
+  action: Superman answers calmly.
+  lighting: Natural daylight-quality key on Superman, warm fill, the blue-white tear behind him.
+  environment: Cape moving in the wind.
+  vfx: None.
+  sound: Score silent under the line.
+  dialogue:
+  - {who: SUPERMAN, line: "If you're here to hurt this world, you're going to have to go through us."}
+  transition: Cut on lightning.
+
+- id: S04_100
+  scene: "4.5"
+  title: Lightning
+  dur: 1.5
+  location: CROSSING
+  characters: []
+  camera: Wide on the skyline.
+  lens: 24 mm.
+  movement: Locked.
+  framing: Clouds lit from horizon to horizon.
+  action: Lightning lights the clouds.
+  lighting: White flash.
+  environment: Clouds.
+  vfx: Sheet lightning.
+  sound: Thunder; arrival fanfare begins.
+  dialogue: []
+  transition: Cut.
+
+- id: S04_110
+  scene: "4.5"
+  title: Wonder Woman lands
+  dur: 2.0
+  location: CROSSING
+  characters: [WW, SUPERMAN]
+  camera: Low, 3 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Superman frame left; Diana lands right in a crouch, rises.
+  action: Wonder Woman lands beside Superman, bracers clanging.
+  lighting: Gold highlights on armor.
+  environment: Dust puff.
+  vfx: Landing dust.
+  sound: Metallic bracer clang (her signature ring).
+  dialogue: []
+  transition: Cut.
+
+- id: S04_120
+  scene: "4.5"
+  title: Batman and Cyborg
+  dur: 2.0
+  location: CROSSING
+  characters: [BATMAN, CYBORG]
+  camera: Medium, 6 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Smoke; Batman's silhouette emerges, Cyborg a step behind.
+  action: Batman emerges from the smoke; Cyborg scans.
+  lighting: Backlit smoke; Batman's lenses glint; Cyborg's red eye and blue scan.
+  environment: Smoke curling around the cape.
+  vfx: Scan beam.
+  sound: Cyborg's servo whir and scan tone.
+  dialogue: []
+  transition: Cut.
+
+- id: S04_130
+  scene: "4.5"
+  title: The Flash
+  dur: 1.5
+  location: CROSSING
+  characters: [FLASH]
+  camera: Medium-wide, 8 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Empty spot; streak arrives; Flash standing.
+  action: The Flash arrives in a streak of red lightning that crackles away into the rain.
+  lighting: Yellow-red lightning.
+  environment: Rain blown aside by the streak.
+  vfx: Speed streak with silhouette preserved, residual arcs.
+  sound: Crackling speed whoosh (Flash signature).
+  dialogue: []
+  transition: Cut.
+
+- id: S04_140
+  scene: "4.5"
+  title: Green Lantern's dome
+  dur: 2.0
+  location: CROSSING
+  characters: [GL]
+  camera: Low, looking up, 10 m.
+  lens: 24 mm.
+  movement: Tilt up.
+  framing: Hal above the street; dome spreading across the frame.
+  action: Green Lantern spreads a green dome above the street; falling debris and fire from the fleet break across it.
+  lighting: Green light washing the street.
+  environment: Debris bouncing off.
+  vfx: Translucent construct with edge glow, impacts.
+  sound: Construct hum (Lantern signature), impacts thudding.
+  dialogue: []
+  transition: Cut.
+
+- id: S04_150
+  scene: "4.5"
+  title: Aquaman charges
+  dur: 2.0
+  location: CROSSING
+  characters: [AQUAMAN]
+  camera: Low, 4 m, in the flooded avenue.
+  lens: 28 mm.
+  movement: Locked; he charges past camera.
+  framing: Flooded avenue; Aquaman charging out in a sheet of spray.
+  action: Aquaman charges out of a flooded avenue, trident in hand.
+  lighting: Fire on wet armor.
+  environment: Water spray.
+  vfx: Water sheet sim.
+  sound: Water crash, trident hum.
+  dialogue: []
+  transition: Cut.
+
+- id: S04_160
+  scene: "4.5"
+  title: Bring them all
+  dur: 3.0
+  location: CROSSING
+  characters: [THANOS, HOLLOWS]
+  camera: Medium close-up on Thanos, 4 m.
+  lens: 50 mm.
+  movement: Locked, then he steps out of frame into the rupture.
+  framing: Thanos centre; rupture behind.
+  action: Thanos regards them all with the faintest smile, steps backward into his rupture, and it seals. The Hollows rise and withdraw.
+  lighting: Violet.
+  environment: Rupture closing pulls embers inward.
+  vfx: Rupture closing.
+  sound: Rupture implodes with a soft thump; Hollows' feet.
+  dialogue:
+  - {who: THANOS, line: "Good. Bring them all."}
+  transition: Cut.
+
+- id: S04_170
+  scene: "4.6"
+  title: Two lines
+  dur: 3.0
+  location: CROSSING
+  characters: [CAP, IRONMAN, THOR, HULK, SPIDEY, STRANGE, SUPERMAN, WW, BATMAN, CYBORG, FLASH, GL, AQUAMAN]
+  camera: Wide, perpendicular to both lines, 2 m high, 25 m away.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Avengers on the left, Justice League on the right; empty asphalt between.
+  action: Two lines of heroes face each other. Nobody moves first.
+  lighting: Fire and green dome light.
+  environment: Rain hissing on hot metal.
+  vfx: Steam.
+  sound: Rain; uneasy strings.
+  dialogue: []
+  transition: Cut.
+
+- id: S04_180
+  scene: "4.6"
+  title: Batman scans
+  dur: 2.0
+  location: CROSSING
+  characters: [BATMAN]
+  camera: Close, 1.5 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Batman kneeling by a fallen Hollow; waveform reflected in his lenses.
+  action: Batman passes a gauntlet scanner over the armor; his lenses fill with a jagged waveform.
+  lighting: Scanner light on his cowl.
+  environment: Rain.
+  vfx: Waveform in lenses.
+  sound: Scanner tone.
+  dialogue: []
+  transition: Match cut on the waveform.
+
+- id: S04_190
+  scene: "4.6"
+  title: The same waveform
+  dur: 2.0
+  location: CROSSING
+  characters: [IRONMAN]
+  camera: Inside the helmet, 0.25 m.
+  lens: 24 mm.
+  movement: Locked.
+  framing: Tony's face; HUD waveform matching Batman's.
+  action: The HUD draws the same waveform.
+  lighting: Blue HUD.
+  environment: None.
+  vfx: HUD waveform (identical shape to S04_180).
+  sound: Matching tone.
+  dialogue: []
+  transition: Cut.
+
+- id: S04_200
+  scene: "4.6"
+  title: Suspicious glances
+  dur: 1.5
+  location: CROSSING
+  characters: [IRONMAN, BATMAN]
+  camera: Two-shot across the gap, 6 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Tony left (faceplate up), Batman right.
+  action: The two men look at each other. Neither likes what he sees.
+  lighting: Fire.
+  environment: Rain.
+  vfx: None.
+  sound: Rain.
+  dialogue: []
+  transition: Cut.
+
+- id: S04_210
+  scene: "4.6"
+  title: A manual for purple warlords
+  dur: 3.0
+  location: CROSSING
+  characters: [IRONMAN, BATMAN]
+  camera: Over Batman's shoulder on Tony, 4 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Tony centre.
+  action: Tony, dry.
+  lighting: Fire.
+  environment: Rain.
+  vfx: None.
+  sound: Dialogue clear, score out.
+  dialogue:
+  - {who: TONY, line: "Please tell me your universe has a manual for purple warlords."}
+  transition: Cut.
+
+- id: S04_220
+  scene: "4.6"
+  title: We usually prepare
+  dur: 2.5
+  location: CROSSING
+  characters: [BATMAN, IRONMAN]
+  camera: Over Tony's shoulder on Batman, 4 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Batman centre.
+  action: Batman, flat.
+  lighting: Fire.
+  environment: Rain.
+  vfx: None.
+  sound: Dialogue clear.
+  dialogue:
+  - {who: BATMAN, line: "No. We usually prepare for them before they arrive."}
+  transition: Cut.
+
+- id: S04_230
+  scene: "4.6"
+  title: The snort
+  dur: 1.0
+  location: CROSSING
+  characters: [FLASH, WW]
+  camera: Medium two-shot, 5 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Flash and Diana.
+  action: The Flash snorts; Diana shoots him a look; he straightens.
+  lighting: Fire.
+  environment: Rain.
+  vfx: None.
+  sound: Stifled laugh.
+  dialogue: []
+  transition: Cut.
+
+- id: S04_240
+  scene: "4.6"
+  title: Every layer of reality
+  dur: 3.0
+  location: CROSSING
+  characters: [STRANGE]
+  camera: Medium, 3 m, through the layered mandala.
+  lens: 50 mm.
+  movement: Slow push through the panes.
+  framing: Strange centre; stacked panes of light receding behind him.
+  action: Strange unfolds a mandala into layered panes of light, every pane cracking along the same line.
+  lighting: Orange spell light.
+  environment: Sparks.
+  vfx: Stacked dimensional panes, synchronized cracks.
+  sound: Layered glass resonance.
+  dialogue:
+  - {who: STRANGE, line: "The fracture isn't just here. It runs through every layer of reality I can see. Ours. Theirs. All of them."}
+  transition: Cut.
+
+- id: S04_250
+  scene: "4.6"
+  title: He's rewriting
+  dur: 2.5
+  location: CROSSING
+  characters: [CYBORG]
+  camera: Medium close-up, 2.5 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Cyborg centre, data scrolling in his eye.
+  action: Cyborg confirms from his side.
+  lighting: Red eye glow, blue data light.
+  environment: Rain.
+  vfx: Eye HUD data.
+  sound: Data chatter.
+  dialogue:
+  - {who: CYBORG, line: "Same pattern on our side. He's not invading."}
+  - {who: CYBORG, line: "He's rewriting."}
+  transition: Cut.
+
+- id: S04_260
+  scene: "4.6"
+  title: We stand together
+  dur: 3.0
+  location: CROSSING
+  characters: [CAP]
+  camera: Medium, 3 m, slightly low.
+  lens: 40 mm.
+  movement: Slow push as he steps forward.
+  framing: Steve stepping into the gap between the two lines.
+  action: Steve steps into the space between the lines.
+  lighting: Fire key, green dome fill.
+  environment: Rain.
+  vfx: None.
+  sound: Score silent under the line.
+  dialogue:
+  - {who: STEVE, line: "We can argue about trust later. Right now, we stand together."}
+  transition: Cut.
+
+- id: S04_270
+  scene: "4.6"
+  title: The handclasp
+  dur: 2.0
+  location: CROSSING
+  characters: [SUPERMAN, CAP]
+  camera: Medium two-shot, 3 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Superman and Steve clasping forearms centre.
+  action: A long beat. Superman nods, steps forward and clasps Steve's forearm.
+  lighting: Warm.
+  environment: Rain.
+  vfx: None.
+  sound: Merged motif begins (Avengers ostinato under JL horn call).
+  dialogue: []
+  transition: Cut.
+
+- id: S04_280
+  scene: "4.6"
+  title: One formation
+  dur: 2.5
+  location: CROSSING
+  characters: [CAP, IRONMAN, THOR, HULK, SPIDEY, STRANGE, SUPERMAN, WW, BATMAN, CYBORG, FLASH, GL, AQUAMAN]
+  camera: Crane from 3 m to 40 m above the group.
+  lens: 28 mm.
+  movement: Crane up and tilt down.
+  framing: The heroes closing into one formation, city and circling fleet revealed around them.
+  action: The lines break; Avengers and Leaguers close into one ragged formation.
+  lighting: Fire, green dome light, violet sky.
+  environment: Rain, fleet circling.
+  vfx: City and fleet plate.
+  sound: Merged theme swells and cuts.
+  dialogue: []
+  transition: Cut into S05_010.

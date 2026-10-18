@@ -1,0 +1,472 @@
+sequence: 6
+title: THANOS TURNS THE TIDE
+target: 61.5
+music: "6M1 'Causality' (reversed orchestra > dread pulse > Thanos motif in full > low strings only)"
+purpose: >
+  Each hero's best move fails for a reason the audience can see. Two realisations reframe
+  the war (Tony: our strength feeds it; Batman: our perception is edited). End with the
+  alliance on the edge of defeat, together under one shield.
+locations: [CROSSING, SEVENTH_AVE, SIXTH_AVE, HARBOR]
+shots:
+
+- id: S06_010
+  scene: "6.1"
+  title: Reversal
+  dur: 3.0
+  location: CROSSING
+  characters: [IRONMAN]
+  camera: Wide, 4 m high, 35 m.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Iron Man left; collapsed building right.
+  action: A missile flies backward into Iron Man's launcher; a fireball shrinks to a spark; a collapsed building rebuilds itself, stands whole for one second, then falls again.
+  lighting: Fire light reversing.
+  environment: Debris flowing upward into the building.
+  vfx: Reversed rigid-body sim, then forward collapse.
+  sound: Reversed impacts sucking inward, then the real collapse.
+  dialogue: []
+  transition: Cut.
+
+- id: S06_020
+  scene: "6.1"
+  title: Beams bend away
+  dur: 2.5
+  location: CROSSING
+  characters: [IRONMAN, THANOS]
+  camera: Behind Iron Man's shoulder, 4 m behind him.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Iron Man frame left firing; Thanos centre-right.
+  action: Iron Man fires; the beams bend around Thanos like light around a black hole.
+  lighting: Repulsor light curving.
+  environment: Smoke drawn around Thanos.
+  vfx: Gravitational lensing on beams and background.
+  sound: Beam whine bending in pitch.
+  dialogue: []
+  transition: Cut.
+
+- id: S06_030
+  scene: "6.2"
+  title: The Flash in the loop
+  dur: 3.0
+  location: SEVENTH_AVE
+  characters: [FLASH]
+  camera: Tracking alongside the Flash at his speed (time-sliced so he reads), 3 m.
+  lens: 35 mm.
+  movement: Fast lateral track; the background repeats exactly.
+  framing: Flash centre running screen right; newsstand, falling newspaper, red hydrant passing.
+  action: He runs flat out; the same newsstand, newspaper and hydrant pass twice.
+  lighting: Streetlights strobing past.
+  environment: The repeated set dressing (identical frames).
+  vfx: Background loop with identical plate repeats; lightning trail.
+  sound: Speed whoosh; the same newspaper flutter twice.
+  dialogue:
+  - {who: FLASH, line: "No, no, no..."}
+  transition: Cut.
+
+- id: S06_040
+  scene: "6.2"
+  title: It's a loop
+  dur: 1.5
+  location: SEVENTH_AVE
+  characters: [FLASH]
+  camera: Medium, 3 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Flash skidding to a stop on the same corner.
+  action: He stops, chest heaving.
+  lighting: Streetlight.
+  environment: Skid marks smoking.
+  vfx: Residual arcs.
+  sound: Heavy breathing.
+  dialogue:
+  - {who: FLASH, line: "It's a loop. The whole block's a loop."}
+  transition: Cut.
+
+- id: S06_050
+  scene: "6.3"
+  title: Spider-sense fails
+  dur: 2.5
+  location: SIXTH_AVE
+  characters: [SPIDEY]
+  camera: Close-up, 1.2 m.
+  lens: 50 mm.
+  movement: Slow push.
+  framing: Spider-Man clinging to a lamppost; ghost-echoes around him.
+  action: Ghost-echoes of things that already happened flicker around him; his lenses go wide.
+  lighting: Violet, flickering.
+  environment: Echo copies of moving debris.
+  vfx: Translucent temporal echoes, lens widening.
+  sound: Spider-sense tone stuttering and doubling.
+  dialogue:
+  - {who: SPIDEY, line: "It's going off for everything. For stuff that already happened. I can't tell what's coming!"}
+  transition: Cut.
+
+- id: S06_060
+  scene: "6.4"
+  title: Superman charges
+  dur: 2.0
+  location: CROSSING
+  characters: [SUPERMAN, THANOS]
+  camera: Wide lateral, 40 m.
+  lens: 35 mm.
+  movement: Pan with the charge.
+  framing: Superman entering frame left at full speed; Thanos right.
+  action: Superman tears free and charges at full speed.
+  lighting: Fire.
+  environment: Shockwave of his passage.
+  vfx: Speed streak, air shock.
+  sound: Supersonic crack.
+  dialogue: []
+  transition: Cut.
+
+- id: S06_070
+  scene: "6.4"
+  title: Redirected
+  dur: 2.0
+  location: CROSSING
+  characters: [SUPERMAN, THANOS]
+  camera: Low, 10 m, behind Thanos.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Thanos's back frame right; Superman deflected toward a building frame left.
+  action: Thanos doesn't look; a lens of rippling force bends Superman's path into a damaged building, which collapses on him.
+  lighting: Violet distortion.
+  environment: Building collapse.
+  vfx: Distortion lens, collapse.
+  sound: Warped whoosh, collapse.
+  dialogue: []
+  transition: Cut.
+
+- id: S06_080
+  scene: "6.4"
+  title: Wonder Woman attacks
+  dur: 2.5
+  location: CROSSING
+  characters: [WW, THANOS]
+  camera: Lateral two-shot, 6 m.
+  lens: 35 mm.
+  movement: Lateral track as he gives ground.
+  framing: Diana left, Thanos right.
+  action: Sword high, sword low, shield bash; Thanos gives ground, blocking with forearm and gauntlet.
+  lighting: Sparks, gold highlights.
+  environment: Sparks.
+  vfx: Sword glints, sparks.
+  sound: Three distinct steel impacts, shield boom.
+  dialogue: []
+  transition: Cut.
+
+- id: S06_090
+  scene: "6.4"
+  title: She skids
+  dur: 2.5
+  location: CROSSING
+  characters: [WW, THANOS]
+  camera: Wide, low, 20 m.
+  lens: 28 mm.
+  movement: Pan with her slide.
+  framing: Thanos left; Diana sliding screen right, carving trenches.
+  action: He traps her blade under the gauntlet, drives a knee into her shield and shoves; she skids thirty meters; she rises, sword still in hand.
+  lighting: Fire.
+  environment: Twin trenches of asphalt.
+  vfx: Asphalt gouging.
+  sound: Shield crunch, long scrape.
+  dialogue: []
+  transition: Cut.
+
+- id: S06_100
+  scene: "6.4"
+  title: Thunder and repulsor
+  dur: 2.5
+  location: CROSSING
+  characters: [IRONMAN, THOR, THANOS]
+  camera: Below them, 15 m, looking up.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Thor and Iron Man upper frame; beam down to Thanos.
+  action: Thor pours lightning into Iron Man's chest; Tony fires it as one blinding beam.
+  lighting: White-blue and warm white combined.
+  environment: Rain vaporised along the beam.
+  vfx: Combined beam.
+  sound: Thunder layered with repulsor whine.
+  dialogue:
+  - {who: TONY, line: "Thor! Now!"}
+  transition: Cut.
+
+- id: S06_110
+  scene: "6.4"
+  title: Absorbed and returned
+  dur: 2.0
+  location: CROSSING
+  characters: [THANOS, IRONMAN, THOR]
+  camera: Medium on Thanos, 5 m.
+  lens: 40 mm.
+  movement: Locked; shake.
+  framing: Thanos centre, gauntlet open into the beam.
+  action: The beam pools into the Stones, which blaze brighter; he answers with a shockwave that flings both out of the sky.
+  lighting: Stones blazing.
+  environment: Shock ring.
+  vfx: Beam absorption, shockwave.
+  sound: Beam sucked in, whoomp.
+  dialogue: []
+  transition: Cut.
+
+- id: S06_120
+  scene: "6.4"
+  title: Hulk falls
+  dur: 2.0
+  location: CROSSING
+  characters: [HULK]
+  camera: Close, low, 2 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Hulk in rubble.
+  action: Hulk pushes up on shaking arms, and falls.
+  lighting: Dim fire.
+  environment: Dust.
+  vfx: Dust.
+  sound: Laboured breathing, rubble shift.
+  dialogue: []
+  transition: Cut.
+
+- id: S06_130
+  scene: "6.5"
+  title: Tony realises
+  dur: 3.0
+  location: CROSSING
+  characters: [IRONMAN]
+  camera: Inside the helmet, 0.25 m.
+  lens: 24 mm.
+  movement: Slow push on his eyes.
+  framing: Tony's face; two graphs overlaid on the HUD.
+  action: Hero attacks and the Engine's output overlay; every spike matches.
+  lighting: Blue HUD, red spikes.
+  environment: None.
+  vfx: HUD graphs (attack log vs Engine output).
+  sound: Data ticks; score drops.
+  dialogue:
+  - {who: TONY, line: "Every hit we land, that thing gets stronger."}
+  - {who: TONY, line: "He wanted us swinging."}
+  transition: Cut.
+
+- id: S06_140
+  scene: "6.6"
+  title: Batman realises
+  dur: 2.5
+  location: CROSSING
+  characters: [BATMAN]
+  camera: Close behind cover, 1.5 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Batman crouched behind a car, gauntlet log glowing.
+  action: His log shows a grapple shot recorded landing before it was fired.
+  lighting: Gauntlet light.
+  environment: Rain.
+  vfx: Gauntlet display with inverted timestamps.
+  sound: Quiet.
+  dialogue:
+  - {who: BATMAN, line: "His Stones aren't just bending space. He's editing what we see. Cause and effect, out of order."}
+  transition: Cut.
+
+- id: S06_150
+  scene: "6.6"
+  title: Fall back
+  dur: 2.0
+  location: CROSSING
+  characters: [BATMAN]
+  camera: Medium, 3 m.
+  lens: 40 mm.
+  movement: Locked.
+  framing: Batman on comms.
+  action: He orders everyone to stop attacking.
+  lighting: Same.
+  environment: Rain.
+  vfx: None.
+  sound: Comms filter on his voice for the listeners.
+  dialogue:
+  - {who: BATMAN, line: "Everyone stop attacking. Every strike is feeding it. Fall back!"}
+  transition: Cut.
+
+- id: S06_160
+  scene: "6.7"
+  title: Centre of the devastation
+  dur: 2.0
+  location: CROSSING
+  characters: [THANOS, SUPERMAN, WW, HULK, IRONMAN, THOR]
+  camera: High angle, 40 m.
+  lens: 35 mm.
+  movement: Slow crane down.
+  framing: Thanos alone centre; heroes scattered in the rubble around him.
+  action: Thanos stands alone at the centre.
+  lighting: Fire, violet.
+  environment: Smoke.
+  vfx: None.
+  sound: Score into the Thanos motif.
+  dialogue: []
+  transition: Cut.
+
+- id: S06_170
+  scene: "6.7"
+  title: Not destroyed by its enemies
+  dur: 3.5
+  location: CROSSING
+  characters: [THANOS]
+  camera: Medium, low, 4 m.
+  lens: 50 mm.
+  movement: Slow push.
+  framing: Thanos centre.
+  action: He speaks quietly.
+  lighting: Violet key.
+  environment: Embers.
+  vfx: None.
+  sound: Score sustained low.
+  dialogue:
+  - {who: THANOS, line: "The universe is not destroyed by its enemies."}
+  transition: Cut.
+
+- id: S06_180
+  scene: "6.7"
+  title: Remain unchanged
+  dur: 3.5
+  location: CROSSING
+  characters: [THANOS]
+  camera: Low, 3 m, tilting up as the gauntlet rises.
+  lens: 35 mm.
+  movement: Tilt up.
+  framing: Gauntlet rising into the upper frame.
+  action: He raises the gauntlet.
+  lighting: Stones blazing.
+  environment: Air pressure dropping, debris lifting.
+  vfx: Stone glow.
+  sound: Choir rises.
+  dialogue:
+  - {who: THANOS, line: "It is destroyed by the belief that it can remain unchanged."}
+  transition: Cut.
+
+- id: S06_190
+  scene: "6.7"
+  title: The sky fractures
+  dur: 2.5
+  location: CROSSING
+  characters: [FLEET]
+  camera: Extreme wide, 2 km, low.
+  lens: 24 mm.
+  movement: Locked.
+  framing: Sky across the frame cracking; shards falling away to violet void.
+  action: Geometric cracks race across the heavens; shards of sky fall away; the fleet opens fire on everything below, including the ferries.
+  lighting: Violet void light through the cracks.
+  environment: Sky shards falling.
+  vfx: Sky shatter (screen-space shards with depth), fleet barrage.
+  sound: Huge glass-like crack across the whole sound field; barrage begins.
+  dialogue: []
+  transition: Cut.
+
+- id: S06_200
+  scene: "6.8"
+  title: Lantern's dome
+  dur: 3.0
+  location: HARBOR
+  characters: [GL]
+  camera: Below Hal over the water, 20 m.
+  lens: 28 mm.
+  movement: Locked; dome impacts shake.
+  framing: Hal centre; dome over ferries and corridor; barrage hitting.
+  action: Lantern throws a dome over the ferries, the corridor and the retreating heroes; each impact drives him lower.
+  lighting: Green light on water.
+  environment: Ferries crossing, water shaking.
+  vfx: Dome construct with impact ripples.
+  sound: Construct hum straining; ring voice.
+  dialogue:
+  - {who: RING, line: "Power level critical."}
+  - {who: GL, line: "Not yet.", note: through his teeth}
+  transition: Cut.
+
+- id: S06_210
+  scene: "6.9"
+  title: Superman carries Hulk
+  dur: 2.0
+  location: CROSSING
+  characters: [SUPERMAN, HULK]
+  camera: Wide, 15 m.
+  lens: 35 mm.
+  movement: Pan.
+  framing: Superman bursting from rubble, hauling Hulk toward the dome.
+  action: Superman bursts out of the rubble, grabs Hulk and hauls him toward the dome.
+  lighting: Fire, green.
+  environment: Rubble.
+  vfx: Rubble burst.
+  sound: Rubble explosion.
+  dialogue: []
+  transition: Cut.
+
+- id: S06_220
+  scene: "6.9"
+  title: Diana holds the line alone
+  dur: 2.5
+  location: CROSSING
+  characters: [WW, THANOS, SPIDEY, PARAMEDIC]
+  camera: Low behind Diana, 4 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Diana centre facing Thanos (distant); heroes retreating past her into the dome; Spider-Man with the paramedic last.
+  action: Diana stands alone until the last of them is past, then backs into the dome without turning her back.
+  lighting: Green dome edge, fire.
+  environment: Rain.
+  vfx: Dome edge.
+  sound: Heroic motif fragment, alone on solo horn.
+  dialogue: []
+  transition: Cut.
+
+- id: S06_230
+  scene: "6.9"
+  title: Strange holds the sky
+  dur: 2.0
+  location: CROSSING
+  characters: [STRANGE]
+  camera: Low, looking up at the dome apex.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Strange at the apex; mandalas wheeling.
+  action: Strange presses back the fracturing sky; blood runs from his nose.
+  lighting: Orange against violet.
+  environment: Sky shards deflecting.
+  vfx: Mandalas.
+  sound: Strain in the spell tones.
+  dialogue: []
+  transition: Cut.
+
+- id: S06_240
+  scene: "6.10"
+  title: They could lose
+  dur: 3.0
+  location: CROSSING
+  characters: [SPIDEY, FLASH, THOR, SUPERMAN, CAP, IRONMAN, WW]
+  camera: Inside the dome, slow lateral track across faces, 2 m.
+  lens: 50 mm.
+  movement: Slow lateral track.
+  framing: "Faces in sequence: Spider-Man shaking, Flash on his knees, Thor bleeding, Superman grey with dust."
+  action: For the first time, they understand they could lose.
+  lighting: Green dome light.
+  environment: Dust settling.
+  vfx: Damage on suits and armor (continuity).
+  sound: Low strings only.
+  dialogue: []
+  transition: Cut.
+
+- id: S06_250
+  scene: "6.10"
+  title: He walks away
+  dur: 2.0
+  location: CROSSING
+  characters: [THANOS]
+  camera: Through the dome wall, 30 m.
+  lens: 85 mm.
+  movement: Locked.
+  framing: Thanos distorted by the green construct, turning away.
+  action: Thanos watches them, then turns away unhurried and walks into the smoke.
+  lighting: Green tint over violet.
+  environment: Smoke.
+  vfx: Construct refraction.
+  sound: Low strings fade to silence.
+  dialogue: []
+  transition: Fade to black (12 frames), into S07_010.

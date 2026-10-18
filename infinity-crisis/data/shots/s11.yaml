@@ -1,0 +1,395 @@
+sequence: 11
+title: THE AFTERMATH
+target: 55.5
+music: "11M1 'Same Responsibility' (silence > solo strings > restrained hopeful resolution of the merged theme > one Thanos-motif note under the spark > silence for titles)"
+purpose: >
+  Let the cost show. Resolve the immediate conflict, confirm Tony's survival with the
+  payoff of his defensive systems (set up in S10_080), deliver the thematic exchange, and
+  leave one credible spark of future danger.
+locations: [WRECKAGE, VOID]
+shots:
+
+- id: S11_010
+  scene: "11.1"
+  title: Wreckage
+  dur: 4.0
+  location: WRECKAGE
+  characters: []
+  camera: Wide, low, 30 m, across the wreckage field.
+  lens: 24 mm.
+  movement: Fade up from black over 1.5 s; very slow push.
+  framing: Twisted ring fragments across dead stone; glowing dust settling.
+  action: Light slowly returns. Nothing moves except the dust.
+  lighting: Cold starlight, faint residual violet glow on metal edges.
+  environment: Glowing dust settling like snow.
+  vfx: Dust particles, residual glow.
+  sound: Silence, then a faint wind of thin air.
+  dialogue: []
+  transition: Cut.
+
+- id: S11_020
+  scene: "11.1"
+  title: Steve wakes
+  dur: 2.5
+  location: WRECKAGE
+  characters: [CAP]
+  camera: Extreme close-up, 0.5 m.
+  lens: 85 mm.
+  movement: Locked.
+  framing: Steve's eyes; dust drifting across.
+  action: Steve's eyes open.
+  lighting: Cold starlight.
+  environment: Dust drifting.
+  vfx: Dust.
+  sound: His breath.
+  dialogue: []
+  transition: Cut.
+
+- id: S11_030
+  scene: "11.1"
+  title: Earth in the seam
+  dur: 3.5
+  location: WRECKAGE
+  characters: []
+  camera: Low, looking up, 2 m.
+  lens: 35 mm.
+  movement: Slow tilt up.
+  framing: Black sky; the last thin seam of the closing rift; Earth small and blue inside it.
+  action: The Engine is gone; the fractures have closed; Earth hangs in the black.
+  lighting: Earth's blue atmospheric glow.
+  environment: Stars steady (no more lensing).
+  vfx: Seam, Earth with atmosphere glow.
+  sound: Solo strings, very soft.
+  dialogue: []
+  transition: Cut.
+
+- id: S11_040
+  scene: "11.1"
+  title: The survivors gather
+  dur: 3.0
+  location: WRECKAGE
+  characters: [CAP, THOR, HULK, STRANGE, SPIDEY, PANTHER, SUPERMAN, BATMAN, WW, FLASH, GL, AQUAMAN, CYBORG]
+  camera: Wide, 25 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Heroes scattered on a fragment; the Flash lying on his back; Hal's ring dark; Hulk sitting, arms on knees. Iron Man is not visible (his shell lies off to frame right, unnoticed).
+  action: The heroes gather; some are injured; some just sit.
+  lighting: Starlight, Earth glow.
+  environment: Dust.
+  vfx: Continuity damage on all costumes.
+  sound: Strings.
+  dialogue: []
+  transition: Cut.
+
+- id: S11_050
+  scene: "11.1"
+  title: Thor looks to the sky
+  dur: 2.5
+  location: WRECKAGE
+  characters: [THOR]
+  camera: Slow lateral track across faces, ending on Thor, 2 m.
+  lens: 50 mm.
+  movement: Slow lateral track.
+  framing: Faces drifting past; Thor looking into the distant sky.
+  action: We drift from face to face; Thor looks into the distance.
+  lighting: Starlight.
+  environment: None.
+  vfx: None.
+  sound: Strings.
+  dialogue: []
+  transition: Cut.
+
+- id: S11_060
+  scene: "11.1"
+  title: The shield
+  dur: 2.0
+  location: WRECKAGE
+  characters: [CAP]
+  camera: Medium, 3 m.
+  lens: 40 mm.
+  movement: Locked.
+  framing: Steve pulling his shield from the wreckage of the control node.
+  action: Steve retrieves his shield.
+  lighting: Starlight on the scratched shield.
+  environment: Debris shifting.
+  vfx: None.
+  sound: Metal scrape.
+  dialogue: []
+  transition: Cut.
+
+- id: S11_070
+  scene: "11.1"
+  title: Diana helps the Flash up
+  dur: 2.0
+  location: WRECKAGE
+  characters: [WW, FLASH]
+  camera: Medium, 3 m.
+  lens: 40 mm.
+  movement: Locked.
+  framing: Diana helping the Flash to his feet.
+  action: Diana helps the wounded Flash stand.
+  lighting: Starlight.
+  environment: None.
+  vfx: None.
+  sound: Strings.
+  dialogue: []
+  transition: Cut.
+
+- id: S11_080
+  scene: "11.1"
+  title: No sign of him
+  dur: 2.5
+  location: WRECKAGE
+  characters: [BATMAN]
+  camera: Close, 2 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Batman kneeling by a fractured piece of the machine.
+  action: Batman studies the fragment.
+  lighting: Starlight, residual violet on the metal.
+  environment: None.
+  vfx: None.
+  sound: Quiet.
+  dialogue:
+  - {who: BATMAN, line: "No sign of him."}
+  transition: Cut.
+
+- id: S11_090
+  scene: "11.1"
+  title: It's over
+  dur: 3.0
+  location: WRECKAGE
+  characters: [STRANGE]
+  camera: Medium, 3 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Strange, cloak torn, a last small mandala fading over his palm.
+  action: Strange confirms the immediate threat has ended.
+  lighting: Fading orange.
+  environment: None.
+  vfx: Mandala fade.
+  sound: Quiet.
+  dialogue:
+  - {who: STRANGE, line: "The Engine's gone. Every fracture is sealed. It's over."}
+  transition: Cut.
+
+- id: S11_100
+  scene: "11.1"
+  title: Superman opens the shell
+  dur: 4.0
+  location: WRECKAGE
+  characters: [SUPERMAN, IRONMAN]
+  camera: Medium-wide, 4 m.
+  lens: 35 mm.
+  movement: Slow push.
+  framing: Superman kneeling at a crumpled, smoking nanotech shell.
+  action: Superman grips the shell's edges and pulls it open; inside, Tony coughs, blinks, alive.
+  lighting: Starlight; smoke backlit by Earth glow.
+  environment: Smoke curling out of the shell.
+  vfx: Nanotech shell deformation, smoke.
+  sound: Metal tearing, a cough.
+  dialogue:
+  - {who: TONY, line: "Did it work?"}
+  - {who: SUPERMAN, line: "It worked."}
+  transition: Cut.
+
+- id: S11_110
+  scene: "11.1"
+  title: Not doing that again
+  dur: 3.0
+  location: WRECKAGE
+  characters: [IRONMAN, SUPERMAN]
+  camera: Two-shot, 2.5 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Superman helping Tony up.
+  action: Tony, exhausted, manages one line; Superman helps him up.
+  lighting: Starlight.
+  environment: None.
+  vfx: None.
+  sound: A breath of a laugh from someone off screen.
+  dialogue:
+  - {who: TONY, line: "Good. Because I'm not doing that again."}
+  transition: Cut.
+
+- id: S11_120
+  scene: "11.1"
+  title: Together
+  dur: 3.0
+  location: WRECKAGE
+  characters: [CAP, IRONMAN, THOR, HULK, STRANGE, SPIDEY, PANTHER, SUPERMAN, BATMAN, WW, FLASH, GL, AQUAMAN, CYBORG]
+  camera: Wide, behind the group, 20 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: The heroes in silhouette at the edge of the wreckage; Earth turning in the distance.
+  action: The heroes stand together.
+  lighting: Earth glow rim on every silhouette.
+  environment: Dust.
+  vfx: Earth.
+  sound: Strings into the merged theme, restrained.
+  dialogue: []
+  transition: Cut.
+
+- id: S11_130
+  scene: "11.1"
+  title: Different worlds
+  dur: 3.0
+  location: WRECKAGE
+  characters: [SUPERMAN]
+  camera: Close-up, 2 m.
+  lens: 85 mm.
+  movement: Locked.
+  framing: Superman, Earth light on his face.
+  action: Superman speaks quietly.
+  lighting: Blue Earth glow.
+  environment: None.
+  vfx: None.
+  sound: Theme holds under the line.
+  dialogue:
+  - {who: SUPERMAN, line: "Different worlds. Different lives."}
+  transition: Cut.
+
+- id: S11_140
+  scene: "11.1"
+  title: Same responsibility
+  dur: 2.5
+  location: WRECKAGE
+  characters: [CAP]
+  camera: Close-up, 2 m.
+  lens: 85 mm.
+  movement: Locked.
+  framing: Steve, shield on his arm.
+  action: Steve answers.
+  lighting: Blue Earth glow.
+  environment: None.
+  vfx: None.
+  sound: Theme.
+  dialogue:
+  - {who: STEVE, line: "Same responsibility."}
+  transition: Cut.
+
+- id: S11_150
+  scene: "11.1"
+  title: The pull-back
+  dur: 4.0
+  location: WRECKAGE
+  characters: [CAP, IRONMAN, THOR, HULK, STRANGE, SPIDEY, PANTHER, SUPERMAN, BATMAN, WW, FLASH, GL, AQUAMAN, CYBORG]
+  camera: Starts 20 m from the group, pulls back to 50,000 km.
+  lens: 35 mm.
+  movement: Exponential pull-back.
+  framing: Heroes shrink to a point; the wreckage, the shattered world, Earth, the stars.
+  action: The theme rises as we pull away into the vastness of space.
+  lighting: Starlight, Earth glow.
+  environment: Debris field drifting.
+  vfx: Multi-scale pull-back.
+  sound: The theme rises to its one full statement.
+  dialogue: []
+  transition: Cut.
+
+- id: S11_160
+  scene: "11.2"
+  title: The spark
+  dur: 2.5
+  location: WRECKAGE
+  characters: []
+  camera: Extreme close-up, 5 cm from a crack in a fragment.
+  lens: 100 mm macro.
+  movement: Locked.
+  framing: Dark metal crack centre.
+  action: Deep inside the crack, a tiny purple spark flickers once.
+  lighting: Darkness, then the spark.
+  environment: Dust motes.
+  vfx: Single violet spark.
+  sound: Theme cuts; one low note of the Thanos motif under the flicker.
+  dialogue: []
+  transition: Cut to black.
+
+- id: S11_170
+  scene: "11.2"
+  title: Black
+  dur: 1.0
+  location: VOID
+  characters: []
+  camera: None (black).
+  lens: None.
+  movement: None.
+  framing: Black.
+  action: Black.
+  lighting: None.
+  environment: None.
+  vfx: None.
+  sound: Silence.
+  dialogue: []
+  transition: Cut to title.
+
+- id: S11_180
+  scene: "11.2"
+  title: "Title: INFINITY CRISIS"
+  dur: 3.0
+  location: VOID
+  characters: []
+  camera: None (title card).
+  lens: None.
+  movement: Title fades in over 12 frames, holds, fades out over 12 frames.
+  framing: Title centred in the 2.39 frame.
+  action: "INFINITY CRISIS"
+  lighting: Title in cold silver with a faint violet edge.
+  environment: None.
+  vfx: Title treatment.
+  sound: A single deep percussion hit on the fade-in, then silence.
+  dialogue: []
+  transition: Cut to black.
+
+- id: S11_190
+  scene: "11.2"
+  title: Pause
+  dur: 1.0
+  location: VOID
+  characters: []
+  camera: None (black).
+  lens: None.
+  movement: None.
+  framing: Black.
+  action: Black.
+  lighting: None.
+  environment: None.
+  vfx: None.
+  sound: Silence.
+  dialogue: []
+  transition: Cut.
+
+- id: S11_200
+  scene: "11.2"
+  title: "THE WAR IS NOT OVER."
+  dur: 2.5
+  location: VOID
+  characters: []
+  camera: None (title card).
+  lens: None.
+  movement: Fade in 12 frames, hold, cut.
+  framing: Small caps, centred.
+  action: "THE WAR IS NOT OVER."
+  lighting: Dim silver.
+  environment: None.
+  vfx: Title.
+  sound: Silence.
+  dialogue: []
+  transition: Cut to black.
+
+- id: S11_210
+  scene: "11.2"
+  title: End
+  dur: 1.0
+  location: VOID
+  characters: []
+  camera: None (black).
+  lens: None.
+  movement: None.
+  framing: Black.
+  action: End.
+  lighting: None.
+  environment: None.
+  vfx: None.
+  sound: Silence.
+  dialogue: []
+  transition: End of picture.

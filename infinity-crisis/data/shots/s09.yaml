@@ -1,0 +1,472 @@
+sequence: 9
+title: SUPERMAN, THOR, AND WONDER WOMAN VS. THANOS
+target: 65.0
+music: "9M1 'Three Against the Titan' (percussion-led combat, each hero's motif on contact, Thanos motif gaining; strings hold under 'buying time')"
+purpose: >
+  A spatially locked three-on-one: Thanos always on screen left driving right toward the
+  platform; the heroes always between him and it. Every exchange shows anticipation,
+  contact, follow-through, recovery and reaction. He wins the fight; they win the time.
+staging: >
+  Screen direction locked for the whole sequence: Thanos LEFT, heroes CENTRE, control
+  platform and Heart RIGHT (background). Any shot that crosses the line is a deliberate
+  reverse marked in its transition field.
+locations: [CAUSEWAY, PLATFORM]
+shots:
+
+- id: S09_010
+  scene: "9.1"
+  title: Thanos lands
+  dur: 3.0
+  location: CAUSEWAY
+  characters: [THANOS]
+  camera: Wide, low, 40 m, side-on.
+  lens: 28 mm.
+  movement: Locked; shake on impact.
+  framing: Thanos landing frame left on the floating causeway; platform far right.
+  action: He lands; the structure around him breaks apart; fragments drift upward in the low gravity.
+  lighting: Violet core light from frame right.
+  environment: Fragments rising slowly.
+  vfx: Low-gravity debris.
+  sound: Impact boom, then the eerie tick of drifting stones.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_020
+  scene: "9.1"
+  title: The line
+  dur: 2.5
+  location: CAUSEWAY
+  characters: [SUPERMAN, THOR, WW, THANOS]
+  background: [BATMAN, CYBORG, FLASH]
+  camera: Wide lateral master, 60 m, 5 m high.
+  lens: 28 mm.
+  movement: Locked. This is the geography shot for the sequence.
+  framing: Thanos left; Superman, Thor and Diana landing in a line centre; platform with Batman, Cyborg and Flash right; the collapsing Heart beyond.
+  action: The three land between Thanos and the platform.
+  lighting: Core backlight right; violet left.
+  environment: Rising fragments.
+  vfx: Heart collapsing in the background.
+  sound: Three landings, each with its hero's signature.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_030
+  scene: "9.1"
+  title: Ending choice
+  dur: 4.0
+  location: CAUSEWAY
+  characters: [THANOS, WW]
+  camera: Shot-reverse-shot, 5 m, eye level.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Thanos frame left looking right; Diana frame right looking left.
+  action: Thanos states his purpose; Diana answers it.
+  lighting: Violet on him, core white on her.
+  environment: Drifting stones.
+  vfx: None.
+  sound: Score drops for the exchange.
+  dialogue:
+  - {who: THANOS, line: "Every war you have fought began as someone's choice. I am ending choice."}
+  - {who: WW, line: "Then you are ending everything worth fighting for."}
+  transition: Cut.
+
+- id: S09_040
+  scene: "9.1"
+  title: Superman's combination
+  dur: 3.5
+  location: CAUSEWAY
+  characters: [SUPERMAN, THANOS]
+  camera: Lateral tracking, medium-wide, 7 m.
+  lens: 35 mm.
+  movement: Lateral track as Thanos gives ground.
+  framing: Superman right, Thanos left.
+  action: Jab, cross, hook, controlled and fast; Thanos blocks all three on his forearms, giving ground.
+  lighting: Impact flashes.
+  environment: Shock puffs of dust per block.
+  vfx: Small impact rings scaled to each blow.
+  sound: Three sharp blocks.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_050
+  scene: "9.1"
+  title: Heat vision split
+  dur: 2.5
+  location: CAUSEWAY
+  characters: [SUPERMAN, THANOS]
+  camera: Over Thanos's shoulder at Superman, 3 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Superman's eyes igniting; gauntlet foreground.
+  action: Heat vision at point-blank range; Thanos turns the gauntlet into it and the beam splits into harmless sparks.
+  lighting: Red-white beam, sparks.
+  environment: Sparks bouncing on stone.
+  vfx: Beam split.
+  sound: Heat vision sizzle breaking into crackle.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_055
+  scene: "9.1"
+  title: Stillness
+  dur: 1.5
+  location: CAUSEWAY
+  characters: [THANOS, SUPERMAN]
+  camera: Medium two-shot, 5 m, eye level.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Thanos left, perfectly still; Superman right, resetting his stance.
+  action: Thanos's rhythm - he does nothing at all for a beat, watching, while Superman resets. Then he moves.
+  lighting: Violet left, core white right.
+  environment: Sparks from the split beam still falling.
+  vfx: None.
+  sound: Everything drops out except falling sparks.
+  dialogue: []
+  transition: Cut on his first movement.
+
+- id: S09_060
+  scene: "9.1"
+  title: Through the rock
+  dur: 2.0
+  location: CAUSEWAY
+  characters: [SUPERMAN, THANOS]
+  camera: Wide, 30 m.
+  lens: 28 mm.
+  movement: Pan with Superman's flight screen right.
+  framing: Superman flung right through a floating rock formation.
+  action: Thanos hammers the gauntlet into Superman's chest; Superman flies backward through a rock formation, which bursts into gravel.
+  lighting: Violet impact flash.
+  environment: Rock burst.
+  vfx: Rock fracture.
+  sound: Heavy impact, rock burst.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_070
+  scene: "9.1"
+  title: Thor at the apex
+  dur: 2.5
+  location: CAUSEWAY
+  characters: [THOR]
+  camera: Low, looking up, 20 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Thor at the top of his fall, lightning wrapping the axe.
+  action: Thor hangs for a heartbeat at the apex, gathering everything.
+  lighting: Lightning.
+  environment: Static arcs to nearby fragments.
+  vfx: Lightning wrap.
+  sound: Crackle building.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_080
+  scene: "9.1"
+  title: The blow lands
+  dur: 2.0
+  location: CAUSEWAY
+  characters: [THOR, THANOS]
+  camera: Lateral, 8 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Thor striking down on the raised gauntlet.
+  action: He strikes; Thanos takes it on the gauntlet; a burst erupts toward the control platform.
+  lighting: White flash.
+  environment: Burst travelling right.
+  vfx: Energy burst.
+  sound: Thunder contact.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_090
+  scene: "9.1"
+  title: Diana deflects
+  dur: 2.0
+  location: CAUSEWAY
+  characters: [WW]
+  camera: Medium, 4 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Diana sliding in sideways, shield angled.
+  action: Diana slides in, angles her shield and deflects the burst away from the platform into the void.
+  lighting: Burst light on her shield.
+  environment: Sparks.
+  vfx: Deflected energy.
+  sound: Shield boom.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_100
+  scene: "9.1"
+  title: Thor high, Diana low
+  dur: 3.0
+  location: CAUSEWAY
+  characters: [THOR, WW, THANOS]
+  camera: Lateral, 8 m.
+  lens: 35 mm.
+  movement: Lateral track.
+  framing: Thanos left; Thor and Diana right, alternating.
+  action: They press him back step by step, axe high, sword low.
+  lighting: Lightning and sparks.
+  environment: Fragments.
+  vfx: Weapon trails.
+  sound: Alternating impacts.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_110
+  scene: "9.1"
+  title: The armor cracks
+  dur: 2.5
+  location: CAUSEWAY
+  characters: [THOR, WW, THANOS]
+  camera: Medium, 5 m.
+  lens: 40 mm.
+  movement: Locked.
+  framing: Lasso pulling the gauntlet arm wide; Thor's axe to the chest plate.
+  action: Diana's lasso snaps around his gauntlet arm and pulls it wide; Thor drives Stormbreaker into the chest plate; the armor cracks.
+  lighting: Lasso gold, lightning.
+  environment: Armor fragments.
+  vfx: Chest plate crack (persists to end of film).
+  sound: Lasso crack, axe impact, armor crack.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_120
+  scene: "9.1"
+  title: Hurled
+  dur: 2.0
+  location: CAUSEWAY
+  characters: [THANOS, WW, THOR]
+  camera: Wide, 15 m.
+  lens: 28 mm.
+  movement: Pan.
+  framing: Diana yanked off her feet and thrown into Thor.
+  action: Thanos wrenches the lasso, yanking Diana off her feet, and hurls her into Thor.
+  lighting: Same.
+  environment: Dust.
+  vfx: None.
+  sound: Collision.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_130
+  scene: "9.1"
+  title: The grapple
+  dur: 3.0
+  location: CAUSEWAY
+  characters: [SUPERMAN, THANOS]
+  camera: Medium two-shot, 4 m.
+  lens: 40 mm.
+  movement: Slow push.
+  framing: Superman and Thanos locked together, faces close.
+  action: Superman returns from the rubble and tackles him; they lock together, shoving; the causeway breaks under their feet.
+  lighting: Core light between them.
+  environment: Stone cracking underfoot.
+  vfx: Ground fracture.
+  sound: Grinding stone, strain.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_135
+  scene: "9.1"
+  title: His calm slips
+  dur: 2.0
+  location: CAUSEWAY
+  characters: [THANOS, SUPERMAN]
+  camera: Extreme close-up, 1 m, over Superman's shoulder.
+  lens: 85 mm.
+  movement: Locked.
+  framing: Thanos's face, jaw set, a vein of effort at the temple.
+  action: For the length of a breath, Thanos's calm slips into effort.
+  lighting: Core light between them.
+  environment: Stone dust trickling up.
+  vfx: None.
+  sound: Two strained breaths, grinding stone.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_137
+  scene: "9.1"
+  title: Thanos takes over
+  dur: 2.5
+  location: CAUSEWAY
+  characters: [THANOS, SUPERMAN]
+  camera: Lateral, low, 6 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: The grapple centre; Superman's boots sliding screen right toward the platform.
+  action: Thanos shifts his weight, turns the grapple and drives Superman back step by step, then throws him aside.
+  lighting: Violet gaining over white.
+  environment: Causeway cracking.
+  vfx: Ground fracture.
+  sound: Thanos motif climbing over the heroes' motifs.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_140
+  scene: "9.1"
+  title: Stormbreaker lost
+  dur: 2.5
+  location: CAUSEWAY
+  characters: [THOR, THANOS]
+  camera: Medium, 5 m.
+  lens: 35 mm.
+  movement: Follows the axe as it spins away.
+  framing: Thanos catching Thor's weapon arm; axe spinning out into the void.
+  action: He catches Thor's arm mid-swing, twists, rips Stormbreaker away and flings it into the void; Thor drops to a knee.
+  lighting: Lightning dying on the axe.
+  environment: None.
+  vfx: Axe spin trail (tracked; it must return in S09_200).
+  sound: Twist, grunt, axe whirring away.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_150
+  scene: "9.1"
+  title: Two strikes on Diana
+  dur: 2.5
+  location: CAUSEWAY
+  characters: [WW, THANOS]
+  camera: Lateral, 5 m.
+  lens: 35 mm.
+  movement: Locked.
+  framing: Diana right defending.
+  action: A gauntlet blow drives her back behind her shield; a backhand cracks across her raised bracers; she goes down.
+  lighting: Sparks.
+  environment: Dust.
+  vfx: Bracer sparks.
+  sound: Shield boom, bracer clang.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_160
+  scene: "9.1"
+  title: Superman driven down
+  dur: 2.0
+  location: CAUSEWAY
+  characters: [SUPERMAN, THANOS]
+  camera: High angle, 8 m.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Thanos driving Superman down into the causeway.
+  action: Superman charges; Thanos catches him by the throat and drives him into the causeway, which craters.
+  lighting: Violet.
+  environment: Crater, rising fragments.
+  vfx: Crater.
+  sound: Crater boom.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_170
+  scene: "9.1"
+  title: Sixty percent
+  dur: 2.0
+  location: PLATFORM
+  characters: [BATMAN, CYBORG, FLASH]
+  camera: Medium, 4 m, on the platform.
+  lens: 40 mm.
+  movement: Locked.
+  framing: Batman at the controls, Cyborg plugged in, Flash running nodes.
+  action: The cascade is progressing; Batman pushes them to hold.
+  lighting: Console light.
+  environment: Shell collapse beyond.
+  vfx: Cascade readout.
+  sound: Comms filter.
+  dialogue:
+  - {who: BATMAN, line: "Cascade at sixty percent. Keep him off the platform.", note: over comms}
+  transition: Cut.
+
+- id: S09_180
+  scene: "9.1"
+  title: Struggling to rise
+  dur: 3.0
+  location: CAUSEWAY
+  characters: [SUPERMAN, THOR, WW]
+  camera: Ground level, 2 m.
+  lens: 24 mm.
+  movement: Locked.
+  framing: Three heroes in the dust; fragments drifting up.
+  action: The three struggle to rise.
+  lighting: Low violet.
+  environment: Fragments rising slowly.
+  vfx: Low-gravity dust.
+  sound: Breathing, distant collapse.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_190
+  scene: "9.1"
+  title: Resistance
+  dur: 3.5
+  location: CAUSEWAY
+  characters: [THANOS]
+  camera: Low, 3 m, push.
+  lens: 35 mm.
+  movement: Slow push as he approaches.
+  framing: Thanos walking toward camera.
+  action: Thanos approaches, unhurried.
+  lighting: Violet; cracked chest plate visible.
+  environment: Fragments.
+  vfx: Armor crack continuity.
+  sound: Measured footsteps; score holds.
+  dialogue:
+  - {who: THANOS, line: "You mistake resistance for victory."}
+  transition: Cut.
+
+- id: S09_200
+  scene: "9.1"
+  title: We're buying time
+  dur: 3.5
+  location: CAUSEWAY
+  characters: [SUPERMAN]
+  camera: Low-angle hero shot, 2 m.
+  lens: 35 mm.
+  movement: Slow tilt up as he rises.
+  framing: Superman rising frame centre.
+  action: Superman looks past Thanos to the collapsing Heart and pushes himself upright, cape torn half away.
+  lighting: Core light on his face.
+  environment: Fragments.
+  vfx: Cape tear (continuity from S09_160).
+  sound: Strings swell.
+  dialogue:
+  - {who: SUPERMAN, line: "No."}
+  - {who: SUPERMAN, line: "We're buying time."}
+  transition: Cut.
+
+- id: S09_205
+  scene: "9.1"
+  title: Stormbreaker returns
+  dur: 2.5
+  location: CAUSEWAY
+  characters: [THOR, WW, SUPERMAN]
+  camera: Wide, low, 10 m.
+  lens: 28 mm.
+  movement: Locked.
+  framing: Thor rising left, hand out; Diana rising right; Superman centre.
+  action: Thor holds out his hand; far out in the void Stormbreaker turns and comes home to his palm with a crack of thunder. Diana stands, sword raised.
+  lighting: Lightning flash on the catch.
+  environment: Fragments.
+  vfx: Axe return trail (pays off S09_140).
+  sound: Thunder on the catch; the three motifs together for two bars.
+  dialogue: []
+  transition: Cut.
+
+- id: S09_210
+  scene: "9.1"
+  title: The final stage
+  dur: 3.0
+  location: CAUSEWAY
+  characters: [THANOS]
+  background: [BATMAN, CYBORG]
+  camera: Reverse, deep focus, behind Thanos's shoulder.
+  lens: 24 mm.
+  movement: Locked.
+  framing: Thanos's shoulder frame left (soft); platform and collapsing Heart sharp in depth.
+  action: Behind Thanos, the shutdown reaches its final stage.
+  lighting: Core collapsing.
+  environment: Shell crumpling.
+  vfx: Heart collapse.
+  sound: Collapse building.
+  dialogue: []
+  transition: Cut into S10_010 (deliberate reverse to the platform).

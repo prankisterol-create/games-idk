@@ -1,0 +1,297 @@
+sequence: 7
+title: THE PLAN
+target: 48.0
+music: "7M1 'The Count' (silence > solo piano > low string motif > building determination; the tick motif is introduced)"
+purpose: >
+  Turn defeat into a plan the audience can follow: three anchors, an order, a half-second
+  window, a clock Thanos cannot read, and three teams whose failure is interdependent.
+  Every hero is visibly damaged; nobody has been cleaned up.
+locations: [BUNKER]
+shots:
+
+- id: S07_010
+  scene: "7.1"
+  title: Regroup
+  dur: 4.0
+  location: BUNKER
+  characters: [IRONMAN, SUPERMAN, WW, FLASH, HULK, SPIDEY, CAP, THOR, STRANGE, BATMAN, CYBORG, GL, AQUAMAN, PANTHER]
+  camera: Wide, 2.5 m high, from a corner of the bunker.
+  lens: 24 mm.
+  movement: Slow push across the room.
+  framing: Heroes scattered through the room; dead screens; water dripping in the foreground.
+  action: The heroes regroup. Tony sits with his helmet off, armor scorched; Superman's cape torn; Diana's shield dented; Flash against the wall, legs trembling; Hulk on the floor; Spider-Man's mask pushed up.
+  lighting: Red emergency lights, flickering fluorescents, a few live screens.
+  environment: Water dripping, dust sifting from the ceiling with distant impacts.
+  vfx: Continuity damage on every costume.
+  sound: Drips, distant muffled impacts above, a dying fluorescent buzz.
+  dialogue: []
+  transition: Cut.
+
+- id: S07_020
+  scene: "7.1"
+  title: He let us walk away
+  dur: 3.0
+  location: BUNKER
+  characters: [STRANGE, BATMAN]
+  camera: Two-shot, 3 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Strange left, Batman right.
+  action: Strange states it; Batman explains it.
+  lighting: Red emergency light.
+  environment: Drips.
+  vfx: None.
+  sound: Room tone.
+  dialogue:
+  - {who: STRANGE, line: "He let us walk away."}
+  - {who: BATMAN, line: "He doesn't need to beat us. He needs us to keep fighting the wrong way."}
+  transition: Cut.
+
+- id: S07_030
+  scene: "7.1"
+  title: The hologram
+  dur: 3.0
+  location: BUNKER
+  characters: [BATMAN]
+  camera: Low, 4 m, the hologram between camera and heroes.
+  lens: 35 mm.
+  movement: Slow arc around the hologram.
+  framing: The Engine hologram centre; faces lit blue around it.
+  action: Batman throws a hologram of the Eternity Engine into the room; three points glow on it - CROWN, ROOT, HEART.
+  lighting: Blue holo light on faces.
+  environment: Dust in the holo beam.
+  vfx: Engine hologram with labelled anchors.
+  sound: Holo tone; score introduces a soft repeating tick.
+  dialogue: []
+  transition: Cut.
+
+- id: S07_040
+  scene: "7.1"
+  title: Under half a second
+  dur: 4.0
+  location: BUNKER
+  characters: [IRONMAN]
+  camera: Medium close-up, 2 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Tony, helmet off, lit by the holo.
+  action: Tony explains the window.
+  lighting: Blue holo key.
+  environment: None.
+  vfx: Holo window graphic (0.4 s).
+  sound: Tick continues.
+  dialogue:
+  - {who: TONY, line: "Three anchors. Crown, Root, Heart. They have to go dark inside the same window, and I mean narrow. Under half a second."}
+  transition: Cut.
+
+- id: S07_050
+  scene: "7.1"
+  title: And in order
+  dur: 3.5
+  location: BUNKER
+  characters: [STRANGE]
+  camera: Medium close-up, 2 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Strange, a small orange diagram of the order turning above his palm.
+  action: Strange adds the order.
+  lighting: Orange from the diagram, blue holo fill.
+  environment: Sparks.
+  vfx: Order diagram (Crown + Root, then Heart).
+  sound: Spell chime.
+  dialogue:
+  - {who: STRANGE, line: "And in order. Crown and Root together, then the Heart, in the same heartbeat. Out of sequence, the fold collapses onto Earth."}
+  transition: Cut.
+
+- id: S07_060
+  scene: "7.1"
+  title: Someone has to be standing there
+  dur: 3.5
+  location: BUNKER
+  characters: [CYBORG, FLASH]
+  camera: Medium on Cyborg, then rack to the Flash behind.
+  lens: 50 mm.
+  movement: Rack focus.
+  framing: Cyborg foreground right; Flash background left against the wall.
+  action: Cyborg explains the gap; the Flash quietly volunteers.
+  lighting: Red eye glow, emergency light.
+  environment: None.
+  vfx: Carrier-pulse waveform in Cyborg's eye.
+  sound: Room tone.
+  dialogue:
+  - {who: CYBORG, line: "The anchors sync to a carrier pulse. I can ride it and open a gap in the Heart's shield, but somebody has to be standing there when it opens."}
+  - {who: FLASH, line: "Half a second's a long time.", note: quietly}
+  transition: Cut.
+
+- id: S07_070
+  scene: "7.1"
+  title: A clock he can't read
+  dur: 3.0
+  location: BUNKER
+  characters: [BATMAN, STRANGE]
+  camera: Over-the-shoulder pair, 3 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Batman frame left, Strange right.
+  action: Batman gives the counter-strategy; Strange makes it possible.
+  lighting: Blue and orange.
+  environment: None.
+  vfx: Strange shows a single orange ring pulsing in time.
+  sound: The tick locks to the ring's pulse.
+  dialogue:
+  - {who: BATMAN, line: "He reads everything we react to. So we don't react. We run this on a clock. Ours, not his."}
+  - {who: STRANGE, line: "I can bind every one of you to a single count. Whatever he shows you, trust the count."}
+  transition: Cut.
+
+- id: S07_080
+  scene: "7.1"
+  title: Team one
+  dur: 3.0
+  location: BUNKER
+  characters: [CAP, IRONMAN, THOR, SUPERMAN, GL]
+  camera: Medium on Steve, the four fliers behind him.
+  lens: 40 mm.
+  movement: Locked.
+  framing: Steve at the hologram; Tony, Thor, Superman, Hal behind.
+  action: Steve names Team One; their icon lights at the Crown.
+  lighting: Blue holo.
+  environment: None.
+  vfx: Team icon at the Crown.
+  sound: Tick; low strings enter.
+  dialogue:
+  - {who: STEVE, line: "Team one, air. Stark, Thor, Superman, Lantern. Pull the fleet off and expose the Crown."}
+  transition: Cut.
+
+- id: S07_090
+  scene: "7.1"
+  title: Team two
+  dur: 3.0
+  location: BUNKER
+  characters: [CAP, WW, HULK, AQUAMAN, PANTHER]
+  camera: Steve turning; Diana, Hulk, Aquaman, T'Challa behind.
+  lens: 40 mm.
+  movement: Slight pan with his turn.
+  framing: Steve foreground; Team Two.
+  action: Team Two named; their icon lights at the Root.
+  lighting: Blue holo.
+  environment: None.
+  vfx: Team icon at the Root.
+  sound: Tick, strings.
+  dialogue:
+  - {who: STEVE, line: "Team two, ground. Diana, Hulk, Aquaman, T'Challa, me. We take the Root gate and hold it."}
+  transition: Cut.
+
+- id: S07_100
+  scene: "7.1"
+  title: Team three
+  dur: 3.5
+  location: BUNKER
+  characters: [CAP, BATMAN, STRANGE, CYBORG, FLASH, SPIDEY]
+  camera: Steve turning again; Batman, Strange, Cyborg, Flash, Spider-Man.
+  lens: 40 mm.
+  movement: Slight pan.
+  framing: Team Three; Spider-Man reacting.
+  action: Team Three named; their icon lights at the Heart. Spider-Man reacts; Batman answers.
+  lighting: Blue holo.
+  environment: None.
+  vfx: Team icon at the Heart.
+  sound: A breath of levity, then the tick again.
+  dialogue:
+  - {who: STEVE, line: "Team three. Batman, Strange, Cyborg, Flash, Parker. You're the Heart."}
+  - {who: SPIDEY, line: "Why do I feel like that's the worst one?"}
+  - {who: BATMAN, line: "Because it is."}
+  transition: Cut.
+
+- id: S07_110
+  scene: "7.1"
+  title: Nobody fails
+  dur: 2.5
+  location: BUNKER
+  characters: [WW, CAP]
+  camera: Two-shot, 3 m.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Diana left, Steve right.
+  action: Diana names the risk; Steve answers it.
+  lighting: Blue holo, red emergency.
+  environment: None.
+  vfx: None.
+  sound: Room tone.
+  dialogue:
+  - {who: WW, line: "And if one team fails..."}
+  - {who: STEVE, line: "None of us finish. So nobody fails."}
+  transition: Cut.
+
+- id: S07_120
+  scene: "7.1"
+  title: We don't have to win every fight
+  dur: 3.5
+  location: BUNKER
+  characters: [CAP]
+  camera: Slow push-in on Steve, 3 m to 2 m.
+  lens: 50 mm.
+  movement: Slow push-in.
+  framing: Steve centre, faces of the team soft around him.
+  action: "He looks at them: the bruised, the burned, the exhausted."
+  lighting: Blue holo key, warm practical fill.
+  environment: Dust in the air.
+  vfx: None.
+  sound: Score silent under the line.
+  dialogue:
+  - {who: STEVE, line: "We don't have to win every fight."}
+  transition: Cut.
+
+- id: S07_130
+  scene: "7.1"
+  title: Make this one count
+  dur: 3.0
+  location: BUNKER
+  characters: [CAP]
+  camera: Over Steve's shoulder onto the hologram's Heart.
+  lens: 50 mm.
+  movement: Locked.
+  framing: Steve's profile; the Heart turning.
+  action: He glances at the Heart.
+  lighting: Blue.
+  environment: None.
+  vfx: Holo Heart.
+  sound: Low string motif begins.
+  dialogue:
+  - {who: STEVE, line: "We just have to make this one count."}
+  transition: Cut.
+
+- id: S07_140
+  scene: "7.1"
+  title: They stand
+  dur: 3.0
+  location: BUNKER
+  characters: [IRONMAN, SUPERMAN, WW, FLASH, HULK, SPIDEY, CAP, THOR, STRANGE, BATMAN, CYBORG, GL, AQUAMAN, PANTHER]
+  camera: Wide, low, 1 m.
+  lens: 24 mm.
+  movement: Slow crane up as they rise.
+  framing: Heroes rising one by one; Hulk last in the foreground.
+  action: One by one, they stand. Hulk is last; he rises to his full height.
+  lighting: Blue holo and red emergency.
+  environment: Dust shaken loose.
+  vfx: None.
+  sound: String motif builds.
+  dialogue: []
+  transition: Cut.
+
+- id: S07_150
+  scene: "7.1"
+  title: Through the portal
+  dur: 2.5
+  location: BUNKER
+  characters: [STRANGE, CAP, WW, SUPERMAN, BATMAN]
+  camera: Behind the group, 5 m.
+  lens: 28 mm.
+  movement: Push toward the portal.
+  framing: Portal centre opening onto a vast violet distance; silhouettes walking into it.
+  action: Strange draws a circle in the air; a portal burns open; they walk into it.
+  lighting: Violet distance light silhouetting them.
+  environment: Air rushing.
+  vfx: Portal onto the Engine.
+  sound: Portal roar; the string motif lifts.
+  dialogue: []
+  transition: Match cut through the portal into S08_010.
