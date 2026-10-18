@@ -21,12 +21,20 @@ def run(args):
 
 def main(picture, sound):
     os.makedirs(os.path.join(OUT, 'storyboard'), exist_ok=True)
+    # cinematic finishing: denoise, bloom, anamorphic streaks, slight chromatic fringe, grade
+    grade = ("hqdn3d=1.5:1.5:3:3,format=gbrp,split=3[b][g][s];"
+             "[g]lutrgb=r='clip((val-135)*2,0,255)':g='clip((val-135)*2,0,255)':b='clip((val-135)*2,0,255)',"
+             "gblur=sigma=22[gl];"
+             "[s]lutrgb=r='clip((val-185)*3,0,255)':g='clip((val-185)*3,0,255)':b='clip((val-185)*3,0,255)',"
+             "gblur=sigma=80:sigmaV=1,colorchannelmixer=rr=0.55:gg=0.75:bb=1.25[st];"
+             "[b][gl]blend=all_mode=screen:all_opacity=0.5[c1];"
+             "[c1][st]blend=all_mode=screen:all_opacity=0.55,rgbashift=rh=-2:bh=2,"
+             "colorbalance=rs=-0.04:bs=0.05:rh=0.05:gh=0.01:bh=-0.03,format=yuv420p,eq=contrast=1.06:saturation=1.08")
     enc = ['-c:v', 'libx264', '-preset', 'medium', '-crf', '22', '-maxrate', '4M', '-bufsize', '8M',
-           '-vf', 'hqdn3d=1.5:1.5:3:3', '-pix_fmt', 'yuv420p',
            '-c:a', 'aac', '-b:a', '256k', '-movflags', '+faststart', '-shortest']
-    run(['ffmpeg', '-y', '-loglevel', 'error', '-i', picture, '-i', sound] + enc +
+    run(['ffmpeg', '-y', '-loglevel', 'error', '-i', picture, '-i', sound, '-vf', grade] + enc +
         [os.path.join(OUT, 'infinity_crisis_s01_16x9_1920x1080.mp4')])
-    run(['ffmpeg', '-y', '-loglevel', 'error', '-i', picture, '-i', sound, ] + [a if a != 'hqdn3d=1.5:1.5:3:3' else 'crop=1920:804:0:138,hqdn3d=1.5:1.5:3:3' for a in enc] +
+    run(['ffmpeg', '-y', '-loglevel', 'error', '-i', picture, '-i', sound, '-vf', 'crop=1920:804:0:138,' + grade] + enc +
         [os.path.join(OUT, 'infinity_crisis_s01_scope_1920x804.mp4')])
     seq = C.load_yaml(os.path.join(C.DATA, 'shots', 's01.yaml'))
     t0, tiles = 0.0, []
@@ -35,7 +43,8 @@ def main(picture, sound):
         for tag, frac in (('a', 0.3), ('b', 0.8)):
             t = t0 + shot['dur'] * frac
             path = os.path.join(OUT, 'storyboard', '%s_%s.jpg' % (shot['id'], tag))
-            run(['ffmpeg', '-y', '-loglevel', 'error', '-ss', '%.3f' % t, '-i', picture, '-frames:v', '1',
+            run(['ffmpeg', '-y', '-loglevel', 'error', '-ss', '%.3f' % t, '-i',
+                 os.path.join(OUT, 'infinity_crisis_s01_16x9_1920x1080.mp4'), '-frames:v', '1',
                  '-vf', 'crop=1920:804:0:138,scale=960:402', '-q:v', '3', path])
             tiles.append((shot, path))
         t0 += shot['dur']
